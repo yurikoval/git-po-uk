@@ -159,38 +159,43 @@ show_diff () {
 	del_count=0
 	new_lines=
 	del_lines=
+	tmpfile=
 
 	case $# in
-	0)
-		status=$(cd $PODIR; git status --porcelain -- ${POTFILE##*/})
+	0 | 1)
+		if test $# -eq 1
+		then
+			new=$1
+		else
+			new=$POTFILE
+		fi
+		tmpfile=$(mktemp /tmp/git-po.XXXX)
+		old=$tmpfile
+		status=$(cd $PODIR; git status --porcelain -- ${new##*/})
 		if test -z "$status"
 		then
 			echo "Nothing changed."
 			return 0
 		fi
-		tmpfile=$(mktemp /tmp/git.po.XXXX)
-		(cd $PODIR; LANGUAGE=C git show HEAD:./${POTFILE##*/} >"$tmpfile")
-		oldpot=$tmpfile
-		newpot=$POTFILE
-		oldtitle="the old 'git.pot' file"
-		newtitle="the new generated 'git.pot' file"
+		(cd $PODIR; LANGUAGE=C git show HEAD:./${new##*/} >"$tmpfile")
+		oldtitle="the orignal '${new##*/}' file"
+		newtitle="the new '${new##*/}' file"
 		# Remove tmpfile on exit
 		trap 'rm -f "$tmpfile"' 0
-		echo "Changes of po/git.pot since last update:"
 		;;
 	2)
-		oldpot=$1
-		newpot=$2
-		oldtitle=${oldpot##*/}
-		newtitle=${newpot##*/}
-		echo "Difference between $oldtitle and $newtitle:"
+		old=$1
+		new=$2
+		oldtitle=${old##*/}
+		newtitle=${new##*/}
 		;;
 	*)
-		usage "show_diff takes 2 or null arguments."
+		usage "show_diff takes no more than 2 arguments."
 		;;
 	esac
 
-	LANGUAGE=C msgcmp -N --use-untranslated "$oldpot" "$newpot" 2>&1 | {
+	echo "Difference between $oldtitle and $newtitle:"
+	LANGUAGE=C msgcmp -N --use-untranslated "$old" "$new" 2>&1 | {
 		while read line
 		do
 			# Extract line number "NNN"from output, like:
@@ -245,6 +250,11 @@ show_diff () {
 			echo "   ${del_lines}"
 		fi
 	}
+	if test -n $tmpfile
+	then
+		rm -f $tmpfile
+		trap - 0
+	fi
 }
 
 verify_commit_encoding () {
