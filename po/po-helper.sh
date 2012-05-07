@@ -359,9 +359,9 @@ check_commits () {
 	then
 		usage "check commits only needs 2 arguments"
 	fi
-	since=${1:-origin/master}
-	til=${2:-HEAD}
-
+	. $(git --exec-path)/git-parse-remote
+	since=${1:-$(get_remote_merge_branch)}
+	til=${2:-$(git symbolic-ref -q HEAD)}
 	if git diff-tree -r "$since" "$til" | awk '{print $6}' | grep -qv "^po/"
 	then
 		echo >&2 "============================================================"
