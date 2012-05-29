@@ -343,17 +343,26 @@ verify_commit_log () {
 				subject=$(( subject + 1 ))
 				continue
 			fi
-			if test "${line%.}" != "$line"
-			then
-				echo >&2 "Error: in commit $c, subject should not end with a punctuation."
-			fi
-			if test ${#line} -gt 50
-			then
-				echo >&2 "Error: in commit $c, subject should less than 50 characters."
-			fi
 			if test $subject_lines -gt 1
 			then
 				echo >&2 "Error: in commit $c, multiple lines found in subject."
+				subject=$(( subject + 1 ))
+			else
+				if test "${line%.}" != "$line"
+				then
+					echo >&2 "Error: in commit $c, subject should not end with a punctuation."
+					echo >&2 "       \"$line\""
+				fi
+				if test ${#line} -gt 50
+				then
+					echo >&2 "Error: in commit $c, subject should less than 50 characters."
+					echo >&2 "       \"$line\""
+				fi
+				# Do not detect sob latter for merge commit.
+				if test "${line#Merge }" != "$line"
+				then
+					sob="Merge"
+				fi
 			fi
 		fi
 		# Description in commit log should line wrap at 72 characters.
@@ -362,6 +371,7 @@ verify_commit_log () {
 			if test ${#line} -gt 72
 			then
 				echo >&2 "Error: in commit $c, description should line wrap at 72 characters."
+				echo >&2 "       \"$line\""
 			fi
 			if test "${line#Signed-off-by: }" != "$line"
 			then
