@@ -250,9 +250,9 @@ show_diff () {
 			echo "   ${del_lines}"
 		fi
 	}
-	if test -n $tmpfile
+	if test -n "$tmpfile"
 	then
-		rm -f $tmpfile
+		rm -f "$tmpfile"
 		trap - 0
 	fi
 }
@@ -264,55 +264,115 @@ verify_commit_encoding () {
 	encoding=""
 	log=""
 
-	git cat-file commit $c | {
-		while read line
-		do
-			log="$log - $line"
-			# next line would be the commit log subject line,
-			# if no previous empty line found.
+	while read line
+	do
+		log="$log - $line"
+		# next line would be the commit log subject line,
+		# if no previous empty line found.
+		if test -z "$line"
+		then
+			subject=$(( subject + 1 ))
+			continue
+		fi
+		if test $subject -eq 0
+		then
+			if echo $line | grep -q "^encoding "
+			then
+				encoding=${line#encoding }
+			fi
+		fi
+		# non-ascii found in commit log
+		m=$(echo $line | sed -e "s/\([[:alnum:][:space:][:punct:]]\)//g")
+		if test -n "$m"
+		then
+			non_ascii="$m >> $line <<"
+			if test $subject -eq 1
+			then
+				report_nonascii_in_subject $c "$non_ascii"
+				return
+			fi
+		fi
+		# subject has only one line
+		test $subject -eq 1 && subject=$(( subject + 1 ))
+		# break if there are non-asciis and has already checked subject line
+		if test -n "$non_ascii" && test $subject -gt 0
+		then
+			break
+		fi
+	done
+	if test -n "$non_ascii"
+	then
+		if test -z "$encoding"
+		then
+			echo $line | iconv -f UTF-8 -t UTF-8 -s >/dev/null ||
+				report_bad_encoding "$c" "$non_ascii"
+		else
+			echo $line | iconv -f $encoding -t UTF-8 -s >/dev/null ||
+				report_bad_encoding "$c" "$non_ascii" "$encoding"
+		fi
+	fi
+}
+
+verify_commit_log () {
+	c=$1
+	sob=""
+	subject=0
+	subject_lines=0
+
+	while read line
+	do
+		if test $subject -eq 0
+		then
+			# The first blank line seperate commit object headings
+			# and log messages"
 			if test -z "$line"
 			then
 				subject=$(( subject + 1 ))
+			fi
+			continue
+		fi
+
+		# Subject line should no longger than 50 characters and
+		# should not end with a punctuation.
+		if test $subject -eq 1
+		then
+			if test -n "$line"
+			then
+				subject_lines=$(( subject_lines + 1 ))
+			else
+				subject=$(( subject + 1 ))
 				continue
 			fi
-			if test $subject -eq 0
+			if test "${line%.}" != "$line"
 			then
-				if echo $line | grep -q "^encoding "
-				then
-					encoding=${line#encoding }
-				fi
+				echo >&2 "Error: in commit $c, subject should not end with a punctuation."
 			fi
-			# non-ascii found in commit log
-			m=$(echo $line | sed -e "s/\([[:alnum:][:space:][:punct:]]\)//g")
-			if test -n "$m"
+			if test ${#line} -gt 50
 			then
-				non_ascii="$m >> $line <<"
-				if test $subject -eq 1
-				then
-					report_nonascii_in_subject $c "$non_ascii"
-					return
-				fi
+				echo >&2 "Error: in commit $c, subject should less than 50 characters."
 			fi
-			# subject has only one line
-			test $subject -eq 1 && subject=$(( subject + 1 ))
-			# break if there are non-asciis and has already checked subject line
-			if test -n "$non_ascii" && test $subject -gt 0
+			if test $subject_lines -gt 1
 			then
-				break
-			fi
-		done
-		if test -n "$non_ascii"
-		then
-			if test -z "$encoding"
-			then
-				echo $line | iconv -f UTF-8 -t UTF-8 -s >/dev/null ||
-					report_bad_encoding "$c" "$non_ascii"
-			else
-				echo $line | iconv -f $encoding -t UTF-8 -s >/dev/null ||
-					report_bad_encoding "$c" "$non_ascii" "$encoding"
+				echo >&2 "Error: in commit $c, multiple lines found in subject."
 			fi
 		fi
-	}
+		# Description in commit log should line wrap at 72 characters.
+		if test $subject -gt 1
+		then
+			if test ${#line} -gt 72
+			then
+				echo >&2 "Error: in commit $c, description should line wrap at 72 characters."
+			fi
+			if test "${line#Signed-off-by: }" != "$line"
+			then
+				sob=$line
+			fi
+		fi
+	done
+	if test -z "$sob"
+	then
+		echo >&2 "Error: in commit $c, there should have a 'Signed-off-by:' line."
+	fi
 }
 
 report_nonascii_in_subject () {
@@ -373,7 +433,9 @@ check_commits () {
 	git rev-list ${since}..${til} | {
 		while read c
 		do
-			verify_commit_encoding $c
+			cobject=$(git cat-file commit $c)
+			echo "$cobject" | verify_commit_encoding $c
+			echo "$cobject" | verify_commit_log $c
 			count=$(( count + 1 ))
 		done
 		echo "$count commits checked complete."
