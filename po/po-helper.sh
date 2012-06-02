@@ -4,6 +4,7 @@
 
 PODIR=$(git rev-parse --show-cdup)po
 POTFILE=$PODIR/git.pot
+TEAMSFILE=$PODIR/TEAMS
 
 usage () {
 	cat <<-\END_OF_USAGE
@@ -34,6 +35,9 @@ Usage:
  * po-helper.sh diff [ <old> <new> ]
        Show difference between old and new po/pot files.
        Default show changes of git.pot since last update.
+
+ * po-helper.sh team [team] [ leader | member ]
+       Show team leader or members with de-obfuscate email address.
 END_OF_USAGE
 
 	if test $# -gt 0
@@ -452,6 +456,82 @@ check_commits () {
 	}
 }
 
+# Show leader or members of l10n team(s)
+show_team () {
+	role="all"
+	team=""
+
+	case $# in
+	0)
+		;;
+	1)
+		case $1 in
+		leader | member | members | all)
+			role=$1
+			;;
+		*)
+			team=$1
+			;;
+		esac
+		;;
+	2)
+		team=$1
+		role=$2
+		;;
+	*)
+		usage "show_team takes no more than 2 arguments."
+		;;
+	esac
+
+	test "$role" = "leader" || role="all"
+
+	if test ! -f $TEAMSFILE
+	then
+		echo >&2 "TEAMS file not found."
+		exit 1
+	fi
+
+	while read line
+	do
+		test "${line#\#}" != "$line" && continue
+		if test "${line%:*}" = "Language"
+		then
+			ct=$(echo $line | sed -e 's/^Language:[[:space:]]*\([^[:space:]]*\)[[:space:]]*(.*)$/\1/g')
+			if test -z "$team" || test "$team" = "$ct"
+			then
+				while read line
+				do
+					test -z "$line" && break
+					if test "${line%:*}" = "Leader"
+					then
+						cl=$(echo $line | sed -e 's/^Leader:[[:space:]]*//' -e 's/ AT /@/g')
+						if test "$role" = "leader" || test "$role" = "all"
+						then
+							echo $cl
+						fi
+					elif test "${line%:*}" = "Members"
+					then
+						cm=$(echo $line | sed -e 's/^Members:[[:space:]]*//' -e 's/ AT /@/g')
+
+						if test "$role" = "all"
+						then
+							echo $cm
+						fi
+					elif test "${line%:*}" = "$line"
+					then
+						if test "$role" = "all"
+						then
+							echo $line | sed -e 's/ AT /@/g'
+						fi
+					fi
+				done
+				test -n "$team" && break
+			fi
+		fi
+	done < $TEAMSFILE
+
+}
+
 
 test $# -eq 0 && usage
 
@@ -477,6 +557,11 @@ do
 	diff)
 		shift
 		show_diff "$@"
+		break
+		;;
+	team | teams)
+		shift
+		show_team "$@"
 		break
 		;;
 	*.po)
