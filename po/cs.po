@@ -538,12 +538,12 @@ msgstr ""
 #: sequencer.c:664
 #, c-format
 msgid "Could not open %s"
-msgstr ""
+msgstr "Nelze otevřít %s"
 
 #: sequencer.c:668
 #, c-format
 msgid "Could not read %s."
-msgstr ""
+msgstr "Nelze přečíst %s."
 
 #: sequencer.c:675
 #, c-format
@@ -553,12 +553,12 @@ msgstr ""
 #: sequencer.c:703
 #, c-format
 msgid "Invalid key: %s"
-msgstr ""
+msgstr "Neplatný klíč: %s"
 
 #: sequencer.c:706
 #, c-format
 msgid "Invalid value for %s: %s"
-msgstr ""
+msgstr "Neplatná hodnota pro %s: %s"
 
 #: sequencer.c:718
 #, c-format
@@ -571,7 +571,7 @@ msgstr ""
 
 #: sequencer.c:740
 msgid "try \"git cherry-pick (--continue | --quit | --abort)\""
-msgstr ""
+msgstr "zkuste \"git cherry-pick (--continue | --quit | --abort)\""
 
 #: sequencer.c:744
 #, c-format
@@ -589,7 +589,7 @@ msgstr ""
 
 #: sequencer.c:781
 msgid "cannot resolve HEAD"
-msgstr ""
+msgstr "nemohu najít HEAD"
 
 #: sequencer.c:783
 msgid "cannot abort from a branch yet to be born"
@@ -598,16 +598,16 @@ msgstr ""
 #: sequencer.c:805 builtin/apply.c:3697
 #, c-format
 msgid "cannot open %s: %s"
-msgstr ""
+msgstr "nelze otevřít %s: %s"
 
 #: sequencer.c:808
 #, c-format
 msgid "cannot read %s: %s"
-msgstr ""
+msgstr "nelze přečíst %s: %s"
 
 #: sequencer.c:809
 msgid "unexpected end of file"
-msgstr ""
+msgstr "neočekávaný konec souboru"
 
 #: sequencer.c:815
 #, c-format
@@ -653,7 +653,7 @@ msgstr ""
 
 #: wrapper.c:414
 msgid "no such user"
-msgstr ""
+msgstr "uživatel neexistuje"
 
 #: wt-status.c:135
 msgid "Unmerged paths:"
@@ -709,7 +709,7 @@ msgstr ""
 
 #: wt-status.c:208
 msgid "bug"
-msgstr ""
+msgstr "chyba"
 
 #: wt-status.c:213
 msgid "both deleted:"
@@ -862,7 +862,7 @@ msgstr ""
 
 #: wt-status.c:800
 msgid " (working directory clean)"
-msgstr ""
+msgstr " (pracovní adresář je čistý)"
 
 #: wt-status.c:908
 msgid "HEAD (no branch)"
@@ -887,11 +887,11 @@ msgstr ""
 #: builtin/add.c:62
 #, c-format
 msgid "unexpected diff status %c"
-msgstr ""
+msgstr "neočekávaný diff status %c"
 
 #: builtin/add.c:67 builtin/commit.c:226
 msgid "updating files failed"
-msgstr ""
+msgstr "aktualizace souborů zhavarovala"
 
 #: builtin/add.c:77
 #, c-format
@@ -919,12 +919,12 @@ msgstr ""
 
 #: builtin/add.c:276
 msgid "Could not read the index"
-msgstr ""
+msgstr "Nelze přečíst index"
 
 #: builtin/add.c:286
 #, c-format
 msgid "Could not open '%s' for writing."
-msgstr ""
+msgstr "Nelze otevřít '%s' pro zápis."
 
 #: builtin/add.c:290
 msgid "Could not write patch"
@@ -955,11 +955,11 @@ msgstr ""
 
 #: builtin/add.c:353
 msgid "no files added"
-msgstr ""
+msgstr "žádné soubory nepřidány"
 
 #: builtin/add.c:359
 msgid "adding files failed"
-msgstr ""
+msgstr "přidání souborů zhavarovalo"
 
 #: builtin/add.c:391
 msgid "-A and -u are mutually incompatible"
@@ -1656,7 +1656,7 @@ msgstr ""
 
 #: builtin/branch.c:808
 msgid "--column and --verbose are incompatible"
-msgstr ""
+msgstr "--column a --verbose jsou neslučitelné"
 
 #: builtin/branch.c:857
 msgid "-a and -r options to 'git branch' do not make sense with a branch name"
@@ -1851,7 +1851,7 @@ msgstr ""
 
 #: builtin/checkout.c:1019
 msgid "git checkout: -f and -m are incompatible"
-msgstr ""
+msgstr "git checkout: -f a -m jsou neslučitelné" 
 
 #: builtin/checkout.c:1053
 msgid "invalid path specification"
@@ -3862,7 +3862,7 @@ msgstr ""
 
 #: builtin/push.c:285
 msgid "--all and --tags are incompatible"
-msgstr ""
+msgstr "--all a --tags jsou neslučitelné"
 
 #: builtin/push.c:286
 msgid "--all can't be combined with refspecs"
@@ -3870,7 +3870,7 @@ msgstr ""
 
 #: builtin/push.c:291
 msgid "--mirror and --tags are incompatible"
-msgstr ""
+msgstr "--mirror a --tags jsou neslučitelné"
 
 #: builtin/push.c:292
 msgid "--mirror can't be combined with refspecs"
@@ -3878,7 +3878,7 @@ msgstr ""
 
 #: builtin/push.c:297
 msgid "--all and --mirror are incompatible"
-msgstr ""
+msgstr "--all a --mirror jsou neslučitelné"
 
 #: builtin/push.c:385
 msgid "--delete is incompatible with --all, --mirror and --tags"
