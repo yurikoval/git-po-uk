@@ -37,12 +37,12 @@ msgstr ""
 #: bundle.c:36
 #, c-format
 msgid "'%s' does not look like a v2 bundle file"
-msgstr ""
+msgstr "'%s' nevzpadá jako soubor s v2 balíčkem"
 
 #: bundle.c:63
 #, c-format
 msgid "unrecognized header: %s%s (%d)"
-msgstr ""
+msgstr "nerozpoznaná hlavička: %s%s (%d)"
 
 #: bundle.c:89 builtin/commit.c:696
 #, c-format
@@ -63,21 +63,21 @@ msgstr ""
 #, c-format
 msgid "The bundle contains %d ref"
 msgid_plural "The bundle contains %d refs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Baliček obsahuje %d referenci"
+msgstr[1] "Baliček obsahuje %d reference"
+msgstr[2] "Baliček obsahuje %d referencí"
 
 #: bundle.c:192
 #, c-format
 msgid "The bundle requires this ref"
 msgid_plural "The bundle requires these %d refs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Baliček vyžaduje %d referenci"
+msgstr[1] "Baliček vyžaduje %d reference"
+msgstr[2] "Baliček vyžaduje %d referencí"
 
 #: bundle.c:290
 msgid "rev-list died"
-msgstr ""
+msgstr "rev-list zhavarovalo"
 
 #: bundle.c:296 builtin/log.c:1205 builtin/shortlog.c:284
 #, c-format
@@ -87,11 +87,11 @@ msgstr ""
 #: bundle.c:331
 #, c-format
 msgid "ref '%s' is excluded by the rev-list options"
-msgstr ""
+msgstr "reference '%s' je vyloučena pomocí přepínače rev-list"
 
 #: bundle.c:376
 msgid "Refusing to create empty bundle."
-msgstr ""
+msgstr "Nelze vytvořit prázdný balíček."
 
 #: bundle.c:394
 msgid "Could not spawn pack-objects"
@@ -99,120 +99,120 @@ msgstr ""
 
 #: bundle.c:412
 msgid "pack-objects died"
-msgstr ""
+msgstr "pack-objects zhavarovalo"
 
 #: bundle.c:415
 #, c-format
 msgid "cannot create '%s'"
-msgstr ""
+msgstr "nelze vytvořit '%s'"
 
 #: bundle.c:437
 msgid "index-pack died"
-msgstr ""
+msgstr "index-pack zhavarovalo"
 
 #: commit.c:48
 #, c-format
 msgid "could not parse %s"
-msgstr ""
+msgstr "nelze zpracovat %s"
 
 #: commit.c:50
 #, c-format
 msgid "%s %s is not a commit!"
-msgstr ""
+msgstr "%s %s není commit!"
 
 #: compat/obstack.c:406 compat/obstack.c:408
 msgid "memory exhausted"
-msgstr ""
+msgstr "nedostatek paměti"
 
 #: connected.c:39
 msgid "Could not run 'git rev-list'"
-msgstr ""
+msgstr "Nelze provést 'git rev-list'"
 
 #: connected.c:48
 #, c-format
 msgid "failed write to rev-list: %s"
-msgstr ""
+msgstr "chyba zápisu do rev-list: %s"
 
 #: connected.c:56
 #, c-format
 msgid "failed to close rev-list's stdin: %s"
-msgstr ""
+msgstr "chba při zaření stdin rev-list: %s"
 
 #: date.c:95
 msgid "in the future"
-msgstr ""
+msgstr "v budoucnu"
 
 #: date.c:101
 #, c-format
 msgid "%lu second ago"
 msgid_plural "%lu seconds ago"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "před %lu sekundou"
+msgstr[1] "před %lu sekundami"
+msgstr[2] "před %lu sekundami"
 
 #: date.c:108
 #, c-format
 msgid "%lu minute ago"
 msgid_plural "%lu minutes ago"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "před %lu minutou"
+msgstr[1] "před %lu minutami"
+msgstr[2] "před %lu minutami"
 
 #: date.c:115
 #, c-format
 msgid "%lu hour ago"
 msgid_plural "%lu hours ago"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "před %lu hodinou"
+msgstr[1] "před %lu hodinami"
+msgstr[2] "před %lu hodinami"
 
 #: date.c:122
 #, c-format
 msgid "%lu day ago"
 msgid_plural "%lu days ago"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "před %lu dnem"
+msgstr[1] "před %lu dny"
+msgstr[2] "před %lu dny"
 
 #: date.c:128
 #, c-format
 msgid "%lu week ago"
 msgid_plural "%lu weeks ago"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "před %lu týdnem"
+msgstr[1] "před %lu týdny"
+msgstr[2] "před %lu týdny"
 
 #: date.c:135
 #, c-format
 msgid "%lu month ago"
 msgid_plural "%lu months ago"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "před %lu měsícem"
+msgstr[1] "před %lu měsíci"
+msgstr[2] "před %lu měsíci"
 
 #: date.c:146
 #, c-format
 msgid "%lu year"
 msgid_plural "%lu years"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%lu rok"
+msgstr[1] "%lu roky"
+msgstr[2] "%lu let"
 
 #: date.c:149
 #, c-format
 msgid "%s, %lu month ago"
 msgid_plural "%s, %lu months ago"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%s, před %lu měsícem"
+msgstr[1] "%s, před %lu měsíci"
+msgstr[2] "%s, před %lu měsíci"
 
 #: date.c:154 date.c:159
 #, c-format
 msgid "%lu year ago"
 msgid_plural "%lu years ago"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "před %lu rokem"
+msgstr[1] "před %lu roky"
+msgstr[2] "před %lu lety"
 
 #: diff.c:105
 #, c-format
@@ -233,31 +233,31 @@ msgstr ""
 
 #: diff.c:1400
 msgid " 0 files changed\n"
-msgstr ""
+msgstr "0 souborů změněno\n"
 
 #: diff.c:1404
 #, c-format
 msgid " %d file changed"
 msgid_plural " %d files changed"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] " %d soubor změněn"
+msgstr[1] " %d soubory změněny"
+msgstr[2] " %d souborů změněno"
 
 #: diff.c:1421
 #, c-format
 msgid ", %d insertion(+)"
 msgid_plural ", %d insertions(+)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] ", %d vložení(+)"
+msgstr[1] ", %d vložení(+)"
+msgstr[2] ", %d vložení(+)"
 
 #: diff.c:1432
 #, c-format
 msgid ", %d deletion(-)"
 msgid_plural ", %d deletions(-)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] ", %d odstranění(-)"
+msgstr[1] ", %d odstranění(-)"
+msgstr[2] ", %d odstranění(-)"
 
 #: diff.c:3478
 #, c-format
@@ -268,20 +268,20 @@ msgstr ""
 
 #: gpg-interface.c:59
 msgid "could not run gpg."
-msgstr ""
+msgstr "nepovedlo se spustit gpg."
 
 #: gpg-interface.c:71
 msgid "gpg did not accept the data"
-msgstr ""
+msgstr "pgp nepřijalo data"
 
 #: gpg-interface.c:82
 msgid "gpg failed to sign the data"
-msgstr ""
+msgstr "gpg nepodepsalo data"
 
 #: grep.c:1320
 #, c-format
 msgid "'%s': unable to read %s"
-msgstr ""
+msgstr "'%s': nelze přečíst %s"
 
 #: grep.c:1337
 #, c-format
@@ -328,54 +328,54 @@ msgstr ""
 #: help.c:361
 #, c-format
 msgid "git: '%s' is not a git command. See 'git --help'."
-msgstr ""
+msgstr "git: '%s' není git příkazem, více 'git --help'."
 
 #: help.c:365
 msgid ""
 "\n"
 "Did you mean this?"
-msgid_plural ""
+msgid_plural "Neměli jste na mysli toto?"
 "\n"
 "Did you mean one of these?"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Neměli jste na mysli tyto?"
+msgstr[1] "Neměli jste na mysli tyto?"
+msgstr[2] "Neměli jste na mysli tyto?"
 
 #: parse-options.c:493
 msgid "..."
-msgstr ""
+msgstr "..."
 
 #: parse-options.c:511
 #, c-format
 msgid "usage: %s"
-msgstr ""
+msgstr "použití: %s"
 
 #. TRANSLATORS: the colon here should align with the
 #. one in "usage: %s" translation
 #: parse-options.c:515
 #, c-format
 msgid "   or: %s"
-msgstr ""
+msgstr "     či: %s"
 
 #: parse-options.c:518
 #, c-format
 msgid "    %s"
-msgstr ""
+msgstr "    %s"
 
 #: remote.c:1629
 #, c-format
 msgid "Your branch is ahead of '%s' by %d commit.\n"
 msgid_plural "Your branch is ahead of '%s' by %d commits.\n"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Vaše větev je popředu od '%s' o %d commit.\n"
+msgstr[1] "Vaše větev je popředu od '%s' o %d commity.\n"
+msgstr[2] "Vaše větev je popředu od '%s' o %d commitů.\n"
 
 #: remote.c:1635
 #, c-format
 msgid "Your branch is behind '%s' by %d commit, and can be fast-forwarded.\n"
 msgid_plural ""
 "Your branch is behind '%s' by %d commits, and can be fast-forwarded.\n"
-msgstr[0] ""
+msgstr[0] "Vaše větev je pozadu od '%s' o %d commit.\n"
 msgstr[1] ""
 msgstr[2] ""
 
@@ -1105,12 +1105,12 @@ msgstr ""
 
 #: builtin/apply.c:2048
 #, c-format
-msgid "unable to read symlink %s"
+msgid "nelze přečíst symlink %s"
 msgstr ""
 
 #: builtin/apply.c:2052
 #, c-format
-msgid "unable to open or read %s"
+msgid "nelze otevřít či přečíst %s"
 msgstr ""
 
 #: builtin/apply.c:2123
@@ -1314,12 +1314,12 @@ msgid "unrecognized input"
 msgstr ""
 
 #: builtin/apply.c:3855
-msgid "unable to read index file"
+msgid "nelze přečíst index soubor"
 msgstr ""
 
 #: builtin/apply.c:3970 builtin/apply.c:3973
 msgid "path"
-msgstr ""
+msgstr "cesta"
 
 #: builtin/apply.c:3971
 msgid "don't apply changes matching the given path"
@@ -1439,7 +1439,7 @@ msgstr ""
 
 #: builtin/apply.c:4069
 #, c-format
-msgid "can't open patch '%s'"
+msgid "nemohu otevřít patch '%s'"
 msgstr ""
 
 #: builtin/apply.c:4083
@@ -2665,7 +2665,7 @@ msgstr ""
 
 #: builtin/grep.c:478 builtin/grep.c:512
 #, c-format
-msgid "unable to read tree (%s)"
+msgid "nelze přečíst strom (%s)"
 msgstr ""
 
 #: builtin/grep.c:526
