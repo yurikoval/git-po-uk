@@ -36,7 +36,7 @@ Usage:
        Show difference between old and new po/pot files.
        Default show changes of git.pot since last update.
 
- * po-helper.sh team [team] [ leader | member ]
+ * po-helper.sh team [[team] [ leader | member ]]
        Show team leader or members with de-obfuscate email address.
 END_OF_USAGE
 
@@ -167,11 +167,15 @@ show_diff () {
 
 	case $# in
 	0 | 1)
-		if test $# -eq 1
+		if test $# -eq 1 && test "$1" != "$POTFILE"
 		then
 			new=$1
+			str_from_old="from the orignal '${new##*/}' file "
+			str_to_new="in the new '${new##*/}' file "
 		else
 			new=$POTFILE
+			str_from_old="from the previous version "
+			str_to_new=""
 		fi
 		tmpfile=$(mktemp /tmp/git-po.XXXX)
 		old=$tmpfile
@@ -182,23 +186,21 @@ show_diff () {
 			return 0
 		fi
 		(cd $PODIR; LANGUAGE=C git show HEAD:./${new##*/} >"$tmpfile")
-		oldtitle="the orignal '${new##*/}' file"
-		newtitle="the new '${new##*/}' file"
 		# Remove tmpfile on exit
 		trap 'rm -f "$tmpfile"' 0
 		;;
 	2)
 		old=$1
 		new=$2
-		oldtitle=${old##*/}
-		newtitle=${new##*/}
+		str_from_old="from ${old##*/} "
+		str_to_new="in ${new##*/} "
 		;;
 	*)
 		usage "show_diff takes no more than 2 arguments."
 		;;
 	esac
 
-	echo "Difference between $oldtitle and $newtitle:"
+	echo "Differences between ${old##*/} and ${new##*/}:"
 	LANGUAGE=C msgcmp -N --use-untranslated "$old" "$new" 2>&1 | {
 		while read line
 		do
@@ -238,19 +240,30 @@ show_diff () {
 		fi
 		if test $new_count -gt 0
 		then
-			test $new_count -ne 1 && new_plur="s" || new_plur=""
 			echo
-			echo " * Add ${new_count} new l10n message${new_plur}" \
-				 "in $newtitle at" \
-				 "line${new_plur}:"
+			if test $new_count -gt 1
+			then
+				echo " * ${new_count} new messages are added" \
+				     "${str_to_new}at lines:"
+			else
+				echo " * ${new_count} new message is added" \
+				     "${str_to_new}at line:"
+			fi
+			echo
 			echo "   ${new_lines}"
 		fi
 		if test $del_count -gt 0
 		then
-			test $del_count -ne 1 && del_plur="s" || del_plur=""
 			echo
-			echo " * Remove ${del_count} l10n message${del_plur}" \
-				 "from $oldtitle at line${del_plur}:"
+			if test $del_count -gt 1
+			then
+				echo " * ${del_count} old messages are deleted" \
+				     "${str_from_old}at lines:"
+			else
+				echo " * ${del_count} old message is deleted" \
+				     "${str_from_old}at line:"
+			fi
+			echo
 			echo "   ${del_lines}"
 		fi
 	}
@@ -466,7 +479,7 @@ show_team () {
 		;;
 	1)
 		case $1 in
-		leader | member | members | all)
+		leader* | member* | all)
 			role=$1
 			;;
 		*)
@@ -475,8 +488,16 @@ show_team () {
 		esac
 		;;
 	2)
-		team=$1
-		role=$2
+		case $1 in
+		leader* | member* | all)
+			role=$1
+			team=$2
+			;;
+		*)
+			team=$1
+			role=$2
+			;;
+		esac
 		;;
 	*)
 		usage "show_team takes no more than 2 arguments."
@@ -507,7 +528,7 @@ show_team () {
 						cl=$(echo $line | sed -e 's/^Leader:[[:space:]]*//' -e 's/ AT /@/g')
 						if test "$role" = "leader" || test "$role" = "all"
 						then
-							echo $cl
+							echo $cl,
 						fi
 					elif test "${line%:*}" = "Members"
 					then
@@ -515,13 +536,13 @@ show_team () {
 
 						if test "$role" = "all"
 						then
-							echo $cm
+							echo $cm,
 						fi
 					elif test "${line%:*}" = "$line"
 					then
 						if test "$role" = "all"
 						then
-							echo $line | sed -e 's/ AT /@/g'
+							echo $line, | sed -e 's/ AT /@/g'
 						fi
 					fi
 				done
