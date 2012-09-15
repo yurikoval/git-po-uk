@@ -161,8 +161,6 @@ show_diff () {
 	pdel="^.*:\([0-9]*\): warning: this message is not used.*"
 	new_count=0
 	del_count=0
-	new_lines=
-	del_lines=
 	tmpfile=
 
 	case $# in
@@ -182,7 +180,7 @@ show_diff () {
 		status=$(cd $PODIR; git status --porcelain -- ${new##*/})
 		if test -z "$status"
 		then
-			echo "Nothing changed."
+			echo "# Nothing changed"
 			return 0
 		fi
 		(cd $PODIR; LANGUAGE=C git show HEAD:./${new##*/} >"$tmpfile")
@@ -200,7 +198,8 @@ show_diff () {
 		;;
 	esac
 
-	echo "Differences between ${old##*/} and ${new##*/}:"
+	echo "# Commit log is from differences between ${old##*/} and ${new##*/}"
+	echo
 	LANGUAGE=C msgcmp -N --use-untranslated "$old" "$new" 2>&1 | {
 		while read line
 		do
@@ -210,12 +209,6 @@ show_diff () {
 			if test -n "$m"
 			then
 				new_count=$(( new_count + 1 ))
-				if test -z "$new_lines"
-				then
-					new_lines="$m"
-				else
-					new_lines="${new_lines}, $m"
-				fi
 				continue
 			fi
 
@@ -225,48 +218,36 @@ show_diff () {
 			if test -n "$m"
 			then
 				del_count=$(( del_count + 1 ))
-				if test -z "$del_lines"
-				then
-					del_lines="$m"
-				else
-					del_lines="${del_lines}, $m"
-				fi
 			fi
 		done
 		if test $new_count -eq 0 && test $del_count -eq 0
 		then
-			echo "Nothing changed."
+			echo "# Nothing changed"
 			return 0
-		fi
-		if test $new_count -gt 0
+		elif test $new_count -eq 0
 		then
-			echo
-			if test $new_count -gt 1
-			then
-				echo " * ${new_count} new messages are added" \
-				     "${str_to_new}at lines:"
-			else
-				echo " * ${new_count} new message is added" \
-				     "${str_to_new}at line:"
-			fi
-			echo
-			echo "   ${new_lines}"
-		fi
-		if test $del_count -gt 0
+			short_stat="$del_count removed"
+		elif test $del_count -eq 0
 		then
-			echo
-			if test $del_count -gt 1
-			then
-				echo " * ${del_count} old messages are deleted" \
-				     "${str_from_old}at lines:"
-			else
-				echo " * ${del_count} old message is deleted" \
-				     "${str_from_old}at line:"
-			fi
-			echo
-			echo "   ${del_lines}"
+			short_stat="$new_count new"
+		else
+			short_stat="$new_count new, $del_count removed"
 		fi
+		if test $(( $new_count + $del_count )) -gt 1
+		then
+			short_stat="$short_stat messages"
+		else
+			short_stat="$short_stat message"
+		fi
+
+		echo "l10n: Update git.pot ($short_stat)"
+		echo
 	}
+	echo "Generate po/git.pot from $(git describe --always) with these i18n update(s):"
+	echo
+	last_changed=$(git log --pretty="%H" -1 $POTFILE)
+	git log --pretty=" * %s" $last_changed.. | grep "^ \* i18n:"
+
 	if test -n "$tmpfile"
 	then
 		rm -f "$tmpfile"
