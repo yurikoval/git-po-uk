@@ -22,7 +22,7 @@ Usage:
  * po-helper.sh check XX.po ...
        Perform syntax check on XX.po file(s)
 
- * po-helper.sh check commits [ <since> <til> ]
+ * po-helper.sh check [commits [ <since> <til> ]]
        Check proper encoding of non-ascii chars in commit logs
 
        - don't write commit log with non-ascii chars without proper
@@ -35,9 +35,6 @@ Usage:
  * po-helper.sh diff [ <old> <new> ]
        Show difference between old and new po/pot files.
        Default show changes of git.pot since last update.
-
- * po-helper.sh team [[team] [ leader | member ]]
-       Show team leader or members with de-obfuscate email address.
 END_OF_USAGE
 
 	if test $# -gt 0
@@ -48,6 +45,11 @@ END_OF_USAGE
 	else
 		exit 0
 	fi
+}
+
+die () {
+	echo >&2 "$@"
+	exit 1
 }
 
 # Init or update XX.po file from git.pot
@@ -99,21 +101,27 @@ notes_for_l10n_team_leader () {
 check () {
 	if test $# -eq 0
 	then
+		echo "------------------------------------------------------------"
 		ls $PODIR/*.po |
 		while read f
 		do
-			echo "============================================================"
-			echo "Check ${f##*/}..."
-			check "$f"
+			printf "%-10s: %s\n" "${f##*/}" "$(check "$f" 2>&1)"
 		done
 
-		echo "============================================================"
+		echo "------------------------------------------------------------"
 		echo "Show updates of git.pot..."
+		echo
 		show_diff
 
-		echo "============================================================"
+		echo "------------------------------------------------------------"
 		echo "Check commits..."
+		echo
 		check commits
+		echo "------------------------------------------------------------"
+		echo "Check for upstream update..."
+		echo
+		check update
+		echo "------------------------------------------------------------"
 	fi
 	while test $# -gt 0
 	do
@@ -124,6 +132,11 @@ check () {
 		commit | commits)
 			shift
 			check_commits "$@"
+			break
+			;;
+		update)
+			shift
+			check_upstream_update kernel
 			break
 			;;
 		*)
@@ -155,12 +168,60 @@ check_po () {
 	done
 }
 
-# Show summary of updates of git.pot or difference between two po/pot files.
-show_diff () {
+# Show differences between 2 po/pot files
+# Return 1 if find any difference(s)
+po_diff_stat () {
+	left=$1
+	right=$2
+	test -f "$left"  || die "File $left not exist!"
+	test -f "$right" || die "File $right not exist!"
+
 	pnew="^.*:\([0-9]*\): this message is used but not defined in.*"
 	pdel="^.*:\([0-9]*\): warning: this message is not used.*"
 	new_count=0
 	del_count=0
+	diffstat=
+
+	LANGUAGE=C msgcmp -N --use-untranslated "$left" "$right" 2>&1 | {
+		while read line
+		do
+			# New message example:
+			#     git.pot:NNN: this message is used but not defined in /tmp/git.po.XXXX
+			m=$(echo $line | grep "$pnew" | sed -e "s/$pnew/\1/")
+			if test -n "$m"
+			then
+				new_count=$(( new_count + 1 ))
+				continue
+			fi
+
+			# Delete message example:
+			#     /tmp/git.po.XXXX:NNN: warning: this message is not used
+			m=$(echo $line | grep "$pdel" | sed -e "s/$pdel/\1/")
+			if test -n "$m"
+			then
+				del_count=$(( del_count + 1 ))
+			fi
+		done
+		if test $new_count -eq 0 && test $del_count -eq 0
+		then
+			return 0
+		elif test $new_count -eq 0
+		then
+			diffstat="$del_count removed"
+		elif test $del_count -eq 0
+		then
+			diffstat="$new_count new"
+		else
+			diffstat="$new_count new, $del_count removed"
+		fi
+
+		echo "$diffstat"
+		return $(( new_count + del_count ))
+	}
+}
+
+# Show summary of updates of git.pot or difference between two po/pot files.
+show_diff () {
 	tmpfile=
 
 	case $# in
@@ -180,7 +241,7 @@ show_diff () {
 		status=$(cd $PODIR; git status --porcelain -- ${new##*/})
 		if test -z "$status"
 		then
-			echo "# Nothing changed"
+			echo >&2 "# Nothing changed. (run 'make pot' first)"
 			return 0
 		fi
 		(cd $PODIR; LANGUAGE=C git show HEAD:./${new##*/} >"$tmpfile")
@@ -198,60 +259,17 @@ show_diff () {
 		;;
 	esac
 
-	echo "# Commit log is from differences between ${old##*/} and ${new##*/}"
-	echo
-	LANGUAGE=C msgcmp -N --use-untranslated "$old" "$new" 2>&1 | {
-		while read line
-		do
-			# Extract line number "NNN"from output, like:
-			#     git.pot:NNN: this message is used but not defined in /tmp/git.po.XXXX
-			m=$(echo $line | grep "$pnew" | sed -e "s/$pnew/\1/")
-			if test -n "$m"
-			then
-				new_count=$(( new_count + 1 ))
-				continue
-			fi
-
-			# Extract line number "NNN" from output, like:
-			#     /tmp/git.po.XXXX:NNN: warning: this message is not used
-			m=$(echo $line | grep "$pdel" | sed -e "s/$pdel/\1/")
-			if test -n "$m"
-			then
-				del_count=$(( del_count + 1 ))
-			fi
-		done
-		if test $new_count -eq 0 && test $del_count -eq 0
-		then
-			echo "# Nothing changed"
-			return 0
-		elif test $new_count -eq 0
-		then
-			short_stat="$del_count removed"
-		elif test $del_count -eq 0
-		then
-			short_stat="$new_count new"
-		else
-			short_stat="$new_count new, $del_count removed"
-		fi
-		if test $(( $new_count + $del_count )) -gt 1
-		then
-			short_stat="$short_stat messages"
-		else
-			short_stat="$short_stat message"
-		fi
-
-		echo "l10n: Update git.pot ($short_stat)"
-		echo
-	}
-	echo "Generate po/git.pot from $(git describe --always) with these i18n update(s):"
-	echo
-	last_changed=$(git log --pretty="%H" -1 $POTFILE)
-	git log --pretty=" * %s" $last_changed.. | grep "^ \* i18n:"
-
-	if test -n "$tmpfile"
+	diffstat=$(po_diff_stat "$old" "$new")
+	if test $? -eq 0
 	then
-		rm -f "$tmpfile"
-		trap - 0
+		return 0
+	else
+		echo >&2 "# Diff between ${old##*/} and ${new##*/}"
+		echo >&2
+		echo "l10n: git.pot: vN.N.N round N ($diffstat)"
+		echo
+		echo "Generate po/git.pot from $(git describe --always) for git vN.N.N l10n round N."
+		return 1
 	fi
 }
 
@@ -450,6 +468,76 @@ check_commits () {
 	}
 }
 
+# Check whether upstream master/next branches have new l10n strings
+# Default remote: kernel
+check_upstream_update () {
+	if test $# -ne 1
+	then
+		if git remote | grep "^kernel$"
+		then
+			remote="kernel"
+		else
+			die "Check which <remote> ?"
+		fi
+	elif test "$1" = "origin"
+	then
+		die "<remote> can not be 'origin'"
+	else
+		remote=$1
+	fi
+
+	# Must in top dir
+	test -f "po/git.pot" || die "File po/git.pot does not exist!"
+
+	# Fetch form origin and <remote>, which can be done manually.
+	#git fetch
+	#git fetch $remote
+
+	# Validate remote branch: $remote/master, and $remote/next
+	if ! git rev-parse "remotes/$remote/master" "remotes/$remote/next" >/dev/null 2>&1
+	then
+		echo >&2 "Required branch master and/or next not exist in $remote"
+		exit 1
+	fi
+
+	# Save current branch and save current git.pot as $working
+	current_branch=$(git symbolic-ref --short HEAD 2>/dev/null || \
+	                 git rev-parse HEAD)
+	working=$(mktemp /tmp/git-pot.XXXX)
+	cp po/git.pot $working
+	# Stash all files include ignore files, (such as config.mak.autogen,
+	# config.status), which may break "make pot" latter.
+	git stash save --all >/dev/null
+	trap "git reset --hard >/dev/null 2>&1;
+	      git checkout $current_branch >/dev/null 2>&1;
+	      git stash pop >/dev/null 2>&1;
+	      rm -f \"$working\"" 0
+
+	result=0
+	for branch in "remotes/$remote/master" "remotes/$remote/next"
+	do
+		git checkout --quiet $branch
+		touch -t 200504071513.13 po/git.pot
+		make pot >/dev/null 2>&1
+		diffstat=$(po_diff_stat "$working" po/git.pot)
+		error_code=$?
+		if test $error_code -ne 0
+		then
+			result=1
+			echo "New l10n updates found in \"$(basename $branch)\" branch of remote \"<$remote>\":"
+			if test $error_code -eq 1
+			then
+				echo "    $diffstat message."
+			else
+				echo "    $diffstat messages."
+			fi
+			echo
+		fi
+		git checkout -- po/git.pot
+	done
+	return $result
+}
+
 # Show leader or members of l10n team(s)
 show_team () {
 	role="all"
@@ -534,6 +622,7 @@ show_team () {
 
 }
 
+#############################################################################
 
 test $# -eq 0 && usage
 
