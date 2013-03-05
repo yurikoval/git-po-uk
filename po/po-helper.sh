@@ -118,9 +118,9 @@ check () {
 		echo
 		check commits
 		echo "------------------------------------------------------------"
-		echo "Check for upstream update..."
-		echo
-		check update
+		echo "Note: If you want to check for upstream l10n update, run:"
+		echo "Note:"
+		echo "Note:     po-helper.sh check update <remote>"
 		echo "------------------------------------------------------------"
 	fi
 	while test $# -gt 0
@@ -136,7 +136,22 @@ check () {
 			;;
 		update)
 			shift
-			check_upstream_update kernel
+			if test $# -eq 0
+			then
+				echo "Input remote name on which you want to check for l10n update:"
+				read remote
+			else
+				remote="$1"
+			fi
+			if test -z "$remote"
+			then
+				echo >&2 "Must provides a valid remote name."
+			elif git remote | grep -q "^$remote$"
+			then
+				check_upstream_update "$remote"
+			else
+				echo >&2 "Remote \"$remote\" does not exist."
+			fi
 			break
 			;;
 		*)
