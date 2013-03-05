@@ -522,10 +522,11 @@ check_upstream_update () {
 	cp po/git.pot $working
 	# Stash all files include ignore files, (such as config.mak.autogen,
 	# config.status), which may break "make pot" latter.
-	git stash save --all >/dev/null
+	git stash save --all "po-helper: check for update at $(date +'%Y-%m-%d %H:%M:%S')" >/dev/null
 	trap "git reset --hard >/dev/null 2>&1;
 	      git checkout $current_branch >/dev/null 2>&1;
-	      git stash pop >/dev/null 2>&1;
+	      git clean -fdx >/dev/null;
+	      git stash pop >/dev/null;
 	      rm -f \"$working\"" 0
 
 	result=0
