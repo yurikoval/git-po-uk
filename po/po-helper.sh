@@ -563,7 +563,10 @@ show_team () {
 		;;
 	1)
 		case $1 in
-		leader* | member* | all)
+		leader*)
+			role="leader"
+			;;
+		member* | all)
 			role=$1
 			;;
 		*)
@@ -573,7 +576,11 @@ show_team () {
 		;;
 	2)
 		case $1 in
-		leader* | member* | all)
+		leader*)
+			role="leader"
+			team=$2
+			;;
+		member* | all)
 			role=$1
 			team=$2
 			;;
