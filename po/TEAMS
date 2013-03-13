@@ -24,6 +24,10 @@ Language:	nl (Dutch)
 Repository:	https://github.com/vfr-nl/git-po/
 Leader:		Vincent van Ravesteijn <vfr@lyx.org>
 
+Language:	pt_BR (Portuguese - Brazil)
+Repository:	https://github.com/harringf/git-po.git
+Leader:		Harring Figueiredo <harringf AT gmail.com>
+
 Language:	pt_PT (Portuguese - Portugal)
 Repository:	https://github.com/marcomsousa/git-l10n-pt_PT/
 Leader:		Marco Sousa <marcomsousa AT gmail.com>
