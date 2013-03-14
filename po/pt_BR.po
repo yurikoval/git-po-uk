@@ -13,14 +13,14 @@ msgstr ""
 "Language-Team: Brazilian Portuguese\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: advice.c:49
 #, c-format
 msgid "hint: %.*s\n"
-msgstr ""
+msgstr "Dica: %.*s\n"
 
 #.
 #. * Message used both when 'git commit' fails and when
@@ -33,14 +33,18 @@ msgid ""
 "appropriate to mark resolution and make a commit,\n"
 "or use 'git commit -a'."
 msgstr ""
+"Corrigi-los na árvore de trabalho,\n"
+"e depois use 'git add/rm <arquivo>' \n"
+"apropriadamente para marcar a resolução e fazer um 'commit',\n"
+"ou use 'git commit -a'"
 
 #: archive.c:10
 msgid "git archive [options] <tree-ish> [<path>...]"
-msgstr ""
+msgstr "git archive [opções] <tree-ish> [<path>...]"
 
 #: archive.c:11
 msgid "git archive --list"
-msgstr ""
+msgstr "git archive --list"
 
 #: archive.c:12
 msgid ""
@@ -49,11 +53,11 @@ msgstr ""
 
 #: archive.c:13
 msgid "git archive --remote <repo> [--exec <cmd>] --list"
-msgstr ""
+msgstr "git archive --remote <repo> [--exec <cmd>] --list"
 
 #: archive.c:323
 msgid "fmt"
-msgstr ""
+msgstr "fmt"
 
 #: archive.c:323
 msgid "archive format"
@@ -61,11 +65,11 @@ msgstr ""
 
 #: archive.c:324 builtin/log.c:1115
 msgid "prefix"
-msgstr ""
+msgstr "prefixo"
 
 #: archive.c:325
 msgid "prepend prefix to each pathname in the archive"
-msgstr ""
+msgstr "adiciona prefixo para cada caminho no arquivo"
 
 #: archive.c:326 builtin/archive.c:91 builtin/blame.c:2366
 #: builtin/blame.c:2367 builtin/config.c:55 builtin/fast-export.c:653
@@ -73,11 +77,11 @@ msgstr ""
 #: builtin/ls-files.c:497 builtin/ls-files.c:500 builtin/notes.c:536
 #: builtin/notes.c:693 builtin/read-tree.c:107 parse-options.h:149
 msgid "file"
-msgstr ""
+msgstr "arquivo"
 
 #: archive.c:327 builtin/archive.c:92
 msgid "write the archive to this file"
-msgstr ""
+msgstr "escreve o archivo para este arquivo"
 
 #: archive.c:329
 msgid "read .gitattributes in working directory"
@@ -85,60 +89,62 @@ msgstr ""
 
 #: archive.c:330
 msgid "report archived files on stderr"
-msgstr ""
+msgstr "relatar arquivos arquivados no stderr"
 
 #: archive.c:331
 msgid "store only"
-msgstr ""
+msgstr "arquivar somente"
 
 #: archive.c:332
 msgid "compress faster"
-msgstr ""
+msgstr "comprimir mais rapidamente"
 
 #: archive.c:340
 msgid "compress better"
-msgstr ""
+msgstr "comprimir mais eficientemente"
 
 #: archive.c:343
 msgid "list supported archive formats"
-msgstr ""
+msgstr "listar formatos que podem ser usados no archivo"
 
 #: archive.c:345 builtin/archive.c:93 builtin/clone.c:85
 msgid "repo"
-msgstr ""
+msgstr "repo"
 
 #: archive.c:346 builtin/archive.c:94
 msgid "retrieve the archive from remote repository <repo>"
-msgstr ""
+msgstr "recuperar o arquivo do repositório remoto"
 
 #: archive.c:347 builtin/archive.c:95 builtin/notes.c:615
 msgid "command"
-msgstr ""
+msgstr "commando"
 
 #: archive.c:348 builtin/archive.c:96
 msgid "path to the remote git-upload-archive command"
-msgstr ""
+msgstr "caminho para o commando remoto do 'git-upload-archive'"
 
 #: attr.c:259
 msgid ""
 "Negative patterns are ignored in git attributes\n"
 "Use '\\!' for literal leading exclamation."
 msgstr ""
+"Modelos negativos são ignorados em atributos 'git'\n"
+"Use '\\!' para exclamações."
 
 #: bundle.c:36
 #, c-format
 msgid "'%s' does not look like a v2 bundle file"
-msgstr ""
+msgstr "'%s' não parece ser um archivo de pacote v2"
 
 #: bundle.c:63
 #, c-format
 msgid "unrecognized header: %s%s (%d)"
-msgstr ""
+msgstr "cabeçário não reconhecido: %s%s (%d)"
 
 #: bundle.c:89 builtin/commit.c:674
 #, c-format
 msgid "could not open '%s'"
-msgstr ""
+msgstr "não foi possível abrir '%s'"
 
 #: bundle.c:140
 msgid "Repository lacks these prerequisite commits:"
@@ -148,170 +154,170 @@ msgstr ""
 #: builtin/log.c:751 builtin/log.c:1358 builtin/log.c:1574 builtin/merge.c:347
 #: builtin/shortlog.c:157
 msgid "revision walk setup failed"
-msgstr ""
+msgstr "preparação de revisão falhou"
 
 #: bundle.c:186
 #, c-format
 msgid "The bundle contains %d ref"
 msgid_plural "The bundle contains %d refs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "O pacote contem %d refs"
+msgstr[1] "Os pacotes contêm %d refs"
 
 #: bundle.c:192
 msgid "The bundle records a complete history."
-msgstr ""
+msgstr "O pacote registra uma história completa."
 
 #: bundle.c:195
 #, c-format
 msgid "The bundle requires this ref"
 msgid_plural "The bundle requires these %d refs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "O pacote requer esta referência"
+msgstr[1] "Os pacotes requerem estas referências %d"
 
 #: bundle.c:294
 msgid "rev-list died"
-msgstr ""
+msgstr "rev-list morreu"
 
 #: bundle.c:300 builtin/log.c:1254 builtin/shortlog.c:260
 #, c-format
 msgid "unrecognized argument: %s"
-msgstr ""
+msgstr "Argumento desconhecido: %s"
 
 #: bundle.c:335
 #, c-format
 msgid "ref '%s' is excluded by the rev-list options"
-msgstr ""
+msgstr "referência '%s' está excluída pelas opções do rev-list"
 
 #: bundle.c:380
 msgid "Refusing to create empty bundle."
-msgstr ""
+msgstr "Recusando-se de criar pacote vazio."
 
 #: bundle.c:398
 msgid "Could not spawn pack-objects"
-msgstr ""
+msgstr "Não foi possível gerar pacotes-objetos (pack-objects)"
 
 #: bundle.c:416
 msgid "pack-objects died"
-msgstr ""
+msgstr "pacotes-objetos (pack-objects) morreram"
 
 #: bundle.c:419
 #, c-format
 msgid "cannot create '%s'"
-msgstr ""
+msgstr "não pode criar '%s'"
 
 #: bundle.c:441
 msgid "index-pack died"
-msgstr ""
+msgstr "pacote-índice (index-pack) morreu"
 
 #: commit.c:50
 #, c-format
 msgid "could not parse %s"
-msgstr ""
+msgstr "não foi possível analisar %s"
 
 #: commit.c:52
 #, c-format
 msgid "%s %s is not a commit!"
-msgstr ""
+msgstr "%s %s não é um 'commit'!"
 
 #: compat/obstack.c:406 compat/obstack.c:408
 msgid "memory exhausted"
-msgstr ""
+msgstr "memória esgotada"
 
 #: connected.c:39
 msgid "Could not run 'git rev-list'"
-msgstr ""
+msgstr "não foi possível rodar 'git rev-list'"
 
 #: connected.c:48
 #, c-format
 msgid "failed write to rev-list: %s"
-msgstr ""
+msgstr "falhou escrever para rev-list: %s"
 
 #: connected.c:56
 #, c-format
 msgid "failed to close rev-list's stdin: %s"
-msgstr ""
+msgstr "error fechando rev-list's stdin: %s"
 
 #: date.c:95
 msgid "in the future"
-msgstr ""
+msgstr "no futuro"
 
 #: date.c:101
 #, c-format
 msgid "%lu second ago"
 msgid_plural "%lu seconds ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu segondo atrás"
+msgstr[1] "%lu segundos atrás"
 
 #: date.c:108
 #, c-format
 msgid "%lu minute ago"
 msgid_plural "%lu minutes ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu minuto atrás"
+msgstr[1] "%lu minutos atrás"
 
 #: date.c:115
 #, c-format
 msgid "%lu hour ago"
 msgid_plural "%lu hours ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu hora atrás"
+msgstr[1] "%lu horas atrás"
 
 #: date.c:122
 #, c-format
 msgid "%lu day ago"
 msgid_plural "%lu days ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu dia atrás"
+msgstr[1] "%lu dias atrás"
 
 #: date.c:128
 #, c-format
 msgid "%lu week ago"
 msgid_plural "%lu weeks ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu semana atrás"
+msgstr[1] "%lu semanas atrás"
 
 #: date.c:135
 #, c-format
 msgid "%lu month ago"
 msgid_plural "%lu months ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu mês atrás"
+msgstr[1] "%lu meses atrás"
 
 #: date.c:146
 #, c-format
 msgid "%lu year"
 msgid_plural "%lu years"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu ano atrás"
+msgstr[1] "%lu anos atrás"
 
 #: date.c:149
 #, c-format
 msgid "%s, %lu month ago"
 msgid_plural "%s, %lu months ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%s, %lu mês atrás"
+msgstr[1] "%s, %lu meses atrás"
 
 #: date.c:154 date.c:159
 #, c-format
 msgid "%lu year ago"
 msgid_plural "%lu years ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu ano atrás"
+msgstr[1] "%lu anos atrás"
 
 #: diff.c:112
 #, c-format
 msgid "  Failed to parse dirstat cut-off percentage '%s'\n"
-msgstr ""
+msgstr "  Falhou analisar o percentual '%s' do 'dirstat'\n"
 
 #: diff.c:117
 #, c-format
 msgid "  Unknown dirstat parameter '%s'\n"
-msgstr ""
+msgstr "Parâmetro desconeciho %s para o 'dirstat'\n"
 
 #: diff.c:210
 #, c-format
 msgid "Unknown value for 'diff.submodule' config variable: '%s'"
-msgstr ""
+msgstr "Valor desconhecido para a variável de configuração 'diff.submodule': '%s'"
 
 #: diff.c:260
 #, c-format
@@ -319,6 +325,8 @@ msgid ""
 "Found errors in 'diff.dirstat' config variable:\n"
 "%s"
 msgstr ""
+"Erros encontrados na variável de configuração 'diff.dirstat':\n"
+"%s"
 
 #: diff.c:3468
 #, c-format
@@ -326,28 +334,30 @@ msgid ""
 "Failed to parse --dirstat/-X option parameter:\n"
 "%s"
 msgstr ""
+"Erro analisando --dirstat/-X opção de parâmetero:\n"
+"%s"
 
 #: diff.c:3482
 #, c-format
 msgid "Failed to parse --submodule option parameter: '%s'"
-msgstr ""
+msgstr "Erro analisando --submodule opção de parâmetro: '%s'"
 
 #: gpg-interface.c:59 gpg-interface.c:127
 msgid "could not run gpg."
-msgstr ""
+msgstr "não foi possível rodar 'gpg'"
 
 #: gpg-interface.c:71
 msgid "gpg did not accept the data"
-msgstr ""
+msgstr "gpg não aceitou os dados"
 
 #: gpg-interface.c:82
 msgid "gpg failed to sign the data"
-msgstr ""
+msgstr "gpg falohou assinando os dados"
 
 #: gpg-interface.c:112
 #, c-format
 msgid "could not create temporary file '%s': %s"
-msgstr ""
+msgstr "nao foi possível criar arquivo temporário '%s': %s"
 
 #: gpg-interface.c:115
 #, c-format
