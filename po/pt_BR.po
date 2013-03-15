@@ -85,7 +85,7 @@ msgstr "escreve o archivo para este arquivo"
 
 #: archive.c:329
 msgid "read .gitattributes in working directory"
-msgstr ""
+msgstr "ler .gitattributes no diretório de trabalho"
 
 #: archive.c:330
 msgid "report archived files on stderr"
@@ -324,7 +324,7 @@ msgstr "Valor desconhecido para a variável de configuração 'diff.submodule': 
 msgid ""
 "Found errors in 'diff.dirstat' config variable:\n"
 "%s"
-msgstr ""
+msgstr "Erros encontrados no paramêtro de configuração 'diff.dirstat':\n"
 "Erros encontrados na variável de configuração 'diff.dirstat':\n"
 "%s"
 
@@ -367,7 +367,7 @@ msgstr ""
 #: grep.c:1622
 #, c-format
 msgid "'%s': unable to read %s"
-msgstr ""
+msgstr "'%s': não foi possível ler: %s"
 
 #: grep.c:1639
 #, c-format
@@ -382,7 +382,7 @@ msgstr ""
 #: help.c:212
 #, c-format
 msgid "available git commands in '%s'"
-msgstr ""
+msgstr "git commandos disponíveis em %s' "
 
 #: help.c:219
 msgid "git commands available from elsewhere on your $PATH"
@@ -390,7 +390,7 @@ msgstr ""
 
 #: help.c:235
 msgid "The most commonly used git commands are:"
-msgstr ""
+msgstr "Os commandos mais usados em git são: "
 
 #: help.c:292
 #, c-format
@@ -398,10 +398,12 @@ msgid ""
 "'%s' appears to be a git command, but we were not\n"
 "able to execute it. Maybe git-%s is broken?"
 msgstr ""
+"'%s' parece ser um commando do git, mas não foi possível executá-lo.\n"
+"Talvez git-%s esteja com defeito?"
 
 #: help.c:349
 msgid "Uh oh. Your system reports no Git commands at all."
-msgstr ""
+msgstr "Pô, meu. Seu sistema nao está reportando nenhum comando do Git."
 
 #: help.c:371
 #, c-format
@@ -409,16 +411,18 @@ msgid ""
 "WARNING: You called a Git command named '%s', which does not exist.\n"
 "Continuing under the assumption that you meant '%s'"
 msgstr ""
+"Aviso: Você executou um comando do Git chamado '%s', o qual não existe.\n"
+"Continuarei na suposição de que voce quiz executar '%s'"
 
 #: help.c:376
 #, c-format
 msgid "in %0.1f seconds automatically..."
-msgstr ""
+msgstr "automaticamente em %0.1f segundos..."
 
 #: help.c:383
 #, c-format
 msgid "git: '%s' is not a git command. See 'git --help'."
-msgstr ""
+msgstr "git: '%s' não é um commando do git. Execute 'git --help'."
 
 #: help.c:387
 msgid ""
@@ -432,17 +436,17 @@ msgstr[1] ""
 
 #: merge.c:56
 msgid "failed to read the cache"
-msgstr ""
+msgstr "falhou na leitura do cache"
 
 #: merge.c:110 builtin/checkout.c:333 builtin/checkout.c:534
 #: builtin/clone.c:586
 msgid "unable to write new index file"
-msgstr ""
+msgstr "não foi possível escrever um novo arquivo de índice"
 
 #: merge-recursive.c:190
 #, c-format
 msgid "(bad commit)\n"
-msgstr ""
+msgstr "(commit ruim)\n"
 
 #: merge-recursive.c:206
 #, c-format
@@ -451,66 +455,66 @@ msgstr ""
 
 #: merge-recursive.c:268
 msgid "error building trees"
-msgstr ""
+msgstr "erro construindo árvores"
 
 #: merge-recursive.c:672
 #, c-format
 msgid "failed to create path '%s'%s"
-msgstr ""
+msgstr "falhow criando caminho '%s'%s"
 
 #: merge-recursive.c:683
 #, c-format
 msgid "Removing %s to make room for subdirectory\n"
-msgstr ""
+msgstr "Removendo %s para dar lugar a subdiretório\n"
 
 #. something else exists
 #. .. but not some other error (who really cares what?)
 #: merge-recursive.c:697 merge-recursive.c:718
 msgid ": perhaps a D/F conflict?"
-msgstr ""
+msgstr ": talvez um conflito D/F?"
 
 #: merge-recursive.c:708
 #, c-format
 msgid "refusing to lose untracked file at '%s'"
-msgstr ""
+msgstr "recusando perder archivo rastreado em '%s'"
 
 #: merge-recursive.c:748
 #, c-format
 msgid "cannot read object %s '%s'"
-msgstr ""
+msgstr "impossível ler objetos %s '%s'"
 
 #: merge-recursive.c:750
 #, c-format
 msgid "blob expected for %s '%s'"
-msgstr ""
+msgstr "bolha (blob) antecipado para %s '%s'"
 
 #: merge-recursive.c:773 builtin/clone.c:302
 #, c-format
 msgid "failed to open '%s'"
-msgstr ""
+msgstr "falhou abrir '%s'"
 
 #: merge-recursive.c:781
 #, c-format
 msgid "failed to symlink '%s'"
-msgstr ""
+msgstr "falhou criando symlink '%s'"
 
 #: merge-recursive.c:784
 #, c-format
 msgid "do not know what to do with %06o %s '%s'"
-msgstr ""
+msgstr "não sei o que fazer com %06o %s '%s'"
 
 #: merge-recursive.c:922
 msgid "Failed to execute internal merge"
-msgstr ""
+msgstr "Falhou ao executar junção interna (internal merge)"
 
 #: merge-recursive.c:926
 #, c-format
 msgid "Unable to add %s to database"
-msgstr ""
+msgstr "Incapaz de adicionar %s no banco de dados"
 
 #: merge-recursive.c:942
 msgid "unsupported object type in the tree"
-msgstr ""
+msgstr "tipo de objeto não suportado na árvore"
 
 #: merge-recursive.c:1021 merge-recursive.c:1035
 #, c-format
@@ -518,6 +522,8 @@ msgid ""
 "CONFLICT (%s/delete): %s deleted in %s and %s in %s. Version %s of %s left "
 "in tree."
 msgstr ""
+"CONFLITO (%s/delete): %s removido em %s e %s em %s. Verção %s de %s foi deixado "
+"na árvore."
 
 #: merge-recursive.c:1027 merge-recursive.c:1040
 #, c-format
@@ -525,19 +531,21 @@ msgid ""
 "CONFLICT (%s/delete): %s deleted in %s and %s in %s. Version %s of %s left "
 "in tree at %s."
 msgstr ""
+"CONFLITO (%s/delete): %s removido em %s e %s em %s. Verção %s de %s foi deixado "
+"na árvore em %s."
 
 #: merge-recursive.c:1081
 msgid "rename"
-msgstr ""
+msgstr "renomear"
 
 #: merge-recursive.c:1081
 msgid "renamed"
-msgstr ""
+msgstr "renomeado"
 
 #: merge-recursive.c:1137
 #, c-format
 msgid "%s is a directory in %s adding as %s instead"
-msgstr ""
+msgstr "%s é um diretório em %s. Adicionando como %s"
 
 #: merge-recursive.c:1159
 #, c-format
@@ -548,7 +556,7 @@ msgstr ""
 
 #: merge-recursive.c:1164
 msgid " (left unresolved)"
-msgstr ""
+msgstr " (deixado sem resolução)"
 
 #: merge-recursive.c:1218
 #, c-format
@@ -568,93 +576,93 @@ msgstr ""
 #: merge-recursive.c:1457
 #, c-format
 msgid "Adding merged %s"
-msgstr ""
+msgstr "Adicionando combinados %s"
 
 #: merge-recursive.c:1462 merge-recursive.c:1660
 #, c-format
 msgid "Adding as %s instead"
-msgstr ""
+msgstr "Adicionando como %s"
 
 #: merge-recursive.c:1513
 #, c-format
 msgid "cannot read object %s"
-msgstr ""
+msgstr "impossível ler objeto %s"
 
 #: merge-recursive.c:1516
 #, c-format
 msgid "object %s is not a blob"
-msgstr ""
+msgstr "objeto %s não é uma bolha (blob)"
 
 #: merge-recursive.c:1564
 msgid "modify"
-msgstr ""
+msgstr "modificar"
 
 #: merge-recursive.c:1564
 msgid "modified"
-msgstr ""
+msgstr "modificado"
 
 #: merge-recursive.c:1574
 msgid "content"
-msgstr ""
+msgstr "contente"
 
 #: merge-recursive.c:1581
 msgid "add/add"
-msgstr ""
+msgstr "adicionar/adicionar"
 
 #: merge-recursive.c:1615
 #, c-format
 msgid "Skipped %s (merged same as existing)"
-msgstr ""
+msgstr "Pulando %s (combinados o mesmo como existente"
 
 #: merge-recursive.c:1629
 #, c-format
 msgid "Auto-merging %s"
-msgstr ""
+msgstr "Combinando automaticament %s"
 
 #: merge-recursive.c:1633 git-submodule.sh:942
 msgid "submodule"
-msgstr ""
+msgstr "sub-modulo"
 
 #: merge-recursive.c:1634
 #, c-format
 msgid "CONFLICT (%s): Merge conflict in %s"
-msgstr ""
+msgstr "CONFLITO (%s): Conflito de combinação em %s"
 
 #: merge-recursive.c:1724
 #, c-format
 msgid "Removing %s"
-msgstr ""
+msgstr "Removendo %s"
 
 #: merge-recursive.c:1749
 msgid "file/directory"
-msgstr ""
+msgstr "arquivo/diretório"
 
 #: merge-recursive.c:1755
 msgid "directory/file"
-msgstr ""
+msgstr "diretório/arquivo"
 
 #: merge-recursive.c:1760
 #, c-format
 msgid "CONFLICT (%s): There is a directory with name %s in %s. Adding %s as %s"
-msgstr ""
+msgstr "CONFLITO (%s): Existe um diretório com o nome %s em %s. Adicionando %s como %s"
 
 #: merge-recursive.c:1770
 #, c-format
 msgid "Adding %s"
-msgstr ""
+msgstr "Adicinando %s"
 
 #: merge-recursive.c:1787
 msgid "Fatal merge failure, shouldn't happen."
-msgstr ""
+msgstr "Erro fatal na combinação, não deveria acontecer."
 
 #: merge-recursive.c:1806
 msgid "Already up-to-date!"
-msgstr ""
+msgstr "Já está tudo atualizado!"
 
 #: merge-recursive.c:1815
 #, c-format
 msgid "merging of trees %s and %s failed"
-msgstr ""
+msgstr "combinação das árvores %s e %s falhou"
 
 #: merge-recursive.c:1845
 #, c-format
@@ -663,57 +671,57 @@ msgstr ""
 
 #: merge-recursive.c:1890
 msgid "Merging:"
-msgstr ""
+msgstr "Combinando:"
 
 #: merge-recursive.c:1903
 #, c-format
 msgid "found %u common ancestor:"
 msgid_plural "found %u common ancestors:"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "um ancestral comum %u foi encontrado:"
+msgstr[1] "ancestrais comuns %u foram encontrados:"
 
 #: merge-recursive.c:1940
 msgid "merge returned no commit"
-msgstr ""
+msgstr "combinação retornou um commit"
 
 #: merge-recursive.c:1997
 #, c-format
 msgid "Could not parse object '%s'"
-msgstr ""
+msgstr "Não foi possível analisar objeto '%s'"
 
 #: merge-recursive.c:2009 builtin/merge.c:643
 msgid "Unable to write index."
-msgstr ""
+msgstr "Impossível de escrever índice."
 
 #: parse-options.c:489
 msgid "..."
-msgstr ""
+msgstr "..."
 
 #: parse-options.c:507
 #, c-format
 msgid "usage: %s"
-msgstr ""
+msgstr "uso: %s"
 
 #. TRANSLATORS: the colon here should align with the
 #. one in "usage: %s" translation
 #: parse-options.c:511
 #, c-format
 msgid "   or: %s"
-msgstr ""
+msgstr "   ou: %s"
 
 #: parse-options.c:514
 #, c-format
 msgid "    %s"
-msgstr ""
+msgstr "   %s"
 
 #: parse-options.c:548
 msgid "-NUM"
-msgstr ""
+msgstr "-NUM"
 
 #: pathspec.c:83
 #, c-format
 msgid "Path '%s' is in submodule '%.*s'"
-msgstr ""
+msgstr "Caminho '%s' está no sub-módulo '%.*s'"
 
 #: pathspec.c:99
 #, c-format
