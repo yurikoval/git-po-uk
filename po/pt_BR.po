@@ -148,7 +148,7 @@ msgstr "não foi possível abrir '%s'"
 
 #: bundle.c:140
 msgid "Repository lacks these prerequisite commits:"
-msgstr ""
+msgstr "Repositório falta estes pre-requisitos cometidos:"
 
 #: bundle.c:164 sequencer.c:566 sequencer.c:998 builtin/log.c:299
 #: builtin/log.c:751 builtin/log.c:1358 builtin/log.c:1574 builtin/merge.c:347
@@ -362,7 +362,7 @@ msgstr "nao foi possível criar arquivo temporário '%s': %s"
 #: gpg-interface.c:115
 #, c-format
 msgid "failed writing detached signature to '%s': %s"
-msgstr ""
+msgstr "Falou escrvendo assinatura isolada para '%s':%s"
 
 #: grep.c:1622
 #, c-format
@@ -382,11 +382,11 @@ msgstr ""
 #: help.c:212
 #, c-format
 msgid "available git commands in '%s'"
-msgstr "git commandos disponíveis em %s' "
+msgstr "git comandos disponíveis em %s' "
 
 #: help.c:219
 msgid "git commands available from elsewhere on your $PATH"
-msgstr ""
+msgstr "git comandos disponíveis de alguma parte do seu %PATH"
 
 #: help.c:235
 msgid "The most commonly used git commands are:"
@@ -451,7 +451,7 @@ msgstr "(commit ruim)\n"
 #: merge-recursive.c:206
 #, c-format
 msgid "addinfo_cache failed for path '%s'"
-msgstr ""
+msgstr "addinfo_cache falhou para caminho '%s'"
 
 #: merge-recursive.c:268
 msgid "error building trees"
@@ -566,12 +566,12 @@ msgstr ""
 #: merge-recursive.c:1248
 #, c-format
 msgid "Renaming %s to %s and %s to %s instead"
-msgstr ""
+msgstr "Renomeando %s para %s e %s para %s"
 
 #: merge-recursive.c:1447
 #, c-format
 msgid "CONFLICT (rename/add): Rename %s->%s in %s. %s added in %s"
-msgstr ""
+msgstr "CONFLITO (rename/add): Renomear %s->%s em %s. %s adicionado em %s"
 
 #: merge-recursive.c:1457
 #, c-format
@@ -667,7 +667,7 @@ msgstr "combinação das árvores %s e %s falhou"
 #: merge-recursive.c:1845
 #, c-format
 msgid "Unprocessed path??? %s"
-msgstr ""
+msgstr "Caminho não processado??? %s"
 
 #: merge-recursive.c:1890
 msgid "Merging:"
@@ -726,18 +726,18 @@ msgstr "Caminho '%s' está no sub-módulo '%.*s'"
 #: pathspec.c:99
 #, c-format
 msgid "'%s' is beyond a symbolic link"
-msgstr ""
+msgstr "'%s' está além de um link simbólico (symbolic link)"
 
 #: remote.c:1653
 #, c-format
 msgid "Your branch is ahead of '%s' by %d commit.\n"
 msgid_plural "Your branch is ahead of '%s' by %d commits.\n"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Seu ramo (branch) está à frente de '%s' por %d commit.\n"
+msgstr[1] "Seu ramo (branch) está à frente de '%s' por %d commits.\n"
 
 #: remote.c:1659
 msgid "  (use \"git push\" to publish your local commits)\n"
-msgstr ""
+msgstr "  (use \"git push\" para publicar seus commits locais)\n"
 
 #: remote.c:1662
 #, c-format
@@ -749,7 +749,7 @@ msgstr[1] ""
 
 #: remote.c:1670
 msgid "  (use \"git pull\" to update your local branch)\n"
-msgstr ""
+msgstr "   (use \"git pull\" para atualizae seu ramo local)\n"
 
 #: remote.c:1673
 #, c-format
@@ -759,30 +759,34 @@ msgid ""
 msgid_plural ""
 "Your branch and '%s' have diverged,\n"
 "and have %d and %d different commits each, respectively.\n"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Seu ramo e '%s' divergiram,\n"
+"e têm %d e %d commits diferentes cada, repectivamente.\n"
+msgstr[1] "Seu ramo e '%s' divergiram,\n" 
+"e têm %d e %d commits diferentes cada, repectivamente.\n"
 
 #: remote.c:1683
 msgid "  (use \"git pull\" to merge the remote branch into yours)\n"
-msgstr ""
+msgstr "  (use \"git pull\" para consolidar o ramo remoto com o seu)\n"
 
 #: sequencer.c:123 builtin/merge.c:761 builtin/merge.c:874 builtin/merge.c:984
 #: builtin/merge.c:994
 #, c-format
 msgid "Could not open '%s' for writing"
-msgstr ""
+msgstr "Não foi possível abrir '%s' para escrever"
 
 #: sequencer.c:125 builtin/merge.c:333 builtin/merge.c:764 builtin/merge.c:986
 #: builtin/merge.c:999
 #, c-format
 msgid "Could not write to '%s'"
-msgstr ""
+msgstr "Não foi possível escrever em '%s'"
 
 #: sequencer.c:146
 msgid ""
 "after resolving the conflicts, mark the corrected paths\n"
 "with 'git add <paths>' or 'git rm <paths>'"
 msgstr ""
+"apos resolver os conflitos, marque os caminhos corretos\n"
+"com 'git add <caminhos>' ou 'git rm <cominhos>'"
 
 #: sequencer.c:149
 msgid ""
@@ -790,38 +794,41 @@ msgid ""
 "with 'git add <paths>' or 'git rm <paths>'\n"
 "and commit the result with 'git commit'"
 msgstr ""
+"apos resolver os conflitos, marque os caminhos corretos\n"
+"com 'git add <caminhos>' ou 'git rm <caminhos>'\n"
+"e comita o resultado com 'git commit'"
 
 #: sequencer.c:162 sequencer.c:774 sequencer.c:857
 #, c-format
 msgid "Could not write to %s"
-msgstr ""
+msgstr "Não foi possível escrevem em %s"
 
 #: sequencer.c:165
 #, c-format
 msgid "Error wrapping up %s"
-msgstr ""
+msgstr "Error encerrando %s"
 
 #: sequencer.c:180
 msgid "Your local changes would be overwritten by cherry-pick."
-msgstr ""
+msgstr "Suas mudanças locais seriam substituídas por escolhas detalhadas."
 
 #: sequencer.c:182
 msgid "Your local changes would be overwritten by revert."
-msgstr ""
+msgstr "Suas mudanças locais seriam substituídas por reverter."
 
 #: sequencer.c:185
 msgid "Commit your changes or stash them to proceed."
-msgstr ""
+msgstr "Comita suas mudanças ou armazane-as (stash) para prosseguir."
 
 #. TRANSLATORS: %s will be "revert" or "cherry-pick"
 #: sequencer.c:236
 #, c-format
 msgid "%s: Unable to write new index file"
-msgstr ""
+msgstr "%s: Impossíve escrever nove arquivo índice"
 
 #: sequencer.c:267
 msgid "Could not resolve HEAD commit\n"
-msgstr ""
+msgstr "Não foi possível resolver HEAD comite\n"
 
 #: sequencer.c:288
 msgid "Unable to update cache tree\n"
@@ -9186,51 +9193,51 @@ msgstr ""
 #: git-submodule.sh:722
 #, sh-format
 msgid "Submodule path '$sm_path': checked out '$sha1'"
-msgstr ""
+msgstr "Caminho sub-módulo '$sm_path': confirmado '$sha1'"
 
 #: git-submodule.sh:744 git-submodule.sh:1066
 #, sh-format
 msgid "Failed to recurse into submodule path '$sm_path'"
-msgstr ""
+msgstr "Falha durante o recurse para sub-módulo '$sm_path'"
 
 #: git-submodule.sh:852
 msgid "The --cached option cannot be used with the --files option"
-msgstr ""
+msgstr "A opção --cached não pode ser usada com a opção --files"
 
 #. unexpected type
 #: git-submodule.sh:892
 #, sh-format
 msgid "unexpected mode $mod_dst"
-msgstr ""
+msgstr "modo inesperado $mod_dst"
 
 #: git-submodule.sh:910
 #, sh-format
 msgid "  Warn: $name doesn't contain commit $sha1_src"
-msgstr ""
+msgstr "Advertência: $name nao contém commit $sha1_src"
 
 #: git-submodule.sh:913
 #, sh-format
 msgid "  Warn: $name doesn't contain commit $sha1_dst"
-msgstr ""
+msgstr "Advertência: $name nao contém commit $sha1_dst"
 
 #: git-submodule.sh:916
 #, sh-format
 msgid "  Warn: $name doesn't contain commits $sha1_src and $sha1_dst"
-msgstr ""
+msgstr "  Adventência: $name não contém comete $sha1_src e $sha1_dst"
 
 #: git-submodule.sh:941
 msgid "blob"
-msgstr ""
+msgstr "bolha"
 
 #: git-submodule.sh:979
 msgid "Submodules changed but not updated:"
-msgstr ""
+msgstr "Sub-módulos mudados mas nao atualizados:"
 
 #: git-submodule.sh:981
 msgid "Submodule changes to be committed:"
-msgstr ""
+msgstr "Sub-módulo modificações para serem comitidas:"
 
 #: git-submodule.sh:1129
 #, sh-format
 msgid "Synchronizing submodule url for '$prefix$sm_path'"
-msgstr ""
+msgstr "Sincronizando sub-módulo url para '$prefix$sm_path'"
