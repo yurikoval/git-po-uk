@@ -346,7 +346,6 @@ verify_commit_encoding () {
 
 verify_commit_log () {
 	c=$1
-	sob=""
 	subject=0
 	subject_lines=0
 
@@ -389,11 +388,6 @@ verify_commit_log () {
 					echo >&2 "Error: in commit $c, subject should less than 50 characters."
 					echo >&2 "       \"$line\""
 				fi
-				# Do not detect sob latter for merge commit.
-				if test "${line#Merge }" != "$line"
-				then
-					sob="Merge"
-				fi
 			fi
 		fi
 		# Description in commit log should line wrap at 72 characters.
@@ -404,15 +398,45 @@ verify_commit_log () {
 				echo >&2 "Error: in commit $c, description should line wrap at 72 characters."
 				echo >&2 "       \"$line\""
 			fi
-			if test "${line#Signed-off-by: }" != "$line"
-			then
-				sob=$line
-			fi
+		fi
+	done
+}
+
+verify_commit_log_sob () {
+	c=$1
+	sob=""
+
+	while read line
+	do
+
+		if test -z "$line"
+		then
+			break
+		fi
+		if test "${line#Signed-off-by: }" != "$line"
+		then
+			sob=$line
+		fi
+		if ! echo $line | grep -q "^.*-by: .\{1,\} <.\{1,\}>"
+		then
+			echo >&2 "Error: in commit $c, no s-o-b or bad s-o-b: $line"
 		fi
 	done
 	if test -z "$sob"
 	then
 		echo >&2 "Error: in commit $c, there should have a 'Signed-off-by:' line."
+	fi
+}
+
+is_merge_commit()
+{
+	c=$1
+	parents=$(git cat-file commit $c | grep "^parent [0-9a-f]\{40\}" | wc -l)
+	if test $parents -ge 2
+	then
+		true
+	else
+		false
 	fi
 }
 
@@ -477,6 +501,10 @@ check_commits () {
 			cobject=$(git cat-file commit $c)
 			echo "$cobject" | verify_commit_encoding $c
 			echo "$cobject" | verify_commit_log $c
+			if ! is_merge_commit $c
+			then
+				echo "$cobject" | tac | verify_commit_log_sob $c
+			fi
 			count=$(( count + 1 ))
 		done
 		echo "$count commits checked complete."
