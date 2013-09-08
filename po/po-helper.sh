@@ -25,15 +25,16 @@ Usage:
  * po-helper.sh check XX.po ...
        Perform syntax check on XX.po file(s)
 
- * po-helper.sh check commits <since> [<til>]
-       Check proper encoding of non-ascii chars in commit logs
+ * po-helper.sh check commit [<commit-ish> [<til>]]
+       Check the specific commit (only <commit-ish> is provided) or
+       a range of commits (from <commit-ish> to <til> or from upstream
+       tracking to HEAD by default) for:
 
-       - don't write commit log with non-ascii chars without proper
-         encoding settings;
+       - proper encoding for non-ascii characters in commit log;
 
-       - subject of commit log must written in English; and
+       - subject of commit log must be written in English; and
 
-       - don't change files outside this directory (po/)
+       - should not change files outside 'po/' directory.
 
  * po-helper.sh diff [<old> <new>]
        Show difference between old and new po/pot files.
@@ -483,13 +484,22 @@ report_bad_encoding () {
 
 # Check commit logs for bad encoding settings
 check_commits () {
-	if test $# -gt 2
-	then
-		usage "check commits only needs 2 arguments"
-	fi
 	. $(git --exec-path)/git-parse-remote
-	since=${1:-$(get_remote_merge_branch)}
-	til=${2:-$(git symbolic-ref -q HEAD)}
+
+	case $# in
+	1)
+		since=${1}~1
+		til=${1}
+		;;
+	0 | 2)
+		since=${1:-$(get_remote_merge_branch)}
+		til=${2:-$(git symbolic-ref -q HEAD)}
+		;;
+	*)
+		usage "check commits only needs 2 arguments"
+		;;
+	esac
+
 	if git diff-tree -r "$since" "$til" | awk '{print $6}' | grep -qv "^po/"
 	then
 		echo >&2 "============================================================"
