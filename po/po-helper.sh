@@ -19,10 +19,13 @@ Usage:
  * po-helper.sh update XX.po ...
        Update XX.po file(s) from the new git.pot template
 
+ * po-helper.sh check
+       Check XX.po files as well as commits.
+
  * po-helper.sh check XX.po ...
        Perform syntax check on XX.po file(s)
 
- * po-helper.sh check [commits [ <since> <til> ]]
+ * po-helper.sh check commits <since> [<til>]
        Check proper encoding of non-ascii chars in commit logs
 
        - don't write commit log with non-ascii chars without proper
@@ -32,7 +35,7 @@ Usage:
 
        - don't change files outside this directory (po/)
 
- * po-helper.sh diff [ <old> <new> ]
+ * po-helper.sh diff [<old> <new>]
        Show difference between old and new po/pot files.
        Default show changes of git.pot since last update.
 END_OF_USAGE
