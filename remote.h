@@ -51,6 +51,8 @@ struct remote {
 	 * for curl remotes only
 	 */
 	char *http_proxy;
+
+	char *namespace;
 };
 
 struct remote *remote_get(const char *name);

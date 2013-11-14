@@ -114,6 +114,9 @@ int cmd_ls_remote(int argc, const char **argv, const char *prefix)
 		return 0;
 	}
 
+	if (remote->namespace)
+		setenv(GIT_NAMESPACE_ENVIRONMENT, remote->namespace, 1);
+
 	transport = transport_get(remote, NULL);
 	if (uploadpack != NULL)
 		transport_set_option(transport, TRANS_OPT_UPLOADPACK, uploadpack);

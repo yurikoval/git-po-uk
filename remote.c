@@ -453,6 +453,9 @@ static int handle_config(const char *key, const char *value, void *cb)
 					 key, value);
 	} else if (!strcmp(subkey, ".vcs")) {
 		return git_config_string(&remote->foreign_vcs, key, value);
+	} else if (!strcmp(subkey, ".namespace")) {
+		return git_config_string((const char **)&remote->namespace,
+					 key, value);
 	}
 	return 0;
 }

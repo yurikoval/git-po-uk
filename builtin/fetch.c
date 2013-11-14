@@ -1034,6 +1034,8 @@ static int fetch_one(struct remote *remote, int argc, const char **argv)
 	sigchain_push_common(unlock_pack_on_signal);
 	atexit(unlock_pack);
 	refspec = parse_fetch_refspec(ref_nr, refs);
+	if (remote->namespace)
+		setenv(GIT_NAMESPACE_ENVIRONMENT, remote->namespace, 1);
 	exit_code = do_fetch(gtransport, refspec, ref_nr);
 	free_refspec(ref_nr, refspec);
 	transport_disconnect(gtransport);

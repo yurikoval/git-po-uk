@@ -882,6 +882,8 @@ int cmd_clone(int argc, const char **argv, const char *prefix)
 	strbuf_reset(&value);
 
 	remote = remote_get(option_origin);
+	if (remote->namespace)
+		setenv(GIT_NAMESPACE_ENVIRONMENT, remote->namespace, 1);
 	transport = transport_get(remote, remote->url[0]);
 
 	if (!transport->get_refs_list || (!is_local && !transport->fetch))

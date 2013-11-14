@@ -35,6 +35,8 @@ static int run_remote_archiver(int argc, const char **argv,
 	_remote = remote_get(remote);
 	if (!_remote->url[0])
 		die(_("git archive: Remote with no URL"));
+	if (_remote->namespace)
+		setenv(GIT_NAMESPACE_ENVIRONMENT, _remote->namespace, 1);
 	transport = transport_get(_remote, _remote->url[0]);
 	transport_connect(transport, "git-upload-archive", exec, fd);
 
