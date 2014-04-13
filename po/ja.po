@@ -4732,7 +4732,7 @@ msgstr ""
 
 #: builtin/fast-export.c:689
 msgid "Use the done feature to terminate the stream"
-msgstr ""s
+msgstr ""
 
 #: builtin/fast-export.c:690
 msgid "Skip output of blob data"
