@@ -33,8 +33,8 @@ msgid ""
 "appropriate to mark resolution and make a commit,\n"
 "or use 'git commit -a'."
 msgstr ""
-"作業ツリーでコンフリクトを解決してから、\n"
-"'git add/rm <file>'を使って解決済みであることを示してください。\n"
+"作業ツリーでコンフリクトを解決してから、'git add/rm <file>'を\n"
+"使って解決済みであることを示した上でコミットしてください。\n"
 "あるいは'git commit -a'を使ってください。"
 
 #: archive.c:10
@@ -9227,91 +9227,91 @@ msgstr ""
 
 #: common-cmds.h:8
 msgid "Add file contents to the index"
-msgstr ""
+msgstr "ファイルをインデックスに追加します。"
 
 #: common-cmds.h:9
 msgid "Find by binary search the change that introduced a bug"
-msgstr ""
+msgstr "バグを混入させた変更を二分探索の方法で探します。"
 
 #: common-cmds.h:10
 msgid "List, create, or delete branches"
-msgstr ""
+msgstr "ブランチを一覧表示または作成、削除します。"
 
 #: common-cmds.h:11
 msgid "Checkout a branch or paths to the working tree"
-msgstr ""
+msgstr "ブランチまたは特定のパスを作業ツリーにチェックアウトします。"
 
 #: common-cmds.h:12
 msgid "Clone a repository into a new directory"
-msgstr ""
+msgstr "リポジトリを複製します。"
 
 #: common-cmds.h:13
 msgid "Record changes to the repository"
-msgstr ""
+msgstr "変更をリポジトリに記録します。"
 
 #: common-cmds.h:14
 msgid "Show changes between commits, commit and working tree, etc"
-msgstr ""
+msgstr "コミット間またはコミットと作業ツリー間などの差分を表示します。"
 
 #: common-cmds.h:15
 msgid "Download objects and refs from another repository"
-msgstr ""
+msgstr "他のリポジトリからオブジェクトと参照（ref）をダウンロードします。"
 
 #: common-cmds.h:16
 msgid "Print lines matching a pattern"
-msgstr ""
+msgstr "指定パターンにマッチする行を表示します。"
 
 #: common-cmds.h:17
 msgid "Create an empty Git repository or reinitialize an existing one"
-msgstr ""
+msgstr "空のGitリポジトリを生成するか、既存のリポジトリを再初期化します。"
 
 #: common-cmds.h:18
 msgid "Show commit logs"
-msgstr ""
+msgstr "コミットのログを表示します。"
 
 #: common-cmds.h:19
 msgid "Join two or more development histories together"
-msgstr ""
+msgstr "2つ以上の開発履歴を1つにマージします。"
 
 #: common-cmds.h:20
 msgid "Move or rename a file, a directory, or a symlink"
-msgstr ""
+msgstr "ファイルまたはディレクトリ、シンボリックリンクを移動またはリネームします。"
 
 #: common-cmds.h:21
 msgid "Fetch from and integrate with another repository or a local branch"
-msgstr ""
+msgstr "他のリポジトリまたはローカルブランチの変更を取得し、マージします。"
 
 #: common-cmds.h:22
 msgid "Update remote refs along with associated objects"
-msgstr ""
+msgstr "関連するオブジェクトとともにリモートの参照（ref）を更新します。"
 
 #: common-cmds.h:23
 msgid "Forward-port local commits to the updated upstream head"
-msgstr ""
+msgstr "ローカルのコミットを更新された上流ブランチに移し替えます。"
 
 #: common-cmds.h:24
 msgid "Reset current HEAD to the specified state"
-msgstr ""
+msgstr "現在のHEADを特定の状態にリセットします。"
 
 #: common-cmds.h:25
 msgid "Remove files from the working tree and from the index"
-msgstr ""
+msgstr "作業ツリーとインデックスからファイルを削除します。"
 
 #: common-cmds.h:26
 msgid "Show various types of objects"
-msgstr ""
+msgstr "様々なタイプのオブジェクトを表示します。"
 
 #: common-cmds.h:27
 msgid "Show the working tree status"
-msgstr ""
+msgstr "作業ツリーのステータスを表示します。"
 
 #: common-cmds.h:28
 msgid "Create, list, delete or verify a tag object signed with GPG"
-msgstr ""
+msgstr "GPGで署名されたタグオブジェクトの生成/削除/検証および一覧表示をします。"
 
 #: git-am.sh:50
 msgid "You need to set your committer info first"
-msgstr ""
+msgstr "コミッター情報を事前に登録しておく必要があります"
 
 #: git-am.sh:95
 msgid ""
@@ -9326,10 +9326,13 @@ msgid ""
 "If you prefer to skip this patch, run \"$cmdline --skip\" instead.\n"
 "To restore the original branch and stop patching, run \"$cmdline --abort\"."
 msgstr ""
+"問題を解決してから、\"$cmdline --continue\"を実行してください。\n"
+"このパッチを飛ばすなら、代わりに\"$cmdline --skip\"を実行してください。\n"
+"パッチ作業を中断して元のブランチを復元するなら\"$cmdline --abort\"を実行してください。"
 
 #: git-am.sh:121
 msgid "Cannot fall back to three-way merge."
-msgstr ""
+msgstr "3ウェイマージが失敗しました。"
 
 #: git-am.sh:137
 msgid "Repository lacks necessary blobs to fall back on 3-way merge."
