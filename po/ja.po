@@ -4732,59 +4732,59 @@ msgstr ""
 
 #: builtin/fast-export.c:689
 msgid "Use the done feature to terminate the stream"
-msgstr ""
+msgstr ""s
 
 #: builtin/fast-export.c:690
 msgid "Skip output of blob data"
-msgstr ""
+msgstr "ブロブのデータの出力を割愛します"
 
 #: builtin/fetch.c:20
 msgid "git fetch [<options>] [<repository> [<refspec>...]]"
-msgstr ""
+msgstr "git fetch [<オプション>] [<リポジトリ> [<参照仕様>...]]"
 
 #: builtin/fetch.c:21
 msgid "git fetch [<options>] <group>"
-msgstr ""
+msgstr "git fetch [<オプション>] <リポジトリの集合>"
 
 #: builtin/fetch.c:22
 msgid "git fetch --multiple [<options>] [(<repository> | <group>)...]"
-msgstr ""
+msgstr "git fetch --multiple [<オプション>] [(<リポジトリ> | <リポジトリの集合>)...]"
 
 #: builtin/fetch.c:23
 msgid "git fetch --all [<options>]"
-msgstr ""
+msgstr "git fetch --all [<オプション>]"
 
 #: builtin/fetch.c:75
 msgid "fetch from all remotes"
-msgstr ""
+msgstr "すべてのリモートから取得します"
 
 #: builtin/fetch.c:77
 msgid "append to .git/FETCH_HEAD instead of overwriting"
-msgstr ""
+msgstr "上書きせずに.git/FETCH_HEADに追加します"
 
 #: builtin/fetch.c:79
 msgid "path to upload pack on remote end"
-msgstr ""
+msgstr "パックファイルのアップロード先のリモートのパス"
 
 #: builtin/fetch.c:80
 msgid "force overwrite of local branch"
-msgstr ""
+msgstr "ローカルのブランチを強制的に上書きします"
 
 #: builtin/fetch.c:82
 msgid "fetch from multiple remotes"
-msgstr ""
+msgstr "複数のリモートから取得します"
 
 #: builtin/fetch.c:84
 msgid "fetch all tags and associated objects"
-msgstr ""
+msgstr "タグと関連オブジェクトを取得します"
 
 #: builtin/fetch.c:86
 msgid "do not fetch all tags (--no-tags)"
-msgstr ""
+msgstr "すべてのタグを取得しません (--no-tags)"
 
 #: builtin/fetch.c:88
 msgid "prune remote-tracking branches no longer on remote"
-msgstr ""
+msgstr "リモートでもはや存在しないリモート追跡ブランチの枝刈りをします"
 
 #: builtin/fetch.c:89
 msgid "on-demand"
@@ -4796,99 +4796,99 @@ msgstr ""
 
 #: builtin/fetch.c:94
 msgid "keep downloaded pack"
-msgstr ""
+msgstr "ダウンロードしたパックファイルを保存します"
 
 #: builtin/fetch.c:96
 msgid "allow updating of HEAD ref"
-msgstr ""
+msgstr "HEADの参照の更新を許可します"
 
 #: builtin/fetch.c:99
 msgid "deepen history of shallow clone"
-msgstr ""
+msgstr "浅いクローンにより過去の履歴を追加します"
 
 #: builtin/fetch.c:101
 msgid "convert to a complete repository"
-msgstr ""
+msgstr "完全なリポジトリに変換します"
 
 #: builtin/fetch.c:103 builtin/log.c:1197
 msgid "dir"
-msgstr ""
+msgstr "ディレクトリ"
 
 #: builtin/fetch.c:104
 msgid "prepend this to submodule path output"
-msgstr ""
+msgstr "サブモジュールのパスの先頭にこのパスをつけて出力します"
 
 #: builtin/fetch.c:107
 msgid "default mode for recursion"
-msgstr ""
+msgstr "再帰方法のデフォルトの方式"
 
 #: builtin/fetch.c:109
 msgid "accept refs that update .git/shallow"
-msgstr ""
+msgstr ".git/shallowを更新する参照も取得します"
 
 #: builtin/fetch.c:347
 msgid "Couldn't find remote ref HEAD"
-msgstr ""
+msgstr "リモートのHEAD参照を見つけられませんでした"
 
 #: builtin/fetch.c:411
 #, c-format
 msgid "object %s not found"
-msgstr ""
+msgstr "%sオブジェクトが見つかりませんでした"
 
 #: builtin/fetch.c:416
 msgid "[up to date]"
-msgstr ""
+msgstr "[取得済み]"
 
 #: builtin/fetch.c:430
 #, c-format
 msgid "! %-*s %-*s -> %s  (can't fetch in current branch)"
-msgstr ""
+msgstr "! %-*s %-*s -> %s  (このブランチに取得することができません)"
 
 #: builtin/fetch.c:431 builtin/fetch.c:517
 msgid "[rejected]"
-msgstr ""
+msgstr "[拒否]"
 
 #: builtin/fetch.c:442
 msgid "[tag update]"
-msgstr ""
+msgstr "[タグの更新]"
 
 #: builtin/fetch.c:444 builtin/fetch.c:479 builtin/fetch.c:497
 msgid "  (unable to update local ref)"
-msgstr ""
+msgstr "  (ローカルの参照の更新ができません)"
 
 #: builtin/fetch.c:462
 msgid "[new tag]"
-msgstr ""
+msgstr "[新規タグ]"
 
 #: builtin/fetch.c:465
 msgid "[new branch]"
-msgstr ""
+msgstr "[新規ブランチ]"
 
 #: builtin/fetch.c:468
 msgid "[new ref]"
-msgstr ""
+msgstr "[新規参照]"
 
 #: builtin/fetch.c:513
 msgid "unable to update local ref"
-msgstr ""
+msgstr "ローカルの参照の更新ができません"
 
 #: builtin/fetch.c:513
 msgid "forced update"
-msgstr ""
+msgstr "[強制的な更新]"
 
 #: builtin/fetch.c:519
 msgid "(non-fast-forward)"
-msgstr ""
+msgstr "(非ファスト・フォーワード)"
 
 #: builtin/fetch.c:552 builtin/fetch.c:785
 #, c-format
 msgid "cannot open %s: %s\n"
-msgstr ""
+msgstr "%sが開けません: %s\n"
 
 #: builtin/fetch.c:561
 #, c-format
 msgid "%s did not send all necessary objects\n"
-msgstr ""
+msgstr "%sは必要なオブジェクトの一部を送りませんでした"
 
 #: builtin/fetch.c:579
 #, c-format
@@ -4898,7 +4898,7 @@ msgstr ""
 #: builtin/fetch.c:667 builtin/fetch.c:750
 #, c-format
 msgid "From %.*s\n"
-msgstr ""
+msgstr "%.*sから\n"
 
 #: builtin/fetch.c:678
 #, c-format
@@ -4919,11 +4919,11 @@ msgstr ""
 
 #: builtin/fetch.c:755
 msgid "[deleted]"
-msgstr ""
+msgstr "[削除]"
 
 #: builtin/fetch.c:756 builtin/remote.c:1050
 msgid "(none)"
-msgstr ""
+msgstr "(なし)"
 
 #: builtin/fetch.c:775
 #, c-format
@@ -4933,62 +4933,64 @@ msgstr ""
 #: builtin/fetch.c:794
 #, c-format
 msgid "Option \"%s\" value \"%s\" is not valid for %s"
-msgstr ""
+msgstr "\"%s\"オプションの値\"%s\"は%sに使えません"
 
 #: builtin/fetch.c:797
 #, c-format
 msgid "Option \"%s\" is ignored for %s\n"
-msgstr ""
+msgstr "\"%s\"オプションは%sでは無視されます"
 
 #: builtin/fetch.c:853
 #, c-format
 msgid "Don't know how to fetch from %s"
-msgstr ""
+msgstr "%sからの取得方法がわかりません"
 
 #: builtin/fetch.c:1015
 #, c-format
 msgid "Fetching %s\n"
-msgstr ""
+msgstr "%sを取得しています"
 
 #: builtin/fetch.c:1017 builtin/remote.c:90
 #, c-format
 msgid "Could not fetch %s"
-msgstr ""
+msgstr "%sを取得できませんでした"
 
 #: builtin/fetch.c:1036
 msgid ""
 "No remote repository specified.  Please, specify either a URL or a\n"
 "remote name from which new revisions should be fetched."
 msgstr ""
+"リモートのリポジトリの指定がありません。URLかリモート名で\n"
+"変更の取得先を指定してください。"
 
 #: builtin/fetch.c:1059
 msgid "You need to specify a tag name."
-msgstr ""
+msgstr "タグ名の指定が必要です"
 
 #: builtin/fetch.c:1107
 msgid "--depth and --unshallow cannot be used together"
-msgstr ""
+msgstr "--depthと--unshallowは一緒に使うことができません"
 
 #: builtin/fetch.c:1109
 msgid "--unshallow on a complete repository does not make sense"
-msgstr ""
+msgstr "完全なリポジトリに対して--unshallowの指定は意味がありません"
 
 #: builtin/fetch.c:1132
 msgid "fetch --all does not take a repository argument"
-msgstr ""
+msgstr "fetch --allにリポジトリのパラメータを渡すことができません"
 
 #: builtin/fetch.c:1134
 msgid "fetch --all does not make sense with refspecs"
-msgstr ""
+msgstr "fetch --allに参照仕様を指定することは意味をなしません"
 
 #: builtin/fetch.c:1145
 #, c-format
 msgid "No such remote or remote group: %s"
-msgstr ""
+msgstr "%sというリモート、もしくはリモートの集合は存在しません"
 
 #: builtin/fetch.c:1153
 msgid "Fetching a group and specifying refspecs does not make sense"
-msgstr ""
+msgstr "集合の取得に参照仕様を指定することは意味をなしません"
 
 #: builtin/fmt-merge-msg.c:13
 msgid "git fmt-merge-msg [-m <message>] [--log[=<n>]|--no-log] [--file <file>]"
@@ -5278,7 +5280,7 @@ msgstr "一致しないファイル名のみ表示します"
 
 #: builtin/grep.c:693
 msgid "print NUL after filenames"
-msgstr "ファイル名の後ろにNULLを出力します"
+msgstr "ファイル名の後ろにNULを出力します"
 
 #: builtin/grep.c:695
 msgid "show the number of matches instead of matching lines"
@@ -9255,7 +9257,7 @@ msgstr "コミット間またはコミットと作業ツリー間などの差分
 
 #: common-cmds.h:15
 msgid "Download objects and refs from another repository"
-msgstr "他のリポジトリからオブジェクトと参照（ref）をダウンロードします。"
+msgstr "他のリポジトリからオブジェクトと参照をダウンロードします。"
 
 #: common-cmds.h:16
 msgid "Print lines matching a pattern"
@@ -9283,7 +9285,7 @@ msgstr "他のリポジトリまたはローカルブランチの変更を取得
 
 #: common-cmds.h:22
 msgid "Update remote refs along with associated objects"
-msgstr "関連するオブジェクトとともにリモートの参照（ref）を更新します。"
+msgstr "関連するオブジェクトとともにリモートの参照を更新します。"
 
 #: common-cmds.h:23
 msgid "Forward-port local commits to the updated upstream head"
