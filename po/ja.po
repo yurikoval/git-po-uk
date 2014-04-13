@@ -5254,107 +5254,107 @@ msgstr ""
 
 #: builtin/grep.c:681
 msgid "don't show filenames"
-msgstr ""
+msgstr "ファイル名を表示しません"
 
 #: builtin/grep.c:682
 msgid "show filenames"
-msgstr ""
+msgstr "ファイル名を表示します"
 
 #: builtin/grep.c:684
 msgid "show filenames relative to top directory"
-msgstr ""
+msgstr "ファイル名をトップ・ディレクトリからのパスを含めて表示します"
 
 #: builtin/grep.c:686
 msgid "show only filenames instead of matching lines"
-msgstr ""
+msgstr "ファイル名のみ表示して、一致する一行一行を表示しません。"
 
 #: builtin/grep.c:688
 msgid "synonym for --files-with-matches"
-msgstr ""
+msgstr "--files-with-matchesに同じ"
 
 #: builtin/grep.c:691
 msgid "show only the names of files without match"
-msgstr ""
+msgstr "一致しないファイル名のみ表示します"
 
 #: builtin/grep.c:693
 msgid "print NUL after filenames"
-msgstr ""
+msgstr "ファイル名の後ろにNULLを出力します"
 
 #: builtin/grep.c:695
 msgid "show the number of matches instead of matching lines"
-msgstr ""
+msgstr "一致する行の中身を表示せずに、一致する回数のみ表示します"
 
 #: builtin/grep.c:696
 msgid "highlight matches"
-msgstr ""
+msgstr "一致する箇所をハイライトします"
 
 #: builtin/grep.c:698
 msgid "print empty line between matches from different files"
-msgstr ""
+msgstr "異なるファイルの結果の間に空の行を出力します"
 
 #: builtin/grep.c:700
 msgid "show filename only once above matches from same file"
-msgstr ""
+msgstr "同一ファイルで一致した結果の上に、ファイル名を1回のみ表示します"
 
 #: builtin/grep.c:703
 msgid "show <n> context lines before and after matches"
-msgstr ""
+msgstr "一致した行の上下に<n>行だけ余分に表示します"
 
 #: builtin/grep.c:706
 msgid "show <n> context lines before matches"
-msgstr ""
+msgstr "一致した行の上に<n>行だけ余分に表示します"
 
 #: builtin/grep.c:708
 msgid "show <n> context lines after matches"
-msgstr ""
+msgstr "一致した行の下に<n>行だけ余分に表示します"
 
 #: builtin/grep.c:709
 msgid "shortcut for -C NUM"
-msgstr ""
+msgstr "-C NUMの略"
 
 #: builtin/grep.c:712
 msgid "show a line with the function name before matches"
-msgstr ""
+msgstr "一致した行の上に関数名も表示します"
 
 #: builtin/grep.c:714
 msgid "show the surrounding function"
-msgstr ""
+msgstr "一致した行が入っている関数を表示します"
 
 #: builtin/grep.c:717
 msgid "read patterns from file"
-msgstr ""
+msgstr "正規表現をファイルから読み出します"
 
 #: builtin/grep.c:719
 msgid "match <pattern>"
-msgstr ""
+msgstr "<正規表現>に一致"
 
 #: builtin/grep.c:721
 msgid "combine patterns specified with -e"
-msgstr ""
+msgstr "-eで指定した正規表現を組み合わせます"
 
 #: builtin/grep.c:733
 msgid "indicate hit with exit status without output"
-msgstr ""
+msgstr "出力をせずに、一致したかどうかを終了ステータスで示します"
 
 #: builtin/grep.c:735
 msgid "show only matches from files that match all patterns"
-msgstr ""
+msgstr "指定した正規表現に全て一致したファイルのみ表示します"
 
 #: builtin/grep.c:737
 msgid "show parse tree for grep expression"
-msgstr ""
+msgstr "grep表現のパース・ツリーを表示します"
 
 #: builtin/grep.c:741
 msgid "pager"
-msgstr ""
+msgstr "ページャ"
 
 #: builtin/grep.c:741
 msgid "show matching files in the pager"
-msgstr ""
+msgstr "一致したファイルをペーシャで表示します"
 
 #: builtin/grep.c:744
 msgid "allow calling of grep(1) (ignored by this build)"
-msgstr ""
+msgstr "grep(1)の呼び出しを許可します（本ビルドではこのオプションは無視されます）"
 
 #: builtin/grep.c:745 builtin/show-ref.c:187
 msgid "show usage"
