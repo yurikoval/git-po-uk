@@ -118,11 +118,11 @@ msgstr "リポジトリ"
 
 #: archive.c:350 builtin/archive.c:91
 msgid "retrieve the archive from remote repository <repo>"
-msgstr ""
+msgstr "リモートリポジトリからアーカイブを取得します <repo>"
 
 #: archive.c:351 builtin/archive.c:92 builtin/notes.c:487
 msgid "command"
-msgstr ""
+msgstr "コマンド"
 
 #: archive.c:352 builtin/archive.c:93
 msgid "path to the remote git-upload-archive command"
@@ -251,21 +251,21 @@ msgstr ""
 #: bundle.c:37
 #, c-format
 msgid "'%s' does not look like a v2 bundle file"
-msgstr ""
+msgstr "'%s'はv2バンドルファイルではないようです"
 
 #: bundle.c:64
 #, c-format
 msgid "unrecognized header: %s%s (%d)"
-msgstr ""
+msgstr "不正なヘッダ: %s%s (%d)"
 
 #: bundle.c:90 builtin/commit.c:706
 #, c-format
 msgid "could not open '%s'"
-msgstr ""
+msgstr "'%s'を開くことができませんでした"
 
 #: bundle.c:141
 msgid "Repository lacks these prerequisite commits:"
-msgstr ""
+msgstr "リポジトリは必須のコミットを欠いています:"
 
 #: bundle.c:165 sequencer.c:662 sequencer.c:1112 builtin/log.c:332
 #: builtin/log.c:821 builtin/log.c:1418 builtin/log.c:1644 builtin/merge.c:357
@@ -281,7 +281,7 @@ msgstr[0] ""
 
 #: bundle.c:194
 msgid "The bundle records a complete history."
-msgstr ""
+msgstr "バンドルは完璧なヒストリーを記録します。"
 
 #: bundle.c:196
 #, c-format
@@ -296,7 +296,7 @@ msgstr ""
 #: bundle.c:302 builtin/log.c:1329 builtin/shortlog.c:261
 #, c-format
 msgid "unrecognized argument: %s"
-msgstr ""
+msgstr "不正な引数: %s"
 
 #: bundle.c:337
 #, c-format
@@ -305,7 +305,7 @@ msgstr ""
 
 #: bundle.c:382
 msgid "Refusing to create empty bundle."
-msgstr ""
+msgstr "空のバンドルを作成することを拒否します。"
 
 #: bundle.c:398
 msgid "Could not spawn pack-objects"
@@ -318,7 +318,7 @@ msgstr ""
 #: bundle.c:419
 #, c-format
 msgid "cannot create '%s'"
-msgstr ""
+msgstr "'%s'を作成できません"
 
 #: bundle.c:441
 msgid "index-pack died"
@@ -327,20 +327,20 @@ msgstr ""
 #: commit.c:53
 #, c-format
 msgid "could not parse %s"
-msgstr ""
+msgstr "%sをパースできませんでした。"
 
 #: commit.c:55
 #, c-format
 msgid "%s %s is not a commit!"
-msgstr ""
+msgstr "%s %sはコミットではありません！"
 
 #: compat/obstack.c:406 compat/obstack.c:408
 msgid "memory exhausted"
-msgstr ""
+msgstr "メモリが枯渇しました"
 
 #: connected.c:70
 msgid "Could not run 'git rev-list'"
-msgstr ""
+msgstr "'git rev-list'を実行できませんでした"
 
 #: connected.c:90
 #, c-format
@@ -354,7 +354,7 @@ msgstr ""
 
 #: date.c:95
 msgid "in the future"
-msgstr ""
+msgstr "将来的に"
 
 #: date.c:101
 #, c-format
@@ -378,25 +378,25 @@ msgstr[0] ""
 #, c-format
 msgid "%lu day ago"
 msgid_plural "%lu days ago"
-msgstr[0] ""
+msgstr[0] "%lu日前"
 
 #: date.c:128
 #, c-format
 msgid "%lu week ago"
 msgid_plural "%lu weeks ago"
-msgstr[0] ""
+msgstr[0] "%lu週間前"
 
 #: date.c:135
 #, c-format
 msgid "%lu month ago"
 msgid_plural "%lu months ago"
-msgstr[0] ""
+msgstr[0] "%luヶ月前"
 
 #: date.c:146
 #, c-format
 msgid "%lu year"
 msgid_plural "%lu years"
-msgstr[0] ""
+msgstr[0] "%lu年"
 
 #: date.c:149
 #, c-format
@@ -408,7 +408,7 @@ msgstr[0] ""
 #, c-format
 msgid "%lu year ago"
 msgid_plural "%lu years ago"
-msgstr[0] ""
+msgstr[0] "%lu年前"
 
 #: diffcore-order.c:24
 #, c-format
@@ -451,20 +451,20 @@ msgstr ""
 
 #: gpg-interface.c:59 gpg-interface.c:131
 msgid "could not run gpg."
-msgstr ""
+msgstr "gpgを実行できませんでした。"
 
 #: gpg-interface.c:71
 msgid "gpg did not accept the data"
-msgstr ""
+msgstr "gpgはデータを認めませんでした"
 
 #: gpg-interface.c:82
 msgid "gpg failed to sign the data"
-msgstr ""
+msgstr "gpgはデータへのサインに失敗しました"
 
 #: gpg-interface.c:115
 #, c-format
 msgid "could not create temporary file '%s': %s"
-msgstr ""
+msgstr "一時ファイルの作成ができませんでした '%s': %s"
 
 #: gpg-interface.c:118
 #, c-format
@@ -479,7 +479,7 @@ msgstr ""
 #: grep.c:1712
 #, c-format
 msgid "'%s': %s"
-msgstr ""
+msgstr "'%s': %s"
 
 #: grep.c:1723
 #, c-format
@@ -497,7 +497,7 @@ msgstr ""
 
 #: help.c:233
 msgid "The most commonly used git commands are:"
-msgstr ""
+msgstr "一般的に最も使用されるgitのコマンドはこれらです:"
 
 #: help.c:290
 #, c-format
@@ -525,7 +525,7 @@ msgstr ""
 #: help.c:381
 #, c-format
 msgid "git: '%s' is not a git command. See 'git --help'."
-msgstr ""
+msgstr "git: '%s'はgitコマンドではありません。'git --help'を読んでください。"
 
 #: help.c:385 help.c:444
 msgid ""
@@ -539,11 +539,11 @@ msgstr[0] ""
 #: help.c:440
 #, c-format
 msgid "%s: %s - %s"
-msgstr ""
+msgstr "%s: %s - %s"
 
 #: merge.c:56
 msgid "failed to read the cache"
-msgstr ""
+msgstr "キャッシュを読めませんでした"
 
 #: merge.c:110 builtin/checkout.c:358 builtin/checkout.c:559
 #: builtin/clone.c:661
@@ -588,7 +588,7 @@ msgstr ""
 #: merge-recursive.c:749
 #, c-format
 msgid "cannot read object %s '%s'"
-msgstr ""
+msgstr "%sオブジェクトを読めません '%s'"
 
 #: merge-recursive.c:751
 #, c-format
@@ -612,7 +612,7 @@ msgstr ""
 
 #: merge-recursive.c:923
 msgid "Failed to execute internal merge"
-msgstr ""
+msgstr "内部マージの実行に失敗しました"
 
 #: merge-recursive.c:927
 #, c-format
@@ -621,7 +621,7 @@ msgstr ""
 
 #: merge-recursive.c:943
 msgid "unsupported object type in the tree"
-msgstr ""
+msgstr "ツリーの中でサポートされていないオブジェクトのタイプ"
 
 #: merge-recursive.c:1022 merge-recursive.c:1036
 #, c-format
@@ -639,11 +639,11 @@ msgstr ""
 
 #: merge-recursive.c:1082
 msgid "rename"
-msgstr ""
+msgstr "リネーム"
 
 #: merge-recursive.c:1082 wt-status.c:283
 msgid "renamed"
-msgstr ""
+msgstr "リネーム"
 
 #: merge-recursive.c:1138
 #, c-format
@@ -659,7 +659,7 @@ msgstr ""
 
 #: merge-recursive.c:1165
 msgid " (left unresolved)"
-msgstr ""
+msgstr "(未解決の残り)"
 
 #: merge-recursive.c:1219
 #, c-format
@@ -698,15 +698,15 @@ msgstr ""
 
 #: merge-recursive.c:1565
 msgid "modify"
-msgstr ""
+msgstr "変更"
 
 #: merge-recursive.c:1565 wt-status.c:281
 msgid "modified"
-msgstr ""
+msgstr "変更した"
 
 #: merge-recursive.c:1575
 msgid "content"
-msgstr ""
+msgstr "コンテンツ"
 
 #: merge-recursive.c:1582
 msgid "add/add"
@@ -720,29 +720,29 @@ msgstr ""
 #: merge-recursive.c:1630
 #, c-format
 msgid "Auto-merging %s"
-msgstr ""
+msgstr "自動マージ %s"
 
 #: merge-recursive.c:1634 git-submodule.sh:1148
 msgid "submodule"
-msgstr ""
+msgstr "submodule"
 
 #: merge-recursive.c:1635
 #, c-format
 msgid "CONFLICT (%s): Merge conflict in %s"
-msgstr ""
+msgstr "コンフリクト(%s): マージが%sの中でコンフリクトしました"
 
 #: merge-recursive.c:1725
 #, c-format
 msgid "Removing %s"
-msgstr ""
+msgstr "%sを削除"
 
 #: merge-recursive.c:1750
 msgid "file/directory"
-msgstr ""
+msgstr "ファイル/ディレクトリ"
 
 #: merge-recursive.c:1756
 msgid "directory/file"
-msgstr ""
+msgstr "ディレクトリ/ファイル"
 
 #: merge-recursive.c:1761
 #, c-format
@@ -752,7 +752,7 @@ msgstr ""
 #: merge-recursive.c:1771
 #, c-format
 msgid "Adding %s"
-msgstr ""
+msgstr "%sを追加"
 
 #: merge-recursive.c:1788
 msgid "Fatal merge failure, shouldn't happen."
@@ -760,7 +760,7 @@ msgstr ""
 
 #: merge-recursive.c:1807
 msgid "Already up-to-date!"
-msgstr ""
+msgstr "すでに最新です！"
 
 #: merge-recursive.c:1816
 #, c-format
@@ -774,7 +774,7 @@ msgstr ""
 
 #: merge-recursive.c:1891
 msgid "Merging:"
-msgstr ""
+msgstr "マージ:"
 
 #: merge-recursive.c:1904
 #, c-format
@@ -789,11 +789,11 @@ msgstr ""
 #: merge-recursive.c:1998
 #, c-format
 msgid "Could not parse object '%s'"
-msgstr ""
+msgstr "'%s'オブジェクトをパースできませんでした"
 
 #: merge-recursive.c:2010 builtin/merge.c:665
 msgid "Unable to write index."
-msgstr ""
+msgstr "インデックスを書き込むことができません。"
 
 #: notes-utils.c:40
 msgid "Cannot commit uninitialized/unreferenced notes tree"
@@ -823,7 +823,7 @@ msgstr ""
 
 #: parse-options.c:537
 msgid "..."
-msgstr ""
+msgstr "..."
 
 #: parse-options.c:555
 #, c-format
@@ -933,7 +933,7 @@ msgstr ""
 #.
 #: remote.c:769
 msgid "Internal error"
-msgstr ""
+msgstr "内部エラー"
 
 #: remote.c:1871
 #, c-format
@@ -986,7 +986,7 @@ msgstr ""
 
 #: run-command.c:80
 msgid "open /dev/null failed"
-msgstr ""
+msgstr "/dev/nullを開くのを失敗しました"
 
 #: run-command.c:82
 #, c-format
@@ -997,13 +997,13 @@ msgstr ""
 #: builtin/merge.c:1006 builtin/merge.c:1016
 #, c-format
 msgid "Could not open '%s' for writing"
-msgstr ""
+msgstr "'%s'を書き込むために開くことに失敗しました"
 
 #: sequencer.c:208 builtin/merge.c:343 builtin/merge.c:786
 #: builtin/merge.c:1008 builtin/merge.c:1021
 #, c-format
 msgid "Could not write to '%s'"
-msgstr ""
+msgstr "'%s'に書き込むことができません"
 
 #: sequencer.c:229
 msgid ""
@@ -1021,7 +1021,7 @@ msgstr ""
 #: sequencer.c:245 sequencer.c:870 sequencer.c:953
 #, c-format
 msgid "Could not write to %s"
-msgstr ""
+msgstr "%sに書き込むことができません"
 
 #: sequencer.c:248
 #, c-format
@@ -1030,11 +1030,11 @@ msgstr ""
 
 #: sequencer.c:263
 msgid "Your local changes would be overwritten by cherry-pick."
-msgstr ""
+msgstr "あなたのローカルの変更はcherry-pickにより上書きされます。"
 
 #: sequencer.c:265
 msgid "Your local changes would be overwritten by revert."
-msgstr ""
+msgstr "あなたのローカルの変更はrevertにより上書きされます。"
 
 #: sequencer.c:268
 msgid "Commit your changes or stash them to proceed."
@@ -1044,29 +1044,29 @@ msgstr ""
 #: sequencer.c:325
 #, c-format
 msgid "%s: Unable to write new index file"
-msgstr ""
+msgstr "%s: 新しいインデックスファイルを書くことができません"
 
 #: sequencer.c:356
 msgid "Could not resolve HEAD commit\n"
-msgstr ""
+msgstr "HEADコミットを解決できませんでした\n"
 
 #: sequencer.c:378
 msgid "Unable to update cache tree\n"
-msgstr ""
+msgstr "キャッシュツリーの更新ができません\n"
 
 #: sequencer.c:423
 #, c-format
 msgid "Could not parse commit %s\n"
-msgstr ""
+msgstr "%sコミットをパースすることができませんでした\n"
 
 #: sequencer.c:428
 #, c-format
 msgid "Could not parse parent commit %s\n"
-msgstr ""
+msgstr "%s 親コミットをパースすることができませんでした\n"
 
 #: sequencer.c:494
 msgid "Your index file is unmerged."
-msgstr ""
+msgstr "あなたのインデックスファイルはマージされています。"
 
 #: sequencer.c:513
 #, c-format
