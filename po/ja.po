@@ -4537,16 +4537,16 @@ msgstr ""
 
 #: builtin/describe.c:16
 msgid "git describe [options] <commit-ish>*"
-msgstr ""
+msgstr "git describe [オプション] <コミットのようなもの>"
 
 #: builtin/describe.c:17
 msgid "git describe [options] --dirty"
-msgstr ""
+msgstr "git describe [オプション] --dirty"
 
 #: builtin/describe.c:237
 #, c-format
 msgid "annotated tag %s not available"
-msgstr ""
+msgstr "%sという注釈付きタグがありません"
 
 #: builtin/describe.c:241
 #, c-format
@@ -7029,35 +7029,35 @@ msgstr ""
 #: builtin/notes.c:167 builtin/tag.c:341
 #, c-format
 msgid "could not create file '%s'"
-msgstr ""
+msgstr "'%s'というファイルを作成することができませんでした"
 
 #: builtin/notes.c:186
 msgid "Please supply the note contents using either -m or -F option"
-msgstr ""
+msgstr "ノートの中身を-mか-Fオプションで指定してください"
 
 #: builtin/notes.c:207 builtin/notes.c:844
 #, c-format
 msgid "Removing note for object %s\n"
-msgstr ""
+msgstr "%sに付随しているノートを削除します"
 
 #: builtin/notes.c:212
 msgid "unable to write note object"
-msgstr ""
+msgstr "ノートのオブジェクトの書き込みに失敗しました"
 
 #: builtin/notes.c:214
 #, c-format
 msgid "The note contents has been left in %s"
-msgstr ""
+msgstr "ノートの中身は%sに保存されました"
 
 #: builtin/notes.c:248 builtin/tag.c:537
 #, c-format
 msgid "cannot read '%s'"
-msgstr ""
+msgstr "'%s'の読み出しに失敗しました"
 
 #: builtin/notes.c:250 builtin/tag.c:540
 #, c-format
 msgid "could not open or read '%s'"
-msgstr ""
+msgstr "'%s'は読み出しも書き込みもできませんでした"
 
 #: builtin/notes.c:269 builtin/notes.c:316 builtin/notes.c:318
 #: builtin/notes.c:378 builtin/notes.c:432 builtin/notes.c:515
@@ -7065,12 +7065,12 @@ msgstr ""
 #: builtin/notes.c:839 builtin/tag.c:553
 #, c-format
 msgid "Failed to resolve '%s' as a valid ref."
-msgstr ""
+msgstr "'%s'の参照先が見つかりませんでした"
 
 #: builtin/notes.c:272
 #, c-format
 msgid "Failed to read object '%s'."
-msgstr ""
+msgstr "'%s'というオブジェクトの読み出しに失敗しました"
 
 #: builtin/notes.c:312
 #, c-format
@@ -7086,37 +7086,37 @@ msgstr ""
 #: builtin/notes.c:510 builtin/notes.c:583 builtin/notes.c:630
 #: builtin/notes.c:904
 msgid "too many parameters"
-msgstr ""
+msgstr "パラメータが多すぎます"
 
 #: builtin/notes.c:384 builtin/notes.c:643
 #, c-format
 msgid "No note found for object %s."
-msgstr ""
+msgstr "%sに付随しているノートが見つかりませんでした"
 
 #: builtin/notes.c:406 builtin/notes.c:563
 msgid "note contents as a string"
-msgstr ""
+msgstr "ノートの中身を文字列で指定します"
 
 #: builtin/notes.c:409 builtin/notes.c:566
 msgid "note contents in a file"
-msgstr ""
+msgstr "ノートの中身をファイルで指定します"
 
 #: builtin/notes.c:411 builtin/notes.c:414 builtin/notes.c:568
 #: builtin/notes.c:571 builtin/tag.c:474
 msgid "object"
-msgstr ""
+msgstr "オブジェクト"
 
 #: builtin/notes.c:412 builtin/notes.c:569
 msgid "reuse and edit specified note object"
-msgstr ""
+msgstr "指定するノートを再利用して編集します"
 
 #: builtin/notes.c:415 builtin/notes.c:572
 msgid "reuse specified note object"
-msgstr ""
+msgstr "指定するノートを再利用します"
 
 #: builtin/notes.c:417 builtin/notes.c:485
 msgid "replace existing notes"
-msgstr ""
+msgstr "既存のノートを上書きします"
 
 #: builtin/notes.c:451
 #, c-format
@@ -7124,15 +7124,17 @@ msgid ""
 "Cannot add notes. Found existing notes for object %s. Use '-f' to overwrite "
 "existing notes"
 msgstr ""
+"ノートを追加することができません。%sに付随している既存のノートがあります。"
+"既存のノートを上書きする場合は'-f'オプションを使ってください。"
 
 #: builtin/notes.c:456 builtin/notes.c:533
 #, c-format
 msgid "Overwriting existing notes for object %s\n"
-msgstr ""
+msgstr "%sに付随しているノートに上書きします"
 
 #: builtin/notes.c:486
 msgid "read objects from stdin"
-msgstr ""
+msgstr "標準入力からオブジェクトを読み込みます"
 
 #: builtin/notes.c:488
 msgid "load rewriting config for <command> (implies --stdin)"
@@ -7140,7 +7142,7 @@ msgstr ""
 
 #: builtin/notes.c:506
 msgid "too few parameters"
-msgstr ""
+msgstr "パラメータが足りません"
 
 #: builtin/notes.c:527
 #, c-format
@@ -7148,11 +7150,13 @@ msgid ""
 "Cannot copy notes. Found existing notes for object %s. Use '-f' to overwrite "
 "existing notes"
 msgstr ""
+"ノートのコピーができません。%sに付随している既存のノートがあります。"
+"既存のノートを上書きする場合は'-f'を使ってください。"
 
 #: builtin/notes.c:539
 #, c-format
 msgid "Missing notes on source object %s. Cannot copy."
-msgstr ""
+msgstr "コピー元のオブジェクト%sにノートが付いていません。よってコピーができません。"
 
 #: builtin/notes.c:588
 #, c-format
@@ -7160,6 +7164,8 @@ msgid ""
 "The -m/-F/-c/-C options have been deprecated for the 'edit' subcommand.\n"
 "Please use 'git notes add -f -m/-F/-c/-C' instead.\n"
 msgstr ""
+"'edit'サブコマンドで-m/-F/-c/-Cオプションは廃止予定です。\n"
+"代わりに'git notes add -f -m/-F/-c/-C'を使ってください。"
 
 #: builtin/notes.c:735
 msgid "General options"
