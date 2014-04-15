@@ -3437,31 +3437,32 @@ msgstr ""
 msgid ""
 "git clean [-d] [-f] [-i] [-n] [-q] [-e <pattern>] [-x | -X] [--] <paths>..."
 msgstr ""
+"git clean [-d] [-f] [-i] [-n] [-q] [-e <パターン>] [-x | -X] [--] <パス>..."
 
 #: builtin/clean.c:30
 #, c-format
 msgid "Removing %s\n"
-msgstr ""
+msgstr "削除します: %s\n"
 
 #: builtin/clean.c:31
 #, c-format
 msgid "Would remove %s\n"
-msgstr ""
+msgstr "本来は削除しました: %s\n"
 
 #: builtin/clean.c:32
 #, c-format
 msgid "Skipping repository %s\n"
-msgstr ""
+msgstr "リポジトリ%sを飛ばします"
 
 #: builtin/clean.c:33
 #, c-format
 msgid "Would skip repository %s\n"
-msgstr ""
+msgstr "リポジトリ%sを本来飛ばしました"
 
 #: builtin/clean.c:34
 #, c-format
 msgid "failed to remove %s"
-msgstr ""
+msgstr "削除に失敗しました: %s"
 
 #: builtin/clean.c:294
 msgid ""
@@ -3470,6 +3471,10 @@ msgid ""
 "foo        - select item based on unique prefix\n"
 "           - (empty) select nothing"
 msgstr ""
+"入力候補の説明:\n"
+"1          - 数字が振られているアイテムを選択します\n"
+"foo        - 先頭のユニークな文字列でアイテムを選択します\n"
+"           - (空) 何も選択しません"
 
 #: builtin/clean.c:298
 msgid ""
@@ -3482,34 +3487,42 @@ msgid ""
 "*          - choose all items\n"
 "           - (empty) finish selecting"
 msgstr ""
+"入力候補の説明:\n"
+"1          - 1つのアイテムを選択します\n"
+"3-5        - 範囲内の複数のアイテムを選択します\n"
+"2-3,6-9    - 複数の範囲のアイテムを選択します\n"
+"foo        - 先頭のユニークな文字列でアイテムを選択します\n"
+"-...       - 指定のアイテムの選択を解除します\n"
+"*          - すべてのアイテムを選択肢ます\n"
+"           - (空) 選択するのを終了します"
 
 #: builtin/clean.c:516
 #, c-format
 msgid "Huh (%s)?"
-msgstr ""
+msgstr "ん？わからないぞ (%s)"
 
 #: builtin/clean.c:659
 #, c-format
 msgid "Input ignore patterns>> "
-msgstr ""
+msgstr "無視するパターンを入力してください >> "
 
 #: builtin/clean.c:696
 #, c-format
 msgid "WARNING: Cannot find items matched by: %s"
-msgstr ""
+msgstr "警告: パターンに一致するアイテムが見つかりませんでした: %s"
 
 #: builtin/clean.c:717
 msgid "Select items to delete"
-msgstr ""
+msgstr "削除するアイテムを選択してください"
 
 #: builtin/clean.c:757
 #, c-format
 msgid "remove %s? "
-msgstr ""
+msgstr "%sを削除しますか？"
 
 #: builtin/clean.c:782
 msgid "Bye."
-msgstr ""
+msgstr "じゃあね。"
 
 #: builtin/clean.c:790
 msgid ""
@@ -3558,11 +3571,11 @@ msgstr ""
 #: builtin/clean.c:880 builtin/describe.c:420 builtin/grep.c:718
 #: builtin/ls-files.c:483 builtin/name-rev.c:314 builtin/show-ref.c:185
 msgid "pattern"
-msgstr ""
+msgstr "パターン"
 
 #: builtin/clean.c:881
 msgid "add <pattern> to ignore rules"
-msgstr ""
+msgstr "無視するルールに<パターン>を追加します"
 
 #: builtin/clean.c:882
 msgid "remove ignored files, too"
@@ -3574,19 +3587,23 @@ msgstr ""
 
 #: builtin/clean.c:902
 msgid "-x and -X cannot be used together"
-msgstr ""
+msgstr "-xと-Xは一緒に使うことができません"
 
 #: builtin/clean.c:906
 msgid ""
 "clean.requireForce set to true and neither -i, -n nor -f given; refusing to "
 "clean"
 msgstr ""
+"clean.requireForceはtrueと設定されていて、それに-i、-n、-fオプションはどれも"
+"指定されていません。よって削除を拒否します"
 
 #: builtin/clean.c:909
 msgid ""
 "clean.requireForce defaults to true and neither -i, -n nor -f given; "
 "refusing to clean"
 msgstr ""
+"clean.requireForceという設定はデフォルトによりtrueで、それに-i、-n、-fオプションは"
+"どれも指定されていません。よって削除を拒否します"
 
 #: builtin/clone.c:36
 msgid "git clone [options] [--] <repo> [<dir>]"
@@ -5324,15 +5341,15 @@ msgstr "一致した行が入っている関数を表示します"
 
 #: builtin/grep.c:717
 msgid "read patterns from file"
-msgstr "正規表現をファイルから読み出します"
+msgstr "パターンをファイルから読み出します"
 
 #: builtin/grep.c:719
 msgid "match <pattern>"
-msgstr "<正規表現>に一致"
+msgstr "<パターン>に一致"
 
 #: builtin/grep.c:721
 msgid "combine patterns specified with -e"
-msgstr "-eで指定した正規表現を組み合わせます"
+msgstr "-eで指定したパターンを組み合わせます"
 
 #: builtin/grep.c:733
 msgid "indicate hit with exit status without output"
@@ -5340,7 +5357,7 @@ msgstr "出力をせずに、一致したかどうかを終了ステータスで
 
 #: builtin/grep.c:735
 msgid "show only matches from files that match all patterns"
-msgstr "指定した正規表現に全て一致したファイルのみ表示します"
+msgstr "指定したパターンに全て一致したファイルのみ表示します"
 
 #: builtin/grep.c:737
 msgid "show parse tree for grep expression"
