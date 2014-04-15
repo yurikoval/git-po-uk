@@ -137,81 +137,81 @@ msgstr ""
 #: branch.c:60
 #, c-format
 msgid "Not setting branch %s as its own upstream."
-msgstr ""
+msgstr "ブランチ%sを自身の上流に設定しません。"
 
 #: branch.c:82
 #, c-format
 msgid "Branch %s set up to track remote branch %s from %s by rebasing."
-msgstr ""
+msgstr "ブランチ%sは%sから、リベースによりリモート・ブランチ%sに追従するように設定しました。"
 
 #: branch.c:83
 #, c-format
 msgid "Branch %s set up to track remote branch %s from %s."
-msgstr ""
+msgstr "ブランチ%sは%sからリモート・ブランチ%sに追従するように設定しました。"
 
 #: branch.c:87
 #, c-format
 msgid "Branch %s set up to track local branch %s by rebasing."
-msgstr ""
+msgstr "ブランチ%sはリベースによりローカル・ブランチ%sに追従するように設定しました。"
 
 #: branch.c:88
 #, c-format
 msgid "Branch %s set up to track local branch %s."
-msgstr ""
+msgstr "ブランチ%sはローカル・ブランチ%sに追従するように設定しました。"
 
 #: branch.c:92
 #, c-format
 msgid "Branch %s set up to track remote ref %s by rebasing."
-msgstr ""
+msgstr "ブランチ%sはリベースによりリモートの参照%sに追従するように設定しました。"
 
 #: branch.c:93
 #, c-format
 msgid "Branch %s set up to track remote ref %s."
-msgstr ""
+msgstr "ブランチ%sはリモートの参照%sに追従するように設定しました。"
 
 #: branch.c:97
 #, c-format
 msgid "Branch %s set up to track local ref %s by rebasing."
-msgstr ""
+msgstr "ブランチ%sはリベースによりローカルの参照%sに追従するように設定しました。"
 
 #: branch.c:98
 #, c-format
 msgid "Branch %s set up to track local ref %s."
-msgstr ""
+msgstr "ブランチ%sはローカルの参照%sに追従するように設定しました。"
 
 #: branch.c:118
 #, c-format
 msgid "Tracking not set up: name too long: %s"
-msgstr ""
+msgstr "追従の設定ができませんでした: 名前が長すぎます: %s"
 
 #: branch.c:137
 #, c-format
 msgid "Not tracking: ambiguous information for ref %s"
-msgstr ""
+msgstr "追従の設定ができませんでした: 参照%sがあいまいです"
 
 #: branch.c:182
 #, c-format
 msgid "'%s' is not a valid branch name."
-msgstr ""
+msgstr "'%s'はブランチの名前として使えません。"
 
 #: branch.c:187
 #, c-format
 msgid "A branch named '%s' already exists."
-msgstr ""
+msgstr "'%s'というブランチは既に存在します。"
 
 #: branch.c:195
 msgid "Cannot force update the current branch."
-msgstr ""
+msgstr "現在使っているブランチを強制的に更新することはできません。"
 
 #: branch.c:215
 #, c-format
 msgid "Cannot setup tracking information; starting point '%s' is not a branch."
-msgstr ""
+msgstr "追従の設定ができません: スタート地点の'%s'はブランチではありません。"
 
 #: branch.c:217
 #, c-format
 msgid "the requested upstream branch '%s' does not exist"
-msgstr ""
+msgstr "指定した上流のブランチ'%s'が存在しません"
 
 #: branch.c:219
 msgid ""
