@@ -2801,11 +2801,11 @@ msgstr ""
 
 #: builtin/branch.c:809
 msgid "change upstream info"
-msgstr ""
+msgstr "upstreamの情報を変更します"
 
 #: builtin/branch.c:813
 msgid "use colored output"
-msgstr ""
+msgstr "カラフルな出力を使用します"
 
 #: builtin/branch.c:814
 msgid "act on remote-tracking branches"
@@ -2815,27 +2815,27 @@ msgstr ""
 #: builtin/branch.c:850 builtin/commit.c:1460 builtin/commit.c:1461
 #: builtin/commit.c:1462 builtin/commit.c:1463 builtin/tag.c:468
 msgid "commit"
-msgstr ""
+msgstr "コミット"
 
 #: builtin/branch.c:818 builtin/branch.c:824
 msgid "print only branches that contain the commit"
-msgstr ""
+msgstr "コミットが含まれているブランチのみを出力します"
 
 #: builtin/branch.c:830
 msgid "Specific git-branch actions:"
-msgstr ""
+msgstr "特定のgit-branchアクション:"
 
 #: builtin/branch.c:831
 msgid "list both remote-tracking and local branches"
-msgstr ""
+msgstr "リモートのトラッキングとローカルのブランチを一覧表示します"
 
 #: builtin/branch.c:833
 msgid "delete fully merged branch"
-msgstr ""
+msgstr "完全にマージされたブランチを削除します"
 
 #: builtin/branch.c:834
 msgid "delete branch (even if not merged)"
-msgstr ""
+msgstr "ブランチを削除します(マージされていないとしても)"
 
 #: builtin/branch.c:835
 msgid "move/rename a branch and its reflog"
@@ -2847,39 +2847,39 @@ msgstr ""
 
 #: builtin/branch.c:837
 msgid "list branch names"
-msgstr ""
+msgstr "ブランチ名の一覧です"
 
 #: builtin/branch.c:838
 msgid "create the branch's reflog"
-msgstr ""
+msgstr "ブランチのreflogを作成します"
 
 #: builtin/branch.c:840
 msgid "edit the description for the branch"
-msgstr ""
+msgstr "ブランチの説明を編集します"
 
 #: builtin/branch.c:841
 msgid "force creation (when already exists)"
-msgstr ""
+msgstr "強制的に作成します(すでに存在する場合)"
 
 #: builtin/branch.c:844
 msgid "print only not merged branches"
-msgstr ""
+msgstr "マージされていないブランチのみを出力します"
 
 #: builtin/branch.c:850
 msgid "print only merged branches"
-msgstr ""
+msgstr "マージされているブランチのみを出力します"
 
 #: builtin/branch.c:854
 msgid "list branches in columns"
-msgstr ""
+msgstr "カラムないのブランチの一覧です"
 
 #: builtin/branch.c:867
 msgid "Failed to resolve HEAD as a valid ref."
-msgstr ""
+msgstr "有効なrefとしてHEADの解決に失敗しました。"
 
 #: builtin/branch.c:872 builtin/clone.c:635
 msgid "HEAD not found below refs/heads!"
-msgstr ""
+msgstr "refs/heads以下にHEADが見つかりませんでした！"
 
 #: builtin/branch.c:896
 msgid "--column and --verbose are incompatible"
@@ -2887,33 +2887,33 @@ msgstr ""
 
 #: builtin/branch.c:902 builtin/branch.c:941
 msgid "branch name required"
-msgstr ""
+msgstr "ブランチ名は必須です"
 
 #: builtin/branch.c:917
 msgid "Cannot give description to detached HEAD"
-msgstr ""
+msgstr "分離したHEADに説明を与えられません"
 
 #: builtin/branch.c:922
 msgid "cannot edit description of more than one branch"
-msgstr ""
+msgstr "２つ以上のブランチの説明を編集できません"
 
 #: builtin/branch.c:929
 #, c-format
 msgid "No commit on branch '%s' yet."
-msgstr ""
+msgstr "'%s'ブランチにはまだコミットがありません。"
 
 #: builtin/branch.c:932
 #, c-format
 msgid "No branch named '%s'."
-msgstr ""
+msgstr "'%s'というブランチはありません。"
 
 #: builtin/branch.c:947
 msgid "too many branches for a rename operation"
-msgstr ""
+msgstr "リネーム操作にブランチが多すぎます"
 
 #: builtin/branch.c:952
 msgid "too many branches to set new upstream"
-msgstr ""
+msgstr "新しいupstreamにセットするブランチが多すぎます"
 
 #: builtin/branch.c:956
 #, c-format
@@ -2924,16 +2924,16 @@ msgstr ""
 #: builtin/branch.c:959 builtin/branch.c:981 builtin/branch.c:1002
 #, c-format
 msgid "no such branch '%s'"
-msgstr ""
+msgstr "'%s'というブランチはありません。"
 
 #: builtin/branch.c:963
 #, c-format
 msgid "branch '%s' does not exist"
-msgstr ""
+msgstr "'%s'ブランチは存在しません"
 
 #: builtin/branch.c:975
 msgid "too many branches to unset upstream"
-msgstr ""
+msgstr "upstreamの設定解除にブランチが多すぎます"
 
 #: builtin/branch.c:979
 msgid "could not unset upstream of HEAD when it does not point to any branch."
@@ -2942,15 +2942,15 @@ msgstr ""
 #: builtin/branch.c:985
 #, c-format
 msgid "Branch '%s' has no upstream information"
-msgstr ""
+msgstr "'%s'ブランチはupstreamの情報を持っていません"
 
 #: builtin/branch.c:999
 msgid "it does not make sense to create 'HEAD' manually"
-msgstr ""
+msgstr "手動で'HEAD'を作成しても意味がありません"
 
 #: builtin/branch.c:1005
 msgid "-a and -r options to 'git branch' do not make sense with a branch name"
-msgstr ""
+msgstr "'git bransh'に-aと-rオプションをブランチ名とともに使用しても意味がありません"
 
 #: builtin/branch.c:1008
 #, c-format
@@ -2970,57 +2970,57 @@ msgstr ""
 #: builtin/branch.c:1026
 #, c-format
 msgid "    git branch -d %s\n"
-msgstr ""
+msgstr "    git branch -d %s\n"
 
 #: builtin/branch.c:1027
 #, c-format
 msgid "    git branch --set-upstream-to %s\n"
-msgstr ""
+msgstr "    git branch --set-upstream-to %s\n"
 
 #: builtin/bundle.c:47
 #, c-format
 msgid "%s is okay\n"
-msgstr ""
+msgstr "%s OK\n"
 
 #: builtin/bundle.c:56
 msgid "Need a repository to create a bundle."
-msgstr ""
+msgstr "バンドルを作成するためにリポジトリが必要です。"
 
 #: builtin/bundle.c:60
 msgid "Need a repository to unbundle."
-msgstr ""
+msgstr "バンドルを解除するためにリポジトリが必要です。"
 
 #: builtin/cat-file.c:328
 msgid "git cat-file (-t|-s|-e|-p|<type>|--textconv) <object>"
-msgstr ""
+msgstr "git cat-file (-t|-s|-e|-p|<type>|--textconv) <object>"
 
 #: builtin/cat-file.c:329
 msgid "git cat-file (--batch|--batch-check) < <list_of_objects>"
-msgstr ""
+msgstr "git cat-file (--batch|--batch-check) < <list_of_objects>"
 
 #: builtin/cat-file.c:366
 msgid "<type> can be one of: blob, tree, commit, tag"
-msgstr ""
+msgstr "<type>は次のいずれかです: blob, tree, commit, tag"
 
 #: builtin/cat-file.c:367
 msgid "show object type"
-msgstr ""
+msgstr "オブジェクトのタイプを表示します"
 
 #: builtin/cat-file.c:368
 msgid "show object size"
-msgstr ""
+msgstr "オブジェクトのサイズを表示します"
 
 #: builtin/cat-file.c:370
 msgid "exit with zero when there's no error"
-msgstr ""
+msgstr "0で終了した時エラーはありません"
 
 #: builtin/cat-file.c:371
 msgid "pretty-print object's content"
-msgstr ""
+msgstr "オブジェクトの内容を見やすく表示します"
 
 #: builtin/cat-file.c:373
 msgid "for blob objects, run textconv on object's content"
-msgstr ""
+msgstr "Blobオブジェクトのためにtextconvをオブジェクトの内容に実行します"
 
 #: builtin/cat-file.c:375
 msgid "show info and content of objects fed from the standard input"
@@ -3032,15 +3032,15 @@ msgstr ""
 
 #: builtin/check-attr.c:11
 msgid "git check-attr [-a | --all | attr...] [--] pathname..."
-msgstr ""
+msgstr "git check-attr [-a | --all | attr...] [--] パス名..."
 
 #: builtin/check-attr.c:12
 msgid "git check-attr --stdin [-z] [-a | --all | attr...] < <list-of-paths>"
-msgstr ""
+msgstr "git check-attr --stdin [-z] [-a | --all | attr...] < <パスのリスト>"
 
 #: builtin/check-attr.c:19
 msgid "report all attributes set on file"
-msgstr ""
+msgstr "ファイルに設定されたすべての属性を報告します"
 
 #: builtin/check-attr.c:20
 msgid "use .gitattributes only from the index"
@@ -3048,7 +3048,7 @@ msgstr ""
 
 #: builtin/check-attr.c:21 builtin/check-ignore.c:22 builtin/hash-object.c:75
 msgid "read file names from stdin"
-msgstr ""
+msgstr "標準入力からファイル名を読み込みます"
 
 #: builtin/check-attr.c:23 builtin/check-ignore.c:24
 msgid "terminate input and output records by a NUL character"
@@ -3056,68 +3056,68 @@ msgstr ""
 
 #: builtin/check-ignore.c:18 builtin/checkout.c:1090 builtin/gc.c:260
 msgid "suppress progress reporting"
-msgstr ""
+msgstr "進捗報告を抑制します"
 
 #: builtin/check-ignore.c:26
 msgid "show non-matching input paths"
-msgstr ""
+msgstr "マッチしない入力されたパスを表示します"
 
 #: builtin/check-ignore.c:28
 msgid "ignore index when checking"
-msgstr ""
+msgstr "チェックはインデックスを無視します"
 
 #: builtin/check-ignore.c:154
 msgid "cannot specify pathnames with --stdin"
-msgstr ""
+msgstr "--stdinとともにパス名を明示できません"
 
 #: builtin/check-ignore.c:157
 msgid "-z only makes sense with --stdin"
-msgstr ""
+msgstr "-zは--stdinとともに使用した場合のみ意味を成します"
 
 #: builtin/check-ignore.c:159
 msgid "no path specified"
-msgstr ""
+msgstr "パスが明示されていません"
 
 #: builtin/check-ignore.c:163
 msgid "--quiet is only valid with a single pathname"
-msgstr ""
+msgstr "--quietはパス名が単一の場合のみ有効です"
 
 #: builtin/check-ignore.c:165
 msgid "cannot have both --quiet and --verbose"
-msgstr ""
+msgstr "--quietと--verboseを両方持つことはできません"
 
 #: builtin/check-ignore.c:168
 msgid "--non-matching is only valid with --verbose"
-msgstr ""
+msgstr "--non-matchingは--verboseとともに使用した場合のみ有効です"
 
 #: builtin/check-mailmap.c:8
 msgid "git check-mailmap [options] <contact>..."
-msgstr ""
+msgstr "git check-mailmap [options] <連絡先>..."
 
 #: builtin/check-mailmap.c:13
 msgid "also read contacts from stdin"
-msgstr ""
+msgstr "連絡先も標準入力から読み込みます"
 
 #: builtin/check-mailmap.c:24
 #, c-format
 msgid "unable to parse contact: %s"
-msgstr ""
+msgstr "連絡先をパースできません: %s"
 
 #: builtin/check-mailmap.c:47
 msgid "no contacts specified"
-msgstr ""
+msgstr "指定された連絡先がありません"
 
 #: builtin/checkout-index.c:126
 msgid "git checkout-index [options] [--] [<file>...]"
-msgstr ""
+msgstr "git checkout-index [オプション] [--] [<ファイル>...]"
 
 #: builtin/checkout-index.c:187
 msgid "check out all files in the index"
-msgstr ""
+msgstr "インデックスからすべてのファイルをチェックアウトします"
 
 #: builtin/checkout-index.c:188
 msgid "force overwrite of existing files"
-msgstr ""
+msgstr "すでに存在するファイルを強制的に上書きします"
 
 #: builtin/checkout-index.c:190
 msgid "no warning for existing files and files not in index"
@@ -3125,7 +3125,7 @@ msgstr ""
 
 #: builtin/checkout-index.c:192
 msgid "don't checkout new files"
-msgstr ""
+msgstr "新しいファイルをチェックアウトしません"
 
 #: builtin/checkout-index.c:194
 msgid "update stat information in the index file"
@@ -3133,19 +3133,19 @@ msgstr ""
 
 #: builtin/checkout-index.c:200
 msgid "read list of paths from the standard input"
-msgstr ""
+msgstr "標準入力からパスのリストを読み込みます"
 
 #: builtin/checkout-index.c:202
 msgid "write the content to temporary files"
-msgstr ""
+msgstr "コンテンツを一時ファイルに書きます"
 
 #: builtin/checkout-index.c:203 builtin/column.c:30
 msgid "string"
-msgstr ""
+msgstr "文字列"
 
 #: builtin/checkout-index.c:204
 msgid "when creating files, prepend <string>"
-msgstr ""
+msgstr "ファイルを作成する際、<文字列>を先頭に追加します"
 
 #: builtin/checkout-index.c:207
 msgid "copy out the files from named stage"
@@ -3153,57 +3153,57 @@ msgstr ""
 
 #: builtin/checkout.c:25
 msgid "git checkout [options] <branch>"
-msgstr ""
+msgstr "git checkout [オプション] <ブランチ>"
 
 #: builtin/checkout.c:26
 msgid "git checkout [options] [<branch>] -- <file>..."
-msgstr ""
+msgstr "git checkout [オプション] [<ブランチ>] -- <ファイル>..."
 
 #: builtin/checkout.c:114 builtin/checkout.c:147
 #, c-format
 msgid "path '%s' does not have our version"
-msgstr ""
+msgstr "パス'%s'は私たちのバージョンを持っていません"
 
 #: builtin/checkout.c:116 builtin/checkout.c:149
 #, c-format
 msgid "path '%s' does not have their version"
-msgstr ""
+msgstr "パス'%s'は彼らのバージョンを持っていません"
 
 #: builtin/checkout.c:132
 #, c-format
 msgid "path '%s' does not have all necessary versions"
-msgstr ""
+msgstr "パス'%s'はすべての必要なバージョンを持っていません"
 
 #: builtin/checkout.c:176
 #, c-format
 msgid "path '%s' does not have necessary versions"
-msgstr ""
+msgstr "パス'%s'は必要なバージョンを持っていません"
 
 #: builtin/checkout.c:193
 #, c-format
 msgid "path '%s': cannot merge"
-msgstr ""
+msgstr "パス'%s': マージできません"
 
 #: builtin/checkout.c:210
 #, c-format
 msgid "Unable to add merge result for '%s'"
-msgstr ""
+msgstr "'%s'のマージ結果を追加することができません"
 
 #: builtin/checkout.c:232 builtin/checkout.c:235 builtin/checkout.c:238
 #: builtin/checkout.c:241
 #, c-format
 msgid "'%s' cannot be used with updating paths"
-msgstr ""
+msgstr "'%s'をパスの更新に使用することができません"
 
 #: builtin/checkout.c:244 builtin/checkout.c:247
 #, c-format
 msgid "'%s' cannot be used with %s"
-msgstr ""
+msgstr "'%s'を%sとともに使用することができません"
 
 #: builtin/checkout.c:250
 #, c-format
 msgid "Cannot update paths and switch to branch '%s' at the same time."
-msgstr ""
+msgstr "パスの更新とブランチ'%s'の切り替えを同時にできません。"
 
 #: builtin/checkout.c:261 builtin/checkout.c:451
 msgid "corrupt index file"
@@ -3212,11 +3212,11 @@ msgstr ""
 #: builtin/checkout.c:322 builtin/checkout.c:329
 #, c-format
 msgid "path '%s' is unmerged"
-msgstr ""
+msgstr "パス'%s'はマージされていません"
 
 #: builtin/checkout.c:473
 msgid "you need to resolve your current index first"
-msgstr ""
+msgstr "あなたは先に現在のインデックスを解決しなければなりません"
 
 #: builtin/checkout.c:594
 #, c-format
@@ -3225,32 +3225,32 @@ msgstr ""
 
 #: builtin/checkout.c:632
 msgid "HEAD is now at"
-msgstr ""
+msgstr "HEADは今"
 
 #: builtin/checkout.c:639
 #, c-format
 msgid "Reset branch '%s'\n"
-msgstr ""
+msgstr "ブランチ'%s'をリセット\n"
 
 #: builtin/checkout.c:642
 #, c-format
 msgid "Already on '%s'\n"
-msgstr ""
+msgstr "すでに'%s'上にいます\n"
 
 #: builtin/checkout.c:646
 #, c-format
 msgid "Switched to and reset branch '%s'\n"
-msgstr ""
+msgstr "'%s'ブランチに切り替えとリセットしました\n"
 
 #: builtin/checkout.c:648 builtin/checkout.c:1033
 #, c-format
 msgid "Switched to a new branch '%s'\n"
-msgstr ""
+msgstr "新しいブランチ'%s'に切り替えました\n"
 
 #: builtin/checkout.c:650
 #, c-format
 msgid "Switched to branch '%s'\n"
-msgstr ""
+msgstr "ブランチ'%s'に切り替えました\n"
 
 #: builtin/checkout.c:706
 #, c-format
@@ -3288,7 +3288,7 @@ msgstr ""
 
 #: builtin/checkout.c:764
 msgid "Previous HEAD position was"
-msgstr ""
+msgstr "前のHEADの位置は"
 
 #: builtin/checkout.c:791 builtin/checkout.c:1028
 msgid "You are on a branch yet to be born"
@@ -3297,55 +3297,55 @@ msgstr ""
 #: builtin/checkout.c:935
 #, c-format
 msgid "only one reference expected, %d given."
-msgstr ""
+msgstr "単一の参照を期待しましたが、%d件与えられました。"
 
 #: builtin/checkout.c:974
 #, c-format
 msgid "invalid reference: %s"
-msgstr ""
+msgstr "不正な参照: %s"
 
 #. case (1): want a tree
 #: builtin/checkout.c:1003
 #, c-format
 msgid "reference is not a tree: %s"
-msgstr ""
+msgstr "参照はツリーではありません: %s"
 
 #: builtin/checkout.c:1042
 msgid "paths cannot be used with switching branches"
-msgstr ""
+msgstr "パスはブランチの切り替えに使用することができません"
 
 #: builtin/checkout.c:1045 builtin/checkout.c:1049
 #, c-format
 msgid "'%s' cannot be used with switching branches"
-msgstr ""
+msgstr "'%s'はブランチの切り替えに使用することができません"
 
 #: builtin/checkout.c:1053 builtin/checkout.c:1056 builtin/checkout.c:1061
 #: builtin/checkout.c:1064
 #, c-format
 msgid "'%s' cannot be used with '%s'"
-msgstr ""
+msgstr "'%s'を'%s'とともに使用することはできません"
 
 #: builtin/checkout.c:1069
 #, c-format
 msgid "Cannot switch branch to a non-commit '%s'"
-msgstr ""
+msgstr "未コミット'%s'へのブランチの切り替えはできません"
 
 #: builtin/checkout.c:1091 builtin/checkout.c:1093 builtin/clone.c:88
 #: builtin/remote.c:159 builtin/remote.c:161
 msgid "branch"
-msgstr ""
+msgstr "ブランチ"
 
 #: builtin/checkout.c:1092
 msgid "create and checkout a new branch"
-msgstr ""
+msgstr "新しいブランチの作成とチェックアウトをします"
 
 #: builtin/checkout.c:1094
 msgid "create/reset and checkout a branch"
-msgstr ""
+msgstr "ブランチを作成またはリセットとチェックアウトをします"
 
 #: builtin/checkout.c:1095
 msgid "create reflog for new branch"
-msgstr ""
+msgstr "新しいブランチのreflogを作成します"
 
 #: builtin/checkout.c:1096
 msgid "detach the HEAD at named commit"
@@ -3353,43 +3353,43 @@ msgstr ""
 
 #: builtin/checkout.c:1097
 msgid "set upstream info for new branch"
-msgstr ""
+msgstr "upstreamの情報を新しいブランチに設定します"
 
 #: builtin/checkout.c:1099
 msgid "new branch"
-msgstr ""
+msgstr "新しいブランチ"
 
 #: builtin/checkout.c:1099
 msgid "new unparented branch"
-msgstr ""
+msgstr "親を持たない新しいブランチ"
 
 #: builtin/checkout.c:1100
 msgid "checkout our version for unmerged files"
-msgstr ""
+msgstr "マージされていないファイルのために私たちのバージョンをチェックアウトします"
 
 #: builtin/checkout.c:1102
 msgid "checkout their version for unmerged files"
-msgstr ""
+msgstr "マージされていないファイルのために彼らのバージョンをチェックアウトします"
 
 #: builtin/checkout.c:1104
 msgid "force checkout (throw away local modifications)"
-msgstr ""
+msgstr "強制的にチェックアウト(ローカルの変更を破棄します)"
 
 #: builtin/checkout.c:1105
 msgid "perform a 3-way merge with the new branch"
-msgstr ""
+msgstr "新しいブランチと3-wayマージを実行します"
 
 #: builtin/checkout.c:1106 builtin/merge.c:225
 msgid "update ignored files (default)"
-msgstr ""
+msgstr "無視されたファイルを更新(デフォルト)"
 
 #: builtin/checkout.c:1107 builtin/log.c:1228 parse-options.h:248
 msgid "style"
-msgstr ""
+msgstr "スタイル"
 
 #: builtin/checkout.c:1108
 msgid "conflict style (merge or diff3)"
-msgstr ""
+msgstr "スタイルのコンフリクト (マージまたはdiff3)"
 
 #: builtin/checkout.c:1111
 msgid "do not limit pathspecs to sparse entries only"
@@ -3397,23 +3397,23 @@ msgstr ""
 
 #: builtin/checkout.c:1113
 msgid "second guess 'git checkout no-such-branch'"
-msgstr ""
+msgstr "第二を'git checkout no-such-branch'と推測します"
 
 #: builtin/checkout.c:1136
 msgid "-b, -B and --orphan are mutually exclusive"
-msgstr ""
+msgstr "-bと-Bと--orphanは相互排他的です"
 
 #: builtin/checkout.c:1153
 msgid "--track needs a branch name"
-msgstr ""
+msgstr "--trackはブランチ名を必要とします"
 
 #: builtin/checkout.c:1160
 msgid "Missing branch name; try -b"
-msgstr ""
+msgstr "ブランチ名が見つかりません; -bをお試しください"
 
 #: builtin/checkout.c:1197
 msgid "invalid path specification"
-msgstr ""
+msgstr "無効なパスの指定です"
 
 #: builtin/checkout.c:1204
 #, c-format
@@ -3452,12 +3452,12 @@ msgstr "本来は削除しました: %s\n"
 #: builtin/clean.c:32
 #, c-format
 msgid "Skipping repository %s\n"
-msgstr "リポジトリ%sを飛ばします"
+msgstr "リポジトリをスキップします %s\n"
 
 #: builtin/clean.c:33
 #, c-format
 msgid "Would skip repository %s\n"
-msgstr "リポジトリ%sを本来飛ばしました"
+msgstr "リポジトリ%sをスキップしました\n"
 
 #: builtin/clean.c:34
 #, c-format
@@ -3518,7 +3518,7 @@ msgstr "削除するアイテムを選択してください"
 #: builtin/clean.c:757
 #, c-format
 msgid "remove %s? "
-msgstr "%sを削除しますか？"
+msgstr "%sを削除しますか？ "
 
 #: builtin/clean.c:782
 msgid "Bye."
@@ -3537,7 +3537,7 @@ msgstr ""
 
 #: builtin/clean.c:817
 msgid "*** Commands ***"
-msgstr ""
+msgstr "*** コマンド ***"
 
 #: builtin/clean.c:818
 msgid "What now"
@@ -3550,23 +3550,23 @@ msgstr[0] ""
 
 #: builtin/clean.c:843
 msgid "No more files to clean, exiting."
-msgstr ""
+msgstr "これ以上ファイルを綺麗にできません、終了します。"
 
 #: builtin/clean.c:874
 msgid "do not print names of files removed"
-msgstr ""
+msgstr "削除されたファイルの名前を表示できません"
 
 #: builtin/clean.c:876
 msgid "force"
-msgstr ""
+msgstr "矯正"
 
 #: builtin/clean.c:877
 msgid "interactive cleaning"
-msgstr ""
+msgstr "インタラクティブクリーニング"
 
 #: builtin/clean.c:879
 msgid "remove whole directories"
-msgstr ""
+msgstr "ディレクトリ全体を削除します"
 
 #: builtin/clean.c:880 builtin/describe.c:420 builtin/grep.c:718
 #: builtin/ls-files.c:483 builtin/name-rev.c:314 builtin/show-ref.c:185
@@ -3579,15 +3579,15 @@ msgstr "無視するルールに<パターン>を追加します"
 
 #: builtin/clean.c:882
 msgid "remove ignored files, too"
-msgstr ""
+msgstr "無視されたファイルも削除します"
 
 #: builtin/clean.c:884
 msgid "remove only ignored files"
-msgstr ""
+msgstr "無視されたファイルのみ削除します"
 
 #: builtin/clean.c:902
 msgid "-x and -X cannot be used together"
-msgstr "-xと-Xは一緒に使うことができません"
+msgstr "-xと-Xは一緒に使用できません"
 
 #: builtin/clean.c:906
 msgid ""
@@ -3607,44 +3607,44 @@ msgstr ""
 
 #: builtin/clone.c:36
 msgid "git clone [options] [--] <repo> [<dir>]"
-msgstr ""
+msgstr "git clone [オプション] [--] <リポジトリ> [<ディレクトリ>]"
 
 #: builtin/clone.c:64 builtin/fetch.c:97 builtin/merge.c:222
 #: builtin/push.c:521
 msgid "force progress reporting"
-msgstr ""
+msgstr "進捗の報告を強制します"
 
 #: builtin/clone.c:66
 msgid "don't create a checkout"
-msgstr ""
+msgstr "チェックポイントを作成しません"
 
 #: builtin/clone.c:67 builtin/clone.c:69 builtin/init-db.c:488
 msgid "create a bare repository"
-msgstr ""
+msgstr "空のリポジトリを作成します"
 
 #: builtin/clone.c:71
 msgid "create a mirror repository (implies bare)"
-msgstr ""
+msgstr "ミラーリポジトリを作成します(bareを含みます)"
 
 #: builtin/clone.c:73
 msgid "to clone from a local repository"
-msgstr ""
+msgstr "ローカルリポジトリからクローンします"
 
 #: builtin/clone.c:75
 msgid "don't use local hardlinks, always copy"
-msgstr ""
+msgstr "ローカルのハードリンクを使用せず、常にコピーします"
 
 #: builtin/clone.c:77
 msgid "setup as shared repository"
-msgstr ""
+msgstr "共有リポジトリとしてセットアップします"
 
 #: builtin/clone.c:79 builtin/clone.c:81
 msgid "initialize submodules in the clone"
-msgstr ""
+msgstr "クローンの中でSubmoduleを初期化します"
 
 #: builtin/clone.c:82 builtin/init-db.c:485
 msgid "template-directory"
-msgstr ""
+msgstr "テンプレートディレクトリ"
 
 #: builtin/clone.c:83 builtin/init-db.c:486
 msgid "directory from which templates will be used"
@@ -3652,19 +3652,19 @@ msgstr ""
 
 #: builtin/clone.c:85
 msgid "reference repository"
-msgstr ""
+msgstr "参照リポジトリ"
 
 #: builtin/clone.c:86 builtin/column.c:26 builtin/merge-file.c:44
 msgid "name"
-msgstr ""
+msgstr "名前"
 
 #: builtin/clone.c:87
 msgid "use <name> instead of 'origin' to track upstream"
-msgstr ""
+msgstr "upstreamを追跡するために'origin'の代わりに<name>を使用します"
 
 #: builtin/clone.c:89
 msgid "checkout <branch> instead of the remote's HEAD"
-msgstr ""
+msgstr "リモートのHEADの代わりに<branch>をチェックアウトします"
 
 #: builtin/clone.c:91
 msgid "path to git-upload-pack on the remote"
@@ -3672,41 +3672,41 @@ msgstr ""
 
 #: builtin/clone.c:92 builtin/fetch.c:98 builtin/grep.c:663
 msgid "depth"
-msgstr ""
+msgstr "深さ"
 
 #: builtin/clone.c:93
 msgid "create a shallow clone of that depth"
-msgstr ""
+msgstr "その深さの浅いクローンを作成する"
 
 #: builtin/clone.c:95
 msgid "clone only one branch, HEAD or --branch"
-msgstr ""
+msgstr "HEADか--branchブランチのみをクローンする"
 
 #: builtin/clone.c:96 builtin/init-db.c:494
 msgid "gitdir"
-msgstr ""
+msgstr "gitdir"
 
 #: builtin/clone.c:97 builtin/init-db.c:495
 msgid "separate git dir from working tree"
-msgstr ""
+msgstr "作業ツリーではないgitディレクトリ"
 
 #: builtin/clone.c:98
 msgid "key=value"
-msgstr ""
+msgstr "key=value"
 
 #: builtin/clone.c:99
 msgid "set config inside the new repository"
-msgstr ""
+msgstr "新しいリポジトリ内に設定する"
 
 #: builtin/clone.c:252
 #, c-format
 msgid "reference repository '%s' is not a local repository."
-msgstr ""
+msgstr "参照リポジトリ'%s'はローカルリポジトリではありません。"
 
 #: builtin/clone.c:256
 #, c-format
 msgid "reference repository '%s' is shallow"
-msgstr ""
+msgstr "参照リポジトリ'%s'は浅いです"
 
 #: builtin/clone.c:259
 #, c-format
@@ -3716,7 +3716,7 @@ msgstr ""
 #: builtin/clone.c:321
 #, c-format
 msgid "failed to create directory '%s'"
-msgstr ""
+msgstr "リポジトリ'%s'の作成に失敗しました"
 
 #: builtin/clone.c:323 builtin/diff.c:83
 #, c-format
@@ -3726,7 +3726,7 @@ msgstr ""
 #: builtin/clone.c:325
 #, c-format
 msgid "%s exists and is not a directory"
-msgstr ""
+msgstr "%sは存在しディレクトリではありません"
 
 #: builtin/clone.c:339
 #, c-format
@@ -3736,17 +3736,17 @@ msgstr ""
 #: builtin/clone.c:361
 #, c-format
 msgid "failed to create link '%s'"
-msgstr ""
+msgstr "リンク'%s'の作成に失敗しました"
 
 #: builtin/clone.c:365
 #, c-format
 msgid "failed to copy file to '%s'"
-msgstr ""
+msgstr "'%s'へのファイルのコピーに失敗しました"
 
 #: builtin/clone.c:388 builtin/clone.c:565
 #, c-format
 msgid "done.\n"
-msgstr ""
+msgstr "完了しました。\n"
 
 #: builtin/clone.c:401
 msgid ""
@@ -3758,16 +3758,16 @@ msgstr ""
 #: builtin/clone.c:480
 #, c-format
 msgid "Could not find remote branch %s to clone."
-msgstr ""
+msgstr "クローンを作成するリモートブランチ%sが見つかりませんでした。"
 
 #: builtin/clone.c:560
 #, c-format
 msgid "Checking connectivity... "
-msgstr ""
+msgstr "コネクティビティを確認しています... "
 
 #: builtin/clone.c:563
 msgid "remote did not send all necessary objects"
-msgstr ""
+msgstr "リモートはすべての必要なオブジェクトを送信できませんでした"
 
 #: builtin/clone.c:626
 msgid "remote HEAD refers to nonexistent ref, unable to checkout.\n"
@@ -3775,90 +3775,90 @@ msgstr ""
 
 #: builtin/clone.c:657
 msgid "unable to checkout working tree"
-msgstr ""
+msgstr "作業ツリーのチェックアウトができません"
 
 #: builtin/clone.c:765
 msgid "Too many arguments."
-msgstr ""
+msgstr "引数が多すぎます。"
 
 #: builtin/clone.c:769
 msgid "You must specify a repository to clone."
-msgstr ""
+msgstr "あなたはクローンするリポジトリを指定しなくてはなりません。"
 
 #: builtin/clone.c:780
 #, c-format
 msgid "--bare and --origin %s options are incompatible."
-msgstr ""
+msgstr "--bareと--origin %sオプションは同時に使用できません。"
 
 #: builtin/clone.c:783
 msgid "--bare and --separate-git-dir are incompatible."
-msgstr ""
+msgstr "--bareと--separate-git-dirは同時に使用できません。"
 
 #: builtin/clone.c:796
 #, c-format
 msgid "repository '%s' does not exist"
-msgstr ""
+msgstr "リポジトリ'%s'は存在しません"
 
 #: builtin/clone.c:802
 msgid "--depth is ignored in local clones; use file:// instead."
-msgstr ""
+msgstr "--depthはローカルのクローンないでは無視されます;代わりにfile://を使用してください。"
 
 #: builtin/clone.c:805
 msgid "source repository is shallow, ignoring --local"
-msgstr ""
+msgstr "ソースリポジトリが浅いので--localを無視しています"
 
 #: builtin/clone.c:810
 msgid "--local is ignored"
-msgstr ""
+msgstr "--localは無視されました"
 
 #: builtin/clone.c:814 builtin/fetch.c:1119
 #, c-format
 msgid "depth %s is not a positive number"
-msgstr ""
+msgstr "深さ%sは正数ではりません"
 
 #: builtin/clone.c:824
 #, c-format
 msgid "destination path '%s' already exists and is not an empty directory."
-msgstr ""
+msgstr "目的のパス'%s'はすでに存在し空のディレクトリではありません。"
 
 #: builtin/clone.c:834
 #, c-format
 msgid "working tree '%s' already exists."
-msgstr ""
+msgstr "作業ツリー'%s'はすでに存在します。"
 
 #: builtin/clone.c:847 builtin/clone.c:859
 #, c-format
 msgid "could not create leading directories of '%s'"
-msgstr ""
+msgstr "'%s'へのディレクトリを作成できませんでした"
 
 #: builtin/clone.c:850
 #, c-format
 msgid "could not create work tree dir '%s'."
-msgstr ""
+msgstr "作業ツリーディレクトリ'%s'を作成できませんでした。"
 
 #: builtin/clone.c:869
 #, c-format
 msgid "Cloning into bare repository '%s'...\n"
-msgstr ""
+msgstr "空リポジトリ'%s'の中にクローンしています...\n"
 
 #: builtin/clone.c:871
 #, c-format
 msgid "Cloning into '%s'...\n"
-msgstr ""
+msgstr "'%s'の中にクローンしています...\n"
 
 #: builtin/clone.c:906
 #, c-format
 msgid "Don't know how to clone %s"
-msgstr ""
+msgstr "%sをクローンする方法が分かりません"
 
 #: builtin/clone.c:957 builtin/clone.c:965
 #, c-format
 msgid "Remote branch %s not found in upstream %s"
-msgstr ""
+msgstr "リモートブランチ%sがupstream%sの中で見つかりません"
 
 #: builtin/clone.c:968
 msgid "You appear to have cloned an empty repository."
-msgstr ""
+msgstr "あなたは空のリポジトリをクローンしたように見えます。"
 
 #: builtin/column.c:9
 msgid "git column [options]"
