@@ -3894,11 +3894,11 @@ msgstr ""
 
 #: builtin/commit.c:36
 msgid "git commit [options] [--] <pathspec>..."
-msgstr ""
+msgstr "git commit [オプション] [--] <参照仕様>..."
 
 #: builtin/commit.c:41
 msgid "git status [options] [--] <pathspec>..."
-msgstr ""
+msgstr "git status [オプション] [--] <参照仕様>..."
 
 #: builtin/commit.c:46
 msgid ""
@@ -3913,6 +3913,16 @@ msgid ""
 "\n"
 "    git commit --amend --reset-author\n"
 msgstr ""
+"名前とメールアドレスはユーザ名とホスト名を参考にして\n"
+"自動的に設定されたので、合っているかどうかを確認してください。\n"
+"次回からメッセージを出さないようにするためには明示的に設定してください: \n"
+"\n"
+"    git config --global user.name \"Your Name\"\n"
+"    git config --global user.email you@example.com\n"
+"\n"
+"そうしてから、今回のコミットに使われた情報を修正するには:"
+"\n"
+"    git commit --amend --reset-author\n"
 
 #: builtin/commit.c:58
 msgid ""
@@ -3920,6 +3930,9 @@ msgid ""
 "it empty. You can repeat your command with --allow-empty, or you can\n"
 "remove the commit entirely with \"git reset HEAD^\".\n"
 msgstr ""
+"直近のコミットを修正するように指示をしたが、そうしたらコミットが空になってしまいます。\n"
+"それがしたいのであれば同じコマンドを --allow-emptyで 実行し直してください。\n"
+"また、コミットをまるごと取り除くのであれば\"git reset HEAD^\"を実行してください。\n"
 
 #: builtin/commit.c:63
 msgid ""
@@ -3929,10 +3942,15 @@ msgid ""
 "    git commit --allow-empty\n"
 "\n"
 msgstr ""
+"衝突の解消によってか、前のチェリー・ピックが空になってしまいました。\n"
+"空でもコミットがしたければ、下記のコマンドを実行してください:\n"
+"\n"
+"    git commit --allow-empty\n"
+"\n"
 
 #: builtin/commit.c:70
 msgid "Otherwise, please use 'git reset'\n"
-msgstr ""
+msgstr "そうでなければ、'git reset'を実行してください。\n"
 
 #: builtin/commit.c:73
 msgid ""
@@ -3943,14 +3961,20 @@ msgid ""
 "Then \"git cherry-pick --continue\" will resume cherry-picking\n"
 "the remaining commits.\n"
 msgstr ""
+"このコミットを飛ばしたければ、下記のコマンドを実行してください:\n"
+"\n"
+"    git reset\n"
+"\n"
+"そうすれば\"git cherry-pick --continue\"で残りのコミットのチェリー・ピックを\n"
+"継続します。\n"
 
 #: builtin/commit.c:287
 msgid "failed to unpack HEAD tree object"
-msgstr ""
+msgstr "HEADのツリーオブジェクトの解凍に失敗しました"
 
 #: builtin/commit.c:329
 msgid "unable to create temporary index"
-msgstr ""
+msgstr "仮のインデックスの作成に失敗しました"
 
 #: builtin/commit.c:335
 msgid "interactive add failed"
