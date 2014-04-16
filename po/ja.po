@@ -187,7 +187,7 @@ msgstr "追従の設定ができませんでした: 名前が長すぎます: %s
 #: branch.c:137
 #, c-format
 msgid "Not tracking: ambiguous information for ref %s"
-msgstr "追従の設定ができませんでした: 参照%sがあいまいです"
+msgstr "追従の設定ができませんでした: 参照%sが曖昧です"
 
 #: branch.c:182
 #, c-format
@@ -228,25 +228,25 @@ msgstr ""
 #: branch.c:264
 #, c-format
 msgid "Not a valid object name: '%s'."
-msgstr ""
+msgstr "不正なオブジェクト名: '%s'"
 
 #: branch.c:284
 #, c-format
 msgid "Ambiguous object name: '%s'."
-msgstr ""
+msgstr "曖昧なオブジェクト名: '%s'"
 
 #: branch.c:289
 #, c-format
 msgid "Not a valid branch point: '%s'."
-msgstr ""
+msgstr "不正な分岐点: '%s'"
 
 #: branch.c:295
 msgid "Failed to lock ref for update"
-msgstr ""
+msgstr "更新のために参照のロックを行おうとしましたが失敗しました"
 
 #: branch.c:313
 msgid "Failed to write ref"
-msgstr ""
+msgstr "参照の書き込みに失敗しました"
 
 #: bundle.c:37
 #, c-format
