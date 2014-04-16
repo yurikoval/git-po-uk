@@ -126,13 +126,15 @@ msgstr "コマンド"
 
 #: archive.c:352 builtin/archive.c:93
 msgid "path to the remote git-upload-archive command"
-msgstr ""
+msgstr "リモートのgit-upload-archiveコマンドへのパス"
 
 #: attr.c:259
 msgid ""
 "Negative patterns are ignored in git attributes\n"
 "Use '\\!' for literal leading exclamation."
 msgstr ""
+"Gitの属性ではパターンの否定形は無視されます。\n"
+"先頭に感嘆符を指定したい場合は'\\!'を使ってください。"
 
 #: branch.c:60
 #, c-format
@@ -224,6 +226,12 @@ msgid ""
 "will track its remote counterpart, you may want to use\n"
 "\"git push -u\" to set the upstream config as you push."
 msgstr ""
+"\n"
+"リモートで既に存在する上流のブランチを元に作業する場合は、\"git fetch\"の\n"
+"実行により取得する必要があるかもしれません。"
+"\n"
+"リモートのブランチを追跡する新規のローカルブランチを作って、プッシュする場合は、\n"
+"\"git push -u\"の実行により、プッシュと同時に上流の設定をするといいかもしれません。"
 
 #: branch.c:264
 #, c-format
@@ -271,13 +279,13 @@ msgstr "リポジトリは必須のコミットを欠いています:"
 #: builtin/log.c:821 builtin/log.c:1418 builtin/log.c:1644 builtin/merge.c:357
 #: builtin/shortlog.c:158
 msgid "revision walk setup failed"
-msgstr ""
+msgstr "記録をたどるための事前準備が失敗しました"
 
 #: bundle.c:187
 #, c-format
 msgid "The bundle contains this ref:"
 msgid_plural "The bundle contains these %d refs:"
-msgstr[0] ""
+msgstr[0] "バンドルに含まれている%d件の参照:"
 
 #: bundle.c:194
 msgid "The bundle records a complete history."
@@ -287,11 +295,11 @@ msgstr "バンドルは完璧なヒストリーを記録します。"
 #, c-format
 msgid "The bundle requires this ref:"
 msgid_plural "The bundle requires these %d refs:"
-msgstr[0] ""
+msgstr[0] "バンドルに必要な%d件の参照:"
 
 #: bundle.c:296
 msgid "rev-list died"
-msgstr ""
+msgstr "rev-listが強制終了しました"
 
 #: bundle.c:302 builtin/log.c:1329 builtin/shortlog.c:261
 #, c-format
@@ -301,7 +309,7 @@ msgstr "不正な引数: %s"
 #: bundle.c:337
 #, c-format
 msgid "ref '%s' is excluded by the rev-list options"
-msgstr ""
+msgstr "rev-listのオプションにより参照'%s'は除外されています"
 
 #: bundle.c:382
 msgid "Refusing to create empty bundle."
@@ -309,11 +317,11 @@ msgstr "空のバンドルを作成することを拒否します。"
 
 #: bundle.c:398
 msgid "Could not spawn pack-objects"
-msgstr ""
+msgstr "パックオブジェクトの生成に失敗しました"
 
 #: bundle.c:416
 msgid "pack-objects died"
-msgstr ""
+msgstr "pack-objectsが強制終了しました"
 
 #: bundle.c:419
 #, c-format
@@ -322,7 +330,7 @@ msgstr "'%s'を作成できません"
 
 #: bundle.c:441
 msgid "index-pack died"
-msgstr ""
+msgstr "index-packが強制終了しました"
 
 #: commit.c:53
 #, c-format
@@ -345,12 +353,12 @@ msgstr "'git rev-list'を実行できませんでした"
 #: connected.c:90
 #, c-format
 msgid "failed write to rev-list: %s"
-msgstr ""
+msgstr "rev-listへの書き込みに失敗しました: %s"
 
 #: connected.c:98
 #, c-format
 msgid "failed to close rev-list's stdin: %s"
-msgstr ""
+msgstr "rev-listの標準入力へのパイプを閉じることに失敗しました: %s"
 
 #: date.c:95
 msgid "in the future"
@@ -360,19 +368,19 @@ msgstr "将来的に"
 #, c-format
 msgid "%lu second ago"
 msgid_plural "%lu seconds ago"
-msgstr[0] ""
+msgstr[0] "%lu秒前"
 
 #: date.c:108
 #, c-format
 msgid "%lu minute ago"
 msgid_plural "%lu minutes ago"
-msgstr[0] ""
+msgstr[0] "%lu分前"
 
 #: date.c:115
 #, c-format
 msgid "%lu hour ago"
 msgid_plural "%lu hours ago"
-msgstr[0] ""
+msgstr[0] "%lu時間前"
 
 #: date.c:122
 #, c-format
@@ -402,7 +410,7 @@ msgstr[0] "%lu年"
 #, c-format
 msgid "%s, %lu month ago"
 msgid_plural "%s, %lu months ago"
-msgstr[0] ""
+msgstr[0] "%s%luヶ月前"
 
 #: date.c:154 date.c:159
 #, c-format
