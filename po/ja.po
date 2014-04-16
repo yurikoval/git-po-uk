@@ -3862,35 +3862,35 @@ msgstr "あなたは空のリポジトリをクローンしたように見えま
 
 #: builtin/column.c:9
 msgid "git column [options]"
-msgstr ""
+msgstr "git column [オプション]"
 
 #: builtin/column.c:26
 msgid "lookup config vars"
-msgstr ""
+msgstr "設定値を調べます"
 
 #: builtin/column.c:27 builtin/column.c:28
 msgid "layout to use"
-msgstr ""
+msgstr "使用するレイアウト"
 
 #: builtin/column.c:29
 msgid "Maximum width"
-msgstr ""
+msgstr "横幅の最大"
 
 #: builtin/column.c:30
 msgid "Padding space on left border"
-msgstr ""
+msgstr "左境界上のパディング"
 
 #: builtin/column.c:31
 msgid "Padding space on right border"
-msgstr ""
+msgstr "右境界上のパディング"
 
 #: builtin/column.c:32
 msgid "Padding space between columns"
-msgstr ""
+msgstr "カラム間のパディング"
 
 #: builtin/column.c:51
 msgid "--command must be the first argument"
-msgstr ""
+msgstr "--commandは第一引数でなくてはなりません"
 
 #: builtin/commit.c:36
 msgid "git commit [options] [--] <pathspec>..."
@@ -4442,51 +4442,51 @@ msgstr ""
 
 #: builtin/config.c:8
 msgid "git config [options]"
-msgstr ""
+msgstr "git config [オプション]"
 
 #: builtin/config.c:54
 msgid "Config file location"
-msgstr ""
+msgstr "コンフィグファイルの位置"
 
 #: builtin/config.c:55
 msgid "use global config file"
-msgstr ""
+msgstr "グローバルのコンフィグファイルを使用します"
 
 #: builtin/config.c:56
 msgid "use system config file"
-msgstr ""
+msgstr "システムのコンフィグファイルを使用します"
 
 #: builtin/config.c:57
 msgid "use repository config file"
-msgstr ""
+msgstr "リポジトリのコンフィグファイルを使用します"
 
 #: builtin/config.c:58
 msgid "use given config file"
-msgstr ""
+msgstr "指定したコンフィグファイルを使用します"
 
 #: builtin/config.c:59
 msgid "blob-id"
-msgstr ""
+msgstr "blob id"
 
 #: builtin/config.c:59
 msgid "read config from given blob object"
-msgstr ""
+msgstr "設定をBlobオブジェクトから読み込みます"
 
 #: builtin/config.c:60
 msgid "Action"
-msgstr ""
+msgstr "アクション"
 
 #: builtin/config.c:61
 msgid "get value: name [value-regex]"
-msgstr ""
+msgstr "値を取得: 名前 [正規表現]"
 
 #: builtin/config.c:62
 msgid "get all values: key [value-regex]"
-msgstr ""
+msgstr "すべての値を取得する: キー [正規表現]"
 
 #: builtin/config.c:63
 msgid "get values for regexp: name-regex [value-regex]"
-msgstr ""
+msgstr "性企業源の値を取得する: name-regex [正規表現]"
 
 #: builtin/config.c:64
 msgid "get value specific for the URL: section[.var] URL"
@@ -4494,75 +4494,75 @@ msgstr ""
 
 #: builtin/config.c:65
 msgid "replace all matching variables: name value [value_regex]"
-msgstr ""
+msgstr "すべての一致した変数を置換します: 設定値名 設定値 [正規表現]"
 
 #: builtin/config.c:66
 msgid "add a new variable: name value"
-msgstr ""
+msgstr "新しい変数を追加します: 設定値名 設定値"
 
 #: builtin/config.c:67
 msgid "remove a variable: name [value-regex]"
-msgstr ""
+msgstr "変数を削除します: 設定値名 [正規表現]"
 
 #: builtin/config.c:68
 msgid "remove all matches: name [value-regex]"
-msgstr ""
+msgstr "すべての一致した値を削除します: 設定値名 [正規表現]"
 
 #: builtin/config.c:69
 msgid "rename section: old-name new-name"
-msgstr ""
+msgstr "セクションの名前を変更します: 古い名前 新しい名前"
 
 #: builtin/config.c:70
 msgid "remove a section: name"
-msgstr ""
+msgstr "セクションを削除します: 名前"
 
 #: builtin/config.c:71
 msgid "list all"
-msgstr ""
+msgstr "一覧"
 
 #: builtin/config.c:72
 msgid "open an editor"
-msgstr ""
+msgstr "エディタを開きます"
 
 #: builtin/config.c:73 builtin/config.c:74
 msgid "slot"
-msgstr ""
+msgstr "スロット"
 
 #: builtin/config.c:73
 msgid "find the color configured: [default]"
-msgstr ""
+msgstr "構成された色を見つけます: [デフォルト]"
 
 #: builtin/config.c:74
 msgid "find the color setting: [stdout-is-tty]"
-msgstr ""
+msgstr "色のセッティングを見つけます: [stdout-is-tty]"
 
 #: builtin/config.c:75
 msgid "Type"
-msgstr ""
+msgstr "タイプ"
 
 #: builtin/config.c:76
 msgid "value is \"true\" or \"false\""
-msgstr ""
+msgstr "値は\"true\"か\"false\"です"
 
 #: builtin/config.c:77
 msgid "value is decimal number"
-msgstr ""
+msgstr "値は10進数です"
 
 #: builtin/config.c:78
 msgid "value is --bool or --int"
-msgstr ""
+msgstr "値は--boolか--intです"
 
 #: builtin/config.c:79
 msgid "value is a path (file or directory name)"
-msgstr ""
+msgstr "値はパスです (ファイル化ディレクトリの名前)"
 
 #: builtin/config.c:80
 msgid "Other"
-msgstr ""
+msgstr "その他"
 
 #: builtin/config.c:81
 msgid "terminate values with NUL byte"
-msgstr ""
+msgstr "NULLバイトで終了しました"
 
 #: builtin/config.c:82
 msgid "respect include directives on lookup"
@@ -4570,11 +4570,11 @@ msgstr ""
 
 #: builtin/count-objects.c:82
 msgid "git count-objects [-v] [-H | --human-readable]"
-msgstr ""
+msgstr "git count-objects [-v] [-H | --human-readable]"
 
 #: builtin/count-objects.c:97
 msgid "print sizes in human readable format"
-msgstr ""
+msgstr "人間が読める形式の出力サイズ"
 
 #: builtin/describe.c:16
 msgid "git describe [options] <commit-ish>*"
@@ -4592,37 +4592,37 @@ msgstr "%sという注釈付きタグがありません"
 #: builtin/describe.c:241
 #, c-format
 msgid "annotated tag %s has no embedded name"
-msgstr ""
+msgstr "注釈付きのタグ%sは埋め込まれた名前がありません"
 
 #: builtin/describe.c:243
 #, c-format
 msgid "tag '%s' is really '%s' here"
-msgstr ""
+msgstr "タグ'%s'は実際は'%s'にあります"
 
 #: builtin/describe.c:270
 #, c-format
 msgid "Not a valid object name %s"
-msgstr ""
+msgstr "有効なオブジェクト名ではありません %s"
 
 #: builtin/describe.c:273
 #, c-format
 msgid "%s is not a valid '%s' object"
-msgstr ""
+msgstr "%sは有効な'%s'オブジェクトではありません"
 
 #: builtin/describe.c:290
 #, c-format
 msgid "no tag exactly matches '%s'"
-msgstr ""
+msgstr "'%s'に正確に一致するタグがありません"
 
 #: builtin/describe.c:292
 #, c-format
 msgid "searching to describe %s\n"
-msgstr ""
+msgstr "%sを記述するために検索しています\n"
 
 #: builtin/describe.c:332
 #, c-format
 msgid "finished search at %s\n"
-msgstr ""
+msgstr "検索は%sで終了しました\n"
 
 #: builtin/describe.c:359
 #, c-format
@@ -4652,7 +4652,7 @@ msgstr ""
 
 #: builtin/describe.c:409
 msgid "find the tag that comes after the commit"
-msgstr ""
+msgstr "コミットの後に来るタグを検索します"
 
 #: builtin/describe.c:410
 msgid "debug search strategy on stderr"
@@ -4668,23 +4668,23 @@ msgstr ""
 
 #: builtin/describe.c:413
 msgid "always use long format"
-msgstr ""
+msgstr "常に長い正式を使用します"
 
 #: builtin/describe.c:414
 msgid "only follow first parent"
-msgstr ""
+msgstr "最初の親にのみ従います"
 
 #: builtin/describe.c:417
 msgid "only output exact matches"
-msgstr ""
+msgstr "出力のみ完全一致します"
 
 #: builtin/describe.c:419
 msgid "consider <n> most recent tags (default: 10)"
-msgstr ""
+msgstr "最も最近の<n>個のタグについて考えます (デフォルト: 10)"
 
 #: builtin/describe.c:421
 msgid "only consider tags matching <pattern>"
-msgstr ""
+msgstr "一致したタグのみを考えます <パターン>"
 
 #: builtin/describe.c:423 builtin/name-rev.c:321
 msgid "show abbreviated commit object as fallback"
@@ -4692,7 +4692,7 @@ msgstr ""
 
 #: builtin/describe.c:424
 msgid "mark"
-msgstr ""
+msgstr "マーク"
 
 #: builtin/describe.c:425
 msgid "append <mark> on dirty working tree (default: \"-dirty\")"
@@ -4700,52 +4700,52 @@ msgstr ""
 
 #: builtin/describe.c:443
 msgid "--long is incompatible with --abbrev=0"
-msgstr ""
+msgstr "--longは--abbrev=0と互換性がありません"
 
 #: builtin/describe.c:469
 msgid "No names found, cannot describe anything."
-msgstr ""
+msgstr "名前が見つからないので何かを記述できません。"
 
 #: builtin/describe.c:489
 msgid "--dirty is incompatible with commit-ishes"
-msgstr ""
+msgstr "--dirtyはcommit-ishesと互換性がありません"
 
 #: builtin/diff.c:85
 #, c-format
 msgid "'%s': not a regular file or symlink"
-msgstr ""
+msgstr "'%s': 通常のファイルでもシンボリックリンクでもありません"
 
 #: builtin/diff.c:236
 #, c-format
 msgid "invalid option: %s"
-msgstr ""
+msgstr "不正なオプション: %s"
 
 #: builtin/diff.c:357
 msgid "Not a git repository"
-msgstr ""
+msgstr "Gitのリポジトリではありません"
 
 #: builtin/diff.c:400
 #, c-format
 msgid "invalid object '%s' given."
-msgstr ""
+msgstr "不正なオブジェクト'%s'が与えられました。"
 
 #: builtin/diff.c:409
 #, c-format
 msgid "more than two blobs given: '%s'"
-msgstr ""
+msgstr "２つ以上のBlobが与えられました: '%s'"
 
 #: builtin/diff.c:416
 #, c-format
 msgid "unhandled object '%s' given."
-msgstr ""
+msgstr "未処理のオブジェクト'%s'が与えられました。"
 
 #: builtin/fast-export.c:22
 msgid "git fast-export [rev-list-opts]"
-msgstr ""
+msgstr "git fast-export [rev-list-opts]"
 
 #: builtin/fast-export.c:673
 msgid "show progress after <n> objects"
-msgstr ""
+msgstr "進捗を<n>個目のオブジェクトの後に表示します"
 
 #: builtin/fast-export.c:675
 msgid "select handling of signed tags"
@@ -4761,7 +4761,7 @@ msgstr ""
 
 #: builtin/fast-export.c:683
 msgid "Import marks from this file"
-msgstr ""
+msgstr "マークをこのファイルからインポートします"
 
 #: builtin/fast-export.c:685
 msgid "Fake a tagger when tags lack one"
@@ -4769,7 +4769,7 @@ msgstr ""
 
 #: builtin/fast-export.c:687
 msgid "Output full tree for each commit"
-msgstr ""
+msgstr "コミット毎に完全なツリーを出力します"
 
 #: builtin/fast-export.c:689
 msgid "Use the done feature to terminate the stream"
@@ -4829,11 +4829,11 @@ msgstr "リモートでもはや存在しないリモート追跡ブランチの
 
 #: builtin/fetch.c:89
 msgid "on-demand"
-msgstr ""
+msgstr "オンデマンド"
 
 #: builtin/fetch.c:90
 msgid "control recursive fetching of submodules"
-msgstr ""
+msgstr "Submoduleの再帰的なフェッチを制御します"
 
 #: builtin/fetch.c:94
 msgid "keep downloaded pack"
@@ -5042,7 +5042,7 @@ msgstr ""
 #: builtin/show-branch.c:654 builtin/show-ref.c:178 builtin/tag.c:446
 #: parse-options.h:135 parse-options.h:242
 msgid "n"
-msgstr ""
+msgstr "n"
 
 #: builtin/fmt-merge-msg.c:664
 msgid "populate log with at most <n> entries from shortlog"
@@ -5050,15 +5050,15 @@ msgstr ""
 
 #: builtin/fmt-merge-msg.c:667
 msgid "alias for --log (deprecated)"
-msgstr ""
+msgstr "--logの別名です (非推奨)"
 
 #: builtin/fmt-merge-msg.c:670
 msgid "text"
-msgstr ""
+msgstr "テキスト"
 
 #: builtin/fmt-merge-msg.c:671
 msgid "use <text> as start of message"
-msgstr ""
+msgstr "メッセージの開始として<テキスト>を使用します"
 
 #: builtin/fmt-merge-msg.c:672
 msgid "file to read from"
@@ -5066,63 +5066,63 @@ msgstr ""
 
 #: builtin/for-each-ref.c:1063
 msgid "git for-each-ref [options] [<pattern>]"
-msgstr ""
+msgstr "git for-each-ref [オプション] [<パターン>]"
 
 #: builtin/for-each-ref.c:1078
 msgid "quote placeholders suitably for shells"
-msgstr ""
+msgstr "シェルに適するようにプレースホルダを引用します"
 
 #: builtin/for-each-ref.c:1080
 msgid "quote placeholders suitably for perl"
-msgstr ""
+msgstr "Perlに適するようにプレースホルダを引用します"
 
 #: builtin/for-each-ref.c:1082
 msgid "quote placeholders suitably for python"
-msgstr ""
+msgstr "Pythonに適するようにプレースホルダを引用します"
 
 #: builtin/for-each-ref.c:1084
 msgid "quote placeholders suitably for tcl"
-msgstr ""
+msgstr "tclに適するようにプレースホルダを引用します"
 
 #: builtin/for-each-ref.c:1087
 msgid "show only <n> matched refs"
-msgstr ""
+msgstr "<n>件の一致したrefを表示します"
 
 #: builtin/for-each-ref.c:1088 builtin/replace.c:177
 msgid "format"
-msgstr ""
+msgstr "形式"
 
 #: builtin/for-each-ref.c:1088
 msgid "format to use for the output"
-msgstr ""
+msgstr "出力に使用するフォーマット"
 
 #: builtin/for-each-ref.c:1089
 msgid "key"
-msgstr ""
+msgstr "キー"
 
 #: builtin/for-each-ref.c:1090
 msgid "field name to sort on"
-msgstr ""
+msgstr "ソートするためのフィールド名"
 
 #: builtin/fsck.c:607
 msgid "git fsck [options] [<object>...]"
-msgstr ""
+msgstr "git fsck [オプション] [<オブジェクト>...]"
 
 #: builtin/fsck.c:613
 msgid "show unreachable objects"
-msgstr ""
+msgstr "到達できないオブジェクトを表示します"
 
 #: builtin/fsck.c:614
 msgid "show dangling objects"
-msgstr ""
+msgstr "ぶら下がっているオブジェクトを表示します"
 
 #: builtin/fsck.c:615
 msgid "report tags"
-msgstr ""
+msgstr "タグを報告します"
 
 #: builtin/fsck.c:616
 msgid "report root nodes"
-msgstr ""
+msgstr "rootノードを報告します"
 
 #: builtin/fsck.c:617
 msgid "make index objects head nodes"
@@ -5130,7 +5130,7 @@ msgstr ""
 
 #: builtin/fsck.c:618
 msgid "make reflogs head nodes (default)"
-msgstr ""
+msgstr "reflogのHEADノードを作成します (デフォルト)"
 
 #: builtin/fsck.c:619
 msgid "also consider packs and alternate objects"
@@ -5138,45 +5138,45 @@ msgstr ""
 
 #: builtin/fsck.c:620
 msgid "enable more strict checking"
-msgstr ""
+msgstr "より厳密なチェックを有効にする"
 
 #: builtin/fsck.c:622
 msgid "write dangling objects in .git/lost-found"
-msgstr ""
+msgstr "ぶら下がっているオブジェクトを.git/lost-foundに書きます"
 
 #: builtin/fsck.c:623 builtin/prune.c:144
 msgid "show progress"
-msgstr ""
+msgstr "進捗を表示する"
 
 #: builtin/gc.c:24
 msgid "git gc [options]"
-msgstr ""
+msgstr "git gc [オプション]"
 
 #: builtin/gc.c:80
 #, c-format
 msgid "Invalid %s: '%s'"
-msgstr ""
+msgstr "不正な%s: '%s'"
 
 #: builtin/gc.c:107
 #, c-format
 msgid "insanely long object directory %.*s"
-msgstr ""
+msgstr "とても長いオブジェクトディレクトリ%.*s"
 
 #: builtin/gc.c:262
 msgid "prune unreferenced objects"
-msgstr ""
+msgstr "参照されていないオブジェクトを整理します"
 
 #: builtin/gc.c:264
 msgid "be more thorough (increased runtime)"
-msgstr ""
+msgstr "より徹底的にします (ランタイムが増加)"
 
 #: builtin/gc.c:265
 msgid "enable auto-gc mode"
-msgstr ""
+msgstr "自動GCモードを有効にします"
 
 #: builtin/gc.c:266
 msgid "force running gc even if there may be another gc running"
-msgstr ""
+msgstr "他のGCが実行中である可能性があっても強制的にGCを実行します"
 
 #: builtin/gc.c:306
 #, c-format
@@ -5195,65 +5195,65 @@ msgstr ""
 #: builtin/gc.c:341
 msgid ""
 "There are too many unreachable loose objects; run 'git prune' to remove them."
-msgstr ""
+msgstr "あまりにも多くの到達できない散開したオブジェクトがあります。それらを削除するには'git prune'を実行します。"
 
 #: builtin/grep.c:23
 msgid "git grep [options] [-e] <pattern> [<rev>...] [[--] <path>...]"
-msgstr ""
+msgstr "git grep [オプション] [-e] <パターン> [<rev>...] [[--] <パス>...]"
 
 #: builtin/grep.c:218
 #, c-format
 msgid "grep: failed to create thread: %s"
-msgstr ""
+msgstr "grep: スレッドの作成に失敗しました: %s"
 
 #: builtin/grep.c:365
 #, c-format
 msgid "Failed to chdir: %s"
-msgstr ""
+msgstr "chdirに失敗しました: %s"
 
 #: builtin/grep.c:443 builtin/grep.c:478
 #, c-format
 msgid "unable to read tree (%s)"
-msgstr ""
+msgstr "ツリー(%s)を読み込めませんでした"
 
 #: builtin/grep.c:493
 #, c-format
 msgid "unable to grep from object of type %s"
-msgstr ""
+msgstr "タイプ%sのオブジェクトからgrepすることができません"
 
 #: builtin/grep.c:551
 #, c-format
 msgid "switch `%c' expects a numerical value"
-msgstr ""
+msgstr "スイッチ'%c'は数値を期待します"
 
 #: builtin/grep.c:568
 #, c-format
 msgid "cannot open '%s'"
-msgstr ""
+msgstr "'%s'を開けません"
 
 #: builtin/grep.c:642
 msgid "search in index instead of in the work tree"
-msgstr ""
+msgstr "作業ツリー内の代わりにインデックス内を検索します"
 
 #: builtin/grep.c:644
 msgid "find in contents not managed by git"
-msgstr ""
+msgstr "Gitで管理されていないコンテンツないから見つけます"
 
 #: builtin/grep.c:646
 msgid "search in both tracked and untracked files"
-msgstr ""
+msgstr "トラックされているファイルとされていないファイルから検索します"
 
 #: builtin/grep.c:648
 msgid "search also in ignored files"
-msgstr ""
+msgstr "無視されたファイルも検索します"
 
 #: builtin/grep.c:651
 msgid "show non-matching lines"
-msgstr ""
+msgstr "一致しない行を表示します"
 
 #: builtin/grep.c:653
 msgid "case insensitive matching"
-msgstr ""
+msgstr "大文字と小文字を区別しないマッチング"
 
 #: builtin/grep.c:655
 msgid "match patterns only at word boundaries"
@@ -5261,15 +5261,15 @@ msgstr ""
 
 #: builtin/grep.c:657
 msgid "process binary files as text"
-msgstr ""
+msgstr "バイナリファイルをテキストとして処理します"
 
 #: builtin/grep.c:659
 msgid "don't match patterns in binary files"
-msgstr ""
+msgstr "バイナリファイルとはパターンマッチしません"
 
 #: builtin/grep.c:662
 msgid "process binary files with textconv filters"
-msgstr ""
+msgstr "textconvフィルターでバイナリファイルを処理します"
 
 #: builtin/grep.c:664
 msgid "descend at most <depth> levels"
@@ -5277,23 +5277,23 @@ msgstr ""
 
 #: builtin/grep.c:668
 msgid "use extended POSIX regular expressions"
-msgstr ""
+msgstr "拡張POSIX正規表現を使用します"
 
 #: builtin/grep.c:671
 msgid "use basic POSIX regular expressions (default)"
-msgstr ""
+msgstr "基本POSIX正規表現を使用します (デフォルト)"
 
 #: builtin/grep.c:674
 msgid "interpret patterns as fixed strings"
-msgstr ""
+msgstr "固定された文字列としてパターンを解釈します"
 
 #: builtin/grep.c:677
 msgid "use Perl-compatible regular expressions"
-msgstr ""
+msgstr "Perl互換の正規表現を使用します"
 
 #: builtin/grep.c:680
 msgid "show line numbers"
-msgstr ""
+msgstr "行番号を表示します"
 
 #: builtin/grep.c:681
 msgid "don't show filenames"
@@ -5401,57 +5401,59 @@ msgstr "grep(1)の呼び出しを許可します（本ビルドではこのオ�
 
 #: builtin/grep.c:745 builtin/show-ref.c:187
 msgid "show usage"
-msgstr ""
+msgstr "使用量を表示します"
 
 #: builtin/grep.c:812
 msgid "no pattern given."
-msgstr ""
+msgstr "パターンが与えられていません。"
 
 #: builtin/grep.c:870
 msgid "--open-files-in-pager only works on the worktree"
-msgstr ""
+msgstr "--open-files-in-pager 作業ツリー上でのみ動作します"
 
 #: builtin/grep.c:893
 msgid "--cached or --untracked cannot be used with --no-index."
-msgstr ""
+msgstr "--cachedまたは--untrackedは--no-indexと一緒に使用できません。"
 
 #: builtin/grep.c:898
 msgid "--no-index or --untracked cannot be used with revs."
-msgstr ""
+msgstr "--no-indexまたは--untrackedはrevsと一緒に使用できません。"
 
 #: builtin/grep.c:901
 msgid "--[no-]exclude-standard cannot be used for tracked contents."
-msgstr ""
+msgstr "--[no-]exclude-standardはトラックされたコンテンツに使用できません。"
 
 #: builtin/grep.c:909
 msgid "both --cached and trees are given."
-msgstr ""
+msgstr "--cachedとツリーの両方が与えられました。"
 
 #: builtin/hash-object.c:60
 msgid ""
 "git hash-object [-t <type>] [-w] [--path=<file>|--no-filters] [--stdin] [--] "
 "<file>..."
 msgstr ""
+"git hash-object [-t <タイプ>] [-w] [--path=<ファイル>|--no-filters] [--stdin] [--] "
+"<ファイル>..."
 
 #: builtin/hash-object.c:61
 msgid "git hash-object  --stdin-paths < <list-of-paths>"
-msgstr ""
+msgstr "git hash-object  --stdin-paths < <パスのリスト>"
 
 #: builtin/hash-object.c:72
 msgid "type"
-msgstr ""
+msgstr "タイプ"
 
 #: builtin/hash-object.c:72
 msgid "object type"
-msgstr ""
+msgstr "オブジェクトタイプ"
 
 #: builtin/hash-object.c:73
 msgid "write the object into the object database"
-msgstr ""
+msgstr "オブジェクトをオブジェクトデータベースに書き込みます"
 
 #: builtin/hash-object.c:74
 msgid "read the object from stdin"
-msgstr ""
+msgstr "オブジェクトを標準入力から読み込みます"
 
 #: builtin/hash-object.c:76
 msgid "store file as is without filters"
@@ -5463,50 +5465,50 @@ msgstr ""
 
 #: builtin/help.c:41
 msgid "print all available commands"
-msgstr ""
+msgstr "有効なコマンドをすべて出力します"
 
 #: builtin/help.c:42
 msgid "print list of useful guides"
-msgstr ""
+msgstr "便利なガイドを一覧で出力します"
 
 #: builtin/help.c:43
 msgid "show man page"
-msgstr ""
+msgstr "man pageを表示します"
 
 #: builtin/help.c:44
 msgid "show manual in web browser"
-msgstr ""
+msgstr "マニュアルをWebブラウザで表示する"
 
 #: builtin/help.c:46
 msgid "show info page"
-msgstr ""
+msgstr "情報ページを表示します"
 
 #: builtin/help.c:52
 msgid "git help [--all] [--guides] [--man|--web|--info] [command]"
-msgstr ""
+msgstr "git help [--all] [--guides] [--man|--web|--info] [コマンド]"
 
 #: builtin/help.c:64
 #, c-format
 msgid "unrecognized help format '%s'"
-msgstr ""
+msgstr "'%s'は認識できないヘルプ形式です"
 
 #: builtin/help.c:92
 msgid "Failed to start emacsclient."
-msgstr ""
+msgstr "emacsclientの起動に失敗しました。"
 
 #: builtin/help.c:105
 msgid "Failed to parse emacsclient version."
-msgstr ""
+msgstr "emacsclientのバージョンのパースに失敗しました。"
 
 #: builtin/help.c:113
 #, c-format
 msgid "emacsclient version '%d' too old (< 22)."
-msgstr ""
+msgstr "emacsclientのバージョン'%d'は古過ぎます。 (< 22)"
 
 #: builtin/help.c:131 builtin/help.c:159 builtin/help.c:168 builtin/help.c:176
 #, c-format
 msgid "failed to exec '%s': %s"
-msgstr ""
+msgstr "'%s'の実行に失敗しました: %s"
 
 #: builtin/help.c:216
 #, c-format
@@ -5514,6 +5516,8 @@ msgid ""
 "'%s': path for unsupported man viewer.\n"
 "Please consider using 'man.<tool>.cmd' instead."
 msgstr ""
+"'%s': パスはman viewerでサポートされていません。\n"
+"代わりに'man.<tool>.cmd'を使用することを検討してください。"
 
 #: builtin/help.c:228
 #, c-format
@@ -5521,80 +5525,82 @@ msgid ""
 "'%s': cmd for supported man viewer.\n"
 "Please consider using 'man.<tool>.path' instead."
 msgstr ""
+"'%s': コマンドはman viewerでサポートされていません。\n"
+"代わりに'man.<tool>.path'を使用することを検討してください。"
 
 #: builtin/help.c:353
 #, c-format
 msgid "'%s': unknown man viewer."
-msgstr ""
+msgstr "'%s': 不明なman viewerです。"
 
 #: builtin/help.c:370
 msgid "no man viewer handled the request"
-msgstr ""
+msgstr "リクエストを処理したman viewerはありません"
 
 #: builtin/help.c:378
 msgid "no info viewer handled the request"
-msgstr ""
+msgstr "リクエストを処理したinfo viewerはありません"
 
 #: builtin/help.c:424
 msgid "Defining attributes per path"
-msgstr ""
+msgstr "パスごとの属性を定義します"
 
 #: builtin/help.c:425
 msgid "A Git glossary"
-msgstr ""
+msgstr "Gitの用語集"
 
 #: builtin/help.c:426
 msgid "Specifies intentionally untracked files to ignore"
-msgstr ""
+msgstr "意図的にトラックされていないファイルを無視するように指定します"
 
 #: builtin/help.c:427
 msgid "Defining submodule properties"
-msgstr ""
+msgstr "Submoduleのプロパティを定義します"
 
 #: builtin/help.c:428
 msgid "Specifying revisions and ranges for Git"
-msgstr ""
+msgstr "Gitのためのリビジョンと範囲を指定します"
 
 #: builtin/help.c:429
 msgid "A tutorial introduction to Git (for version 1.5.1 or newer)"
-msgstr ""
+msgstr "Gitのチュートリアルの紹介 (バージョン1.5.1以上用)"
 
 #: builtin/help.c:430
 msgid "An overview of recommended workflows with Git"
-msgstr ""
+msgstr "Gitの推奨されるワークフローの概要"
 
 #: builtin/help.c:442
 msgid "The common Git guides are:\n"
-msgstr ""
+msgstr "Gitの共通ガイドです:\n"
 
 #: builtin/help.c:463 builtin/help.c:480
 #, c-format
 msgid "usage: %s%s"
-msgstr ""
+msgstr "使用量: %s%s"
 
 #: builtin/help.c:496
 #, c-format
 msgid "`git %s' is aliased to `%s'"
-msgstr ""
+msgstr "`git %s'は`%s'の別名です"
 
 #: builtin/index-pack.c:184
 #, c-format
 msgid "object type mismatch at %s"
-msgstr ""
+msgstr "オブジェクトタイプが%sとマッチしません"
 
 #: builtin/index-pack.c:204
 msgid "object of unexpected type"
-msgstr ""
+msgstr "予期しないタイプのオブジェクトです"
 
 #: builtin/index-pack.c:244
 #, c-format
 msgid "cannot fill %d byte"
 msgid_plural "cannot fill %d bytes"
-msgstr[0] ""
+msgstr[0] "%dバイトを埋めることができません"
 
 #: builtin/index-pack.c:254
 msgid "early EOF"
-msgstr ""
+msgstr "早期EOF"
 
 #: builtin/index-pack.c:255
 msgid "read error on input"
@@ -5611,21 +5617,21 @@ msgstr ""
 #: builtin/index-pack.c:290
 #, c-format
 msgid "unable to create '%s'"
-msgstr ""
+msgstr "'%s'を作成できません"
 
 #: builtin/index-pack.c:295
 #, c-format
 msgid "cannot open packfile '%s'"
-msgstr ""
+msgstr "パックファイル'%s'を開けません"
 
 #: builtin/index-pack.c:309
 msgid "pack signature mismatch"
-msgstr ""
+msgstr "パック証明がマッチしません"
 
 #: builtin/index-pack.c:311
 #, c-format
 msgid "pack version %<PRIu32> unsupported"
-msgstr ""
+msgstr "パックバージョン%<PRIu32>はサポートされていません"
 
 #: builtin/index-pack.c:329
 #, c-format
@@ -5648,7 +5654,7 @@ msgstr ""
 #: builtin/index-pack.c:516
 #, c-format
 msgid "unknown object type %d"
-msgstr ""
+msgstr "%dは不明なオブジェクトタイプです"
 
 #: builtin/index-pack.c:547
 msgid "cannot pread pack file"
@@ -5662,55 +5668,55 @@ msgstr[0] ""
 
 #: builtin/index-pack.c:575
 msgid "serious inflate inconsistency"
-msgstr ""
+msgstr "深刻なインフレートの矛盾"
 
 #: builtin/index-pack.c:666 builtin/index-pack.c:672 builtin/index-pack.c:695
 #: builtin/index-pack.c:729 builtin/index-pack.c:738
 #, c-format
 msgid "SHA1 COLLISION FOUND WITH %s !"
-msgstr ""
+msgstr "%sのSHA1の衝突を発見しました！"
 
 #: builtin/index-pack.c:669 builtin/pack-objects.c:171
 #: builtin/pack-objects.c:263
 #, c-format
 msgid "unable to read %s"
-msgstr ""
+msgstr "%sを読み込めません"
 
 #: builtin/index-pack.c:735
 #, c-format
 msgid "cannot read existing object %s"
-msgstr ""
+msgstr "存在するオブジェクト%sを読み込めません"
 
 #: builtin/index-pack.c:749
 #, c-format
 msgid "invalid blob object %s"
-msgstr ""
+msgstr "不正なBlobオブジェクト%s"
 
 #: builtin/index-pack.c:763
 #, c-format
 msgid "invalid %s"
-msgstr ""
+msgstr "不正な%s"
 
 #: builtin/index-pack.c:766
 msgid "Error in object"
-msgstr ""
+msgstr "オブジェクトの中にエラーがあります"
 
 #: builtin/index-pack.c:768
 #, c-format
 msgid "Not all child objects of %s are reachable"
-msgstr ""
+msgstr "%sのすべての子オブジェクトは到達可能ではありません"
 
 #: builtin/index-pack.c:839 builtin/index-pack.c:869
 msgid "failed to apply delta"
-msgstr ""
+msgstr "デルタの適用に失敗しました"
 
 #: builtin/index-pack.c:1010
 msgid "Receiving objects"
-msgstr ""
+msgstr "オブジェクトを受け取っています"
 
 #: builtin/index-pack.c:1010
 msgid "Indexing objects"
-msgstr ""
+msgstr "オブジェクトに索引をつけています"
 
 #: builtin/index-pack.c:1036
 msgid "pack is corrupted (SHA1 mismatch)"
@@ -5722,29 +5728,29 @@ msgstr ""
 
 #: builtin/index-pack.c:1044
 msgid "pack has junk at the end"
-msgstr ""
+msgstr "パックの最後にゴミがあります"
 
 #: builtin/index-pack.c:1055
 msgid "confusion beyond insanity in parse_pack_objects()"
-msgstr ""
+msgstr "狂気を超えた混乱がparse_pack_objects()にあります"
 
 #: builtin/index-pack.c:1078
 msgid "Resolving deltas"
-msgstr ""
+msgstr "デルタを解決しています"
 
 #: builtin/index-pack.c:1088
 #, c-format
 msgid "unable to create thread: %s"
-msgstr ""
+msgstr "スレッドの作成に失敗しました: %s"
 
 #: builtin/index-pack.c:1130
 msgid "confusion beyond insanity"
-msgstr ""
+msgstr "狂気を超えた混乱"
 
 #: builtin/index-pack.c:1138
 #, c-format
 msgid "completed with %d local objects"
-msgstr ""
+msgstr "%d件のローカルオブジェクトが完了しました"
 
 #: builtin/index-pack.c:1148
 #, c-format
@@ -5755,7 +5761,7 @@ msgstr ""
 #, c-format
 msgid "pack has %d unresolved delta"
 msgid_plural "pack has %d unresolved deltas"
-msgstr[0] ""
+msgstr[0] "パックは未解決の%d個のデルタを持っています"
 
 #: builtin/index-pack.c:1177
 #, c-format
@@ -5769,7 +5775,7 @@ msgstr ""
 
 #: builtin/index-pack.c:1280
 msgid "error while closing pack file"
-msgstr ""
+msgstr "パックファイルを閉じている間にエラー"
 
 #: builtin/index-pack.c:1293
 #, c-format
@@ -5783,21 +5789,21 @@ msgstr ""
 
 #: builtin/index-pack.c:1314
 msgid "cannot store pack file"
-msgstr ""
+msgstr "パックファイルを保存できません"
 
 #: builtin/index-pack.c:1325
 msgid "cannot store index file"
-msgstr ""
+msgstr "インデックスファイルを保存できません"
 
 #: builtin/index-pack.c:1358
 #, c-format
 msgid "bad pack.indexversion=%<PRIu32>"
-msgstr ""
+msgstr "bad pack.indexversion=%<PRIu32>"
 
 #: builtin/index-pack.c:1364
 #, c-format
 msgid "invalid number of threads specified (%d)"
-msgstr ""
+msgstr "指定されたスレッドの数が無効です(%d)"
 
 #: builtin/index-pack.c:1368 builtin/index-pack.c:1546
 #, c-format
@@ -5807,7 +5813,7 @@ msgstr ""
 #: builtin/index-pack.c:1426
 #, c-format
 msgid "Cannot open existing pack file '%s'"
-msgstr ""
+msgstr "存在するパックファイル'%s'を開けません"
 
 #: builtin/index-pack.c:1428
 #, c-format
@@ -5818,36 +5824,36 @@ msgstr ""
 #, c-format
 msgid "non delta: %d object"
 msgid_plural "non delta: %d objects"
-msgstr[0] ""
+msgstr[0] "デルタではありません: %d個のオブジェクト"
 
 #: builtin/index-pack.c:1482
 #, c-format
 msgid "chain length = %d: %lu object"
 msgid_plural "chain length = %d: %lu objects"
-msgstr[0] ""
+msgstr[0] "チェーンの長さ = %d: %luオブジェクト"
 
 #: builtin/index-pack.c:1510
 msgid "Cannot come back to cwd"
-msgstr ""
+msgstr "cwdに戻れません"
 
 #: builtin/index-pack.c:1558 builtin/index-pack.c:1561
 #: builtin/index-pack.c:1573 builtin/index-pack.c:1577
 #, c-format
 msgid "bad %s"
-msgstr ""
+msgstr "悪い%s"
 
 #: builtin/index-pack.c:1591
 msgid "--fix-thin cannot be used without --stdin"
-msgstr ""
+msgstr "--fix-thinは--stdinなしに使用できません"
 
 #: builtin/index-pack.c:1595 builtin/index-pack.c:1605
 #, c-format
 msgid "packfile name '%s' does not end with '.pack'"
-msgstr ""
+msgstr "パックファイル名'%s'の終わりが'.pack'ではありません"
 
 #: builtin/index-pack.c:1614
 msgid "--verify with no packfile name given"
-msgstr ""
+msgstr "パックファイル名を与えずに--verifyを使用"
 
 #: builtin/init-db.c:35
 #, c-format
