@@ -443,6 +443,33 @@ verify_commit_log_sob () {
 	fi
 }
 
+verify_commit_log_subject () {
+	c=$1
+	subject=0
+
+	while read line
+	do
+		if test $subject -eq 0
+		then
+			if test -z "$line"
+			then
+				# The first blank line seperate commit object headings
+				# and log messages"
+				subject=$(( subject + 1 ))
+			fi
+			continue
+		else
+			if test "$line" = "${line#l10n: }"
+			then
+				hiecho >&2 "Error: commit subject should start with \"l10n: \""
+				echo >&2 "       in commit: $c,"
+				echo >&2 "       subject: \"$line\""
+			fi
+			break
+		fi
+	done
+}
+
 is_merge_commit()
 {
 	c=$1
@@ -528,6 +555,7 @@ check_commits () {
 			if ! is_merge_commit $c
 			then
 				echo "$cobject" | tac | verify_commit_log_sob $c
+				echo "$cobject" | verify_commit_log_subject $c
 			fi
 			count=$(( count + 1 ))
 		done
