@@ -44,15 +44,26 @@ END_OF_USAGE
 	if test $# -gt 0
 	then
 		echo >&2
-		echo >&2 "Error: $*"
+		hiecho >&2 "Error: $*"
 		exit 1
 	else
 		exit 0
 	fi
 }
 
+hiecho()
+{
+	if test "$1" = "-n"
+	then
+		shift
+		printf "[1m$*[0m"
+	else
+		printf "[1m$*[0m\n"
+	fi
+}
+
 die () {
-	echo >&2 "$@"
+	hiecho >&2 "$@"
 	exit 1
 }
 
@@ -149,12 +160,12 @@ check () {
 			fi
 			if test -z "$remote"
 			then
-				echo >&2 "Must provides a valid remote name."
+				hiecho >&2 "Error: must provides a valid remote name."
 			elif git remote | grep -q "^$remote$"
 			then
 				check_upstream_update "$remote"
 			else
-				echo >&2 "Remote \"$remote\" does not exist."
+				hiecho >&2 "Error: remote \"$remote\" does not exist."
 			fi
 			break
 			;;
@@ -181,7 +192,7 @@ check_po () {
 				mkdir -p "${mo%/*}"
 				msgfmt -o "$mo" --check --statistics "$po"
 			else
-				echo >&2 "Error: File $po does not exist."
+				hiecho >&2 "Error: File $po does not exist."
 			fi
 		fi
 	done
@@ -357,10 +368,10 @@ verify_commit_log () {
 	do
 		if test $subject -eq 0
 		then
-			# The first blank line seperate commit object headings
-			# and log messages"
 			if test -z "$line"
 			then
+				# The first blank line seperate commit object headings
+				# and log messages"
 				subject=$(( subject + 1 ))
 			fi
 			continue
@@ -379,17 +390,17 @@ verify_commit_log () {
 			fi
 			if test $subject_lines -gt 1
 			then
-				echo >&2 "Error: in commit $c, multiple lines found in subject."
+				hiecho >&2 "Error: in commit $c, multiple lines found in subject."
 				subject=$(( subject + 1 ))
 			else
 				if test "${line%.}" != "$line"
 				then
-					echo >&2 "Error: in commit $c, subject should not end with a punctuation."
+					hiecho >&2 "Error: in commit $c, subject should not end with a punctuation."
 					echo >&2 "       \"$line\""
 				fi
 				if test ${#line} -gt 50
 				then
-					echo >&2 "Error: in commit $c, subject should less than 50 characters."
+					hiecho >&2 "Warning: in commit $c, subject should less than 50 characters."
 					echo >&2 "       \"$line\""
 				fi
 			fi
@@ -399,7 +410,7 @@ verify_commit_log () {
 		then
 			if test ${#line} -gt 72
 			then
-				echo >&2 "Error: in commit $c, description should line wrap at 72 characters."
+				hiecho >&2 "Error: in commit $c, description should line wrap at 72 characters."
 				echo >&2 "       \"$line\""
 			fi
 		fi
@@ -423,12 +434,12 @@ verify_commit_log_sob () {
 		fi
 		if ! echo $line | grep -q "^.*-by: .\{1,\} <.\{1,\}>"
 		then
-			echo >&2 "Error: in commit $c, no s-o-b or bad s-o-b: $line"
+			hiecho >&2 "Error: in commit $c, no s-o-b or bad s-o-b: $line"
 		fi
 	done
 	if test -z "$sob"
 	then
-		echo >&2 "Error: in commit $c, there should have a 'Signed-off-by:' line."
+		hiecho >&2 "Error: in commit $c, there should have a 'Signed-off-by:' line."
 	fi
 }
 
@@ -449,7 +460,7 @@ report_nonascii_in_subject () {
 	non_ascii=$2
 
 	echo >&2 "============================================================"
-	echo >&2 "Error: Non-ASCII in subject of commit $c:"
+	hiecho >&2 "Error: Non-ASCII in subject of commit $c:"
 	echo >&2 "       ${non_ascii}"
 	echo >&2
 	git cat-file commit "$c" | head -15 |
@@ -468,9 +479,9 @@ report_bad_encoding () {
 	echo >&2 "============================================================"
 	if test -z "$encoding"
 	then
-		echo >&2 "Error: Not have encoding setting for commit $c:"
+		hiecho >&2 "Error: Not have encoding setting for commit $c:"
 	else
-		echo >&2 "Error: Wrong encoding ($encoding) for commit $c:"
+		hiecho >&2 "Error: Wrong encoding ($encoding) for commit $c:"
 	fi
 	echo >&2 "       ${non_ascii}"
 	echo >&2
@@ -503,8 +514,8 @@ check_commits () {
 	if git diff-tree -r "$since" "$til" | awk '{print $6}' | grep -qv "^po/"
 	then
 		echo >&2 "============================================================"
-		echo >&2 "Error: changed files outside po directory!"
-		echo >&2 "       reference: git diff-tree -r $since $til"
+		hiecho >&2 "Error: changed files outside po directory!"
+		echo >&2 "       run: git diff-tree -r $since $til"
 	fi
 
 	count=0
@@ -552,7 +563,7 @@ check_upstream_update () {
 	# Validate remote branch: $remote/master, and $remote/next
 	if ! git rev-parse "remotes/$remote/master" "remotes/$remote/next" >/dev/null 2>&1
 	then
-		echo >&2 "Required branch master and/or next not exist in $remote"
+		hiecho >&2 "Required branch master and/or next not exist in $remote"
 		exit 1
 	fi
 
@@ -641,7 +652,7 @@ show_team () {
 
 	if test ! -f $TEAMSFILE
 	then
-		echo >&2 "TEAMS file not found."
+		hiecho >&2 "TEAMS file not found."
 		exit 1
 	fi
 
@@ -692,7 +703,7 @@ test $# -eq 0 && usage
 
 if ! test -f "$POTFILE"
 then
-	echo "Cannot find git.pot in your workspace. Are you in the workspace of git project?"
+	hiecho "Cannot find git.pot in your workspace. Are you in the workspace of git project?"
 	exit 1
 fi
 
