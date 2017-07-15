@@ -3,6 +3,73 @@
 # This file is distributed under the same license as the Git package.
 # Jacques Viviers <jacques.viviers@gmail.com>, 2017.
 #
+# Afrikaans translations of common Git words used in this file:
+#
+#   English          |  Afrikaans
+#   -----------------+---------------------------------
+#   3-way merge      | 3-rigting samesmelting
+#   a commit         | 'n vaslegging (vaslê)
+#   backward         |
+#     compatibility  | versoenbaar
+#   bare repository  | skoon stoorplaas
+#   bisect           | bisekteer
+#   blob             | blob
+#   branch           | tak
+#   bug              | gogga
+#   bundle           | bondel
+#   bypass           | kortsluit
+#   to checkout      | uitboek
+#   cherry-pick      | uitkies
+#   to commit        | om vas te lê, vaslegging, vaslê
+#   commit-ish       | vasleggerige
+#   config file      | konfigurasie lêer
+#   dangling         | hangende
+#   to debug         | om te ontfout
+#   debugging        | ontfouting
+#   to deflate       | om af te blaas
+#   email            | e-pos
+#   entry            | inskrywing
+#   fast-forward     | vinnig vooruit
+#   fast-forwarded   | vinnig vooruit geneem word
+#   to fetch         | om te kry
+#   fix conflicts    | maak konflikte reg
+#   to format        | om te formatteer
+#   glob             | uitbrei
+#   hash             | huts
+#   HEAD             | HEAD, kop
+#   hook             | haak
+#   hunk             | stuk
+#   to inflate       | om op te blaas
+#   to list          | om te lys
+#   mapping          | bymekaarpassing
+#   merge            | saamsmelt
+#   pack             | pak
+#   patches          | lappies
+#   pattern          | patroon
+#   to prune         | om te snoei
+#   to pull          | om te trek/aftrek
+#   to push          | om te stoot
+#   to rebase        | om te hervestig
+#   repository       | stoorplaas
+#   remote           | afgeleë
+#   revert           | terugstel/terugstelling
+#   revision         | weergawe
+#   shallow          | vlak
+#   shell            | beveldop
+#   stash            | bêre
+#   to stash         | om te bêre
+#   tag              | ettiket
+#   template         | sjabloon
+#   thread           | draad
+#   to track         | om na te spoor
+#   tree             | boom
+#   tree-ish         | boomerige
+#   to unstage       | onttou
+#   upstream         | stroom-op
+#   viewer           | leser
+#   worktree /       |
+#   work(ing) tree   | werkboom
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
@@ -13,61 +80,73 @@ msgstr ""
 "Language-Team: Afrikaans <>\n"
 "Language: af\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #: advice.c:55
 #, c-format
 msgid "hint: %.*s\n"
-msgstr ""
+msgstr "wenk: %.*s\n"
 
 #: advice.c:83
 msgid "Cherry-picking is not possible because you have unmerged files."
 msgstr ""
+"Uitkiesing is nie moontlik nie, want jy het lêers wat nog nie saamgesmelt is "
+"nie."
 
 #: advice.c:85
 msgid "Committing is not possible because you have unmerged files."
 msgstr ""
+"Vaslegging is nie moontlik nie, want jy het lêers wat nog nie saamgesmelt is "
+"nie."
 
 #: advice.c:87
 msgid "Merging is not possible because you have unmerged files."
 msgstr ""
+"Saamsmelting is nie moontlik nie, want jy het lêers wat nog nie saamgesmelt "
+"is nie."
 
 #: advice.c:89
 msgid "Pulling is not possible because you have unmerged files."
 msgstr ""
+"Aftrek is nie moontlik nie, want jy het lêers wat nog nie saamgesmelt is nie."
 
 #: advice.c:91
 msgid "Reverting is not possible because you have unmerged files."
 msgstr ""
+"Terugstelling is nie moontlik nie, want jy het lêers wat nog nie saamgesmelt "
+"is nie."
 
 #: advice.c:93
 #, c-format
 msgid "It is not possible to %s because you have unmerged files."
 msgstr ""
+"%s is nie moontlik nie, want jy het lêers wat nog nie saamgesmelt is nie."
 
 #: advice.c:101
 msgid ""
 "Fix them up in the work tree, and then use 'git add/rm <file>'\n"
 "as appropriate to mark resolution and make a commit."
 msgstr ""
+"Korrigeer dit in die werkboom en gebruik dan 'git add/rm <lêer>'\n"
+"soos toepaslik om die resolusie te merk en doen dan 'n vaslegging."
 
 #: advice.c:109
 msgid "Exiting because of an unresolved conflict."
-msgstr ""
+msgstr "Uigegaan weens 'n konflik."
 
 #: advice.c:114 builtin/merge.c:1185
 msgid "You have not concluded your merge (MERGE_HEAD exists)."
-msgstr ""
+msgstr "Jy het nie jou samesmelting voltooi nie (MERGE_HEAD bestaan)."
 
 #: advice.c:116
 msgid "Please, commit your changes before merging."
-msgstr ""
+msgstr "Lê asseblief eers jou veranderinge vas voordat jy saamsmelt."
 
 #: advice.c:117
 msgid "Exiting because of unfinished merge."
-msgstr ""
+msgstr "Uigegaan weens 'n onvoltooide samesmelting."
 
 #: advice.c:123
 #, c-format
@@ -84,6 +163,19 @@ msgid ""
 "  git checkout -b <new-branch-name>\n"
 "\n"
 msgstr ""
+"Nota: '%s' is uitgeboek.\n"
+"\n"
+"Jy is in 'n 'ontkoppelde HEAD' toestand. Jy kan rondkyk, eksperimentele\n"
+"veranderinge maak en hulle vaslê, en jy kan vasleggings weggooi wat jy\n"
+"in hierdie toestand gemaak het sonder om enige takke te beïnvloed deur\n"
+"'n nog 'n uitboek te doen.\n"
+"\n"
+"As jy 'n tak wil skep om die vasleggings wat jy maak te bewaar, kan jy\n"
+"so doen (nou of later) deur die -b skakel saam met jou uitboek bevel te\n"
+"geruik. Byvoorbeeld:\n"
+"\n"
+"  git checkout -b <nuwe-tak-naam>\n"
+"\n"
 
 #: apply.c:57
 #, c-format
