@@ -831,33 +831,35 @@ msgstr "Formato de carpeta desconocido '%s'"
 #: archive.c:483
 #, c-format
 msgid "Argument not supported for format '%s': -%d"
-msgstr ""
+msgstr "Argumento no soprtado para formato '%s': -%d"
 
 #: attr.c:214
 #, c-format
 msgid "%.*s is not a valid attribute name"
-msgstr ""
+msgstr "%.*s no es un nombre de atributo valido"
 
 #: attr.c:410
 msgid ""
 "Negative patterns are ignored in git attributes\n"
 "Use '\\!' for literal leading exclamation."
 msgstr ""
+"Los patrones negativos son ignorados en los atributos de git\n"
+"Usa '\\!' para comenzar literalmente con exclamacion."
 
 #: bisect.c:447
 #, c-format
 msgid "Badly quoted content in file '%s': %s"
-msgstr ""
+msgstr "Revisa las comillas en el archivo '%s': %s"
 
 #: bisect.c:655
 #, c-format
 msgid "We cannot bisect more!\n"
-msgstr ""
+msgstr "No podemos bisecar mas!\n"
 
 #: bisect.c:708
 #, c-format
 msgid "Not a valid commit name %s"
-msgstr ""
+msgstr "No es un nombre de commit valido %s"
 
 #: bisect.c:732
 #, c-format
@@ -865,6 +867,8 @@ msgid ""
 "The merge base %s is bad.\n"
 "This means the bug has been fixed between %s and [%s].\n"
 msgstr ""
+"La base de fusion %s esta mal.\n"
+"Esto quiere decir que el bug ha sido arreglado enter %s y [%s].\n"
 
 #: bisect.c:737
 #, c-format
@@ -872,6 +876,8 @@ msgid ""
 "The merge base %s is new.\n"
 "The property has changed between %s and [%s].\n"
 msgstr ""
+"La base de fusion %s es nueva.\n"
+"Esta propiedad ha cambiado entre %s y [%s].\n"
 
 #: bisect.c:742
 #, c-format
@@ -879,6 +885,8 @@ msgid ""
 "The merge base %s is %s.\n"
 "This means the first '%s' commit is between %s and [%s].\n"
 msgstr ""
+"La base de fusion %s es %s.\n"
+"Esto quiere decir que el primer '%s' commit esta entre %s y [%s].\n"
 
 #: bisect.c:750
 #, c-format
@@ -887,6 +895,9 @@ msgid ""
 "git bisect cannot work properly in this case.\n"
 "Maybe you mistook %s and %s revs?\n"
 msgstr ""
+"Algunas %s revisiones no son ancestros de la revision %s.\n"
+"git bisect no puede trabajar bien en este caso.\n"
+"Tal vez confundio la revision %s y %s?\n"
 
 #: bisect.c:763
 #, c-format
@@ -895,35 +906,39 @@ msgid ""
 "So we cannot be sure the first %s commit is between %s and %s.\n"
 "We continue anyway."
 msgstr ""
+"la base de fusion entre %s y [%s] tiene que ser saltada.\n"
+"Asi que no podemos estar seguros que el primer %s commit esta entre"
+"%s y %s.\n"
+"Vamos a continuar de todas maneras."
 
 #: bisect.c:798
 #, c-format
 msgid "Bisecting: a merge base must be tested\n"
-msgstr ""
+msgstr "Bisectando: una base de fusion debe ser probada\n"
 
 #: bisect.c:849
 #, c-format
 msgid "a %s revision is needed"
-msgstr ""
+msgstr "una %s revision es necesaria"
 
 #: bisect.c:866 builtin/notes.c:175 builtin/tag.c:256
 #, c-format
 msgid "could not create file '%s'"
-msgstr ""
+msgstr "no se pudo crear el archivo '%s'"
 
 #: bisect.c:917
 #, c-format
 msgid "could not read file '%s'"
-msgstr ""
+msgstr "no se pudo leer el archivo '%s'"
 
 #: bisect.c:947
 msgid "reading bisect refs failed"
-msgstr ""
+msgstr "fallo leer las refs de bisect"
 
 #: bisect.c:967
 #, c-format
 msgid "%s was both %s and %s\n"
-msgstr ""
+msgstr "%s fue ambos %s y %s\n"
 
 #: bisect.c:975
 #, c-format
@@ -931,13 +946,15 @@ msgid ""
 "No testable commit found.\n"
 "Maybe you started with bad path parameters?\n"
 msgstr ""
+"No se encontro un commit para probar.\n"
+"Tal vez comenzo con una mala ruta de parametros?\n"
 
 #: bisect.c:994
 #, c-format
 msgid "(roughly %d step)"
 msgid_plural "(roughly %d steps)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "(aproximadamente %d paso)"
+msgstr[1] "(aproximadamente %d pasos)"
 
 #. TRANSLATORS: the last %s will be replaced with "(roughly %d
 #. steps)" translation.
@@ -946,42 +963,43 @@ msgstr[1] ""
 #, c-format
 msgid "Bisecting: %d revision left to test after this %s\n"
 msgid_plural "Bisecting: %d revisions left to test after this %s\n"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Bisectando: falta %d revision por probar despues de esto %s\n"
+msgstr[1] "Bisectando: faltan %d revisiones por probar despues de esto %s\n"
 
 #: blame.c:1757
 msgid "--contents and --reverse do not blend well."
-msgstr ""
+msgstr "--contents y --reverse no se mezclan bien."
 
 #: blame.c:1768
 msgid "cannot use --contents with final commit object name"
-msgstr ""
+msgstr "no se puede usar --contents con el nombre de objeto commit final"
 
 #: blame.c:1788
 msgid "--reverse and --first-parent together require specified latest commit"
-msgstr ""
+msgstr "--reverse y --first-parent juntos requieren especificar el ultimo commit"
 
 #: blame.c:1797 bundle.c:164 ref-filter.c:1919 sequencer.c:1166
 #: sequencer.c:2328 builtin/commit.c:1058 builtin/log.c:356 builtin/log.c:907
 #: builtin/log.c:1357 builtin/log.c:1683 builtin/log.c:1926 builtin/merge.c:360
 #: builtin/shortlog.c:177
 msgid "revision walk setup failed"
-msgstr ""
+msgstr "fallo la configuracion del camino de revision"
 
 #: blame.c:1815
 msgid ""
 "--reverse --first-parent together require range along first-parent chain"
 msgstr ""
+"--reverse --first-parent jutnos requieren un rango a lo largo de la cadena del primer padre"
 
 #: blame.c:1826
 #, c-format
 msgid "no such path %s in %s"
-msgstr ""
+msgstr "no hay una ruta %s en %s"
 
 #: blame.c:1837
 #, c-format
 msgid "cannot read blob %s for path %s"
-msgstr ""
+msgstr "no se puede leer el blob %s para la ruta %s"
 
 #: branch.c:53
 #, c-format
@@ -991,84 +1009,88 @@ msgid ""
 "the remote tracking information by invoking\n"
 "\"git branch --set-upstream-to=%s%s%s\"."
 msgstr ""
+"\n"
+"Tras arreglar la causa del error puedes intentar arreglar\n"
+"la infomacion del rastreo remoto invocando\n"
+"\"git branch --set-upstream-to=%s%s%s\"."
 
 #: branch.c:67
 #, c-format
 msgid "Not setting branch %s as its own upstream."
-msgstr ""
+msgstr "La rama %s no se configura como su propio upstream."
 
 #: branch.c:93
 #, c-format
 msgid "Branch %s set up to track remote branch %s from %s by rebasing."
-msgstr ""
+msgstr "Rama %s configurada para rastrear la rama remota %s de %s por rebase."
 
 #: branch.c:94
 #, c-format
 msgid "Branch %s set up to track remote branch %s from %s."
-msgstr ""
+msgstr "Rama %s configurada para rastrear la rama remota %s de %s."
 
 #: branch.c:98
 #, c-format
 msgid "Branch %s set up to track local branch %s by rebasing."
-msgstr ""
+msgstr "Rama %s configurada para rastrear la rama local %s por rebase."
 
 #: branch.c:99
 #, c-format
 msgid "Branch %s set up to track local branch %s."
-msgstr ""
+msgstr "Rama %s configurada para rastrear la rama local %s."
 
 #: branch.c:104
 #, c-format
 msgid "Branch %s set up to track remote ref %s by rebasing."
-msgstr ""
+msgstr "Rama %s configurada para rastrear la referencia remota %s por rebase."
 
 #: branch.c:105
 #, c-format
 msgid "Branch %s set up to track remote ref %s."
-msgstr ""
+msgstr "Rama %s configurada para rastrear la referencia remota %s."
 
 #: branch.c:109
 #, c-format
 msgid "Branch %s set up to track local ref %s by rebasing."
-msgstr ""
+msgstr "Rama %s configurada para rastrear la referencia local %s por rebase."
 
 #: branch.c:110
 #, c-format
 msgid "Branch %s set up to track local ref %s."
-msgstr ""
+msgstr "Rama %s configurada para rastrear la referencia local %s."
 
 #: branch.c:119
 msgid "Unable to write upstream branch configuration"
-msgstr ""
+msgstr "No es posible escribir la configuracion de la rama upstream"
 
 #: branch.c:156
 #, c-format
 msgid "Not tracking: ambiguous information for ref %s"
-msgstr ""
+msgstr "No rastreando: informacion ambigua para la referencia %s"
 
 #: branch.c:185
 #, c-format
 msgid "'%s' is not a valid branch name."
-msgstr ""
+msgstr "'%s' no es un nombre valido de rama."
 
 #: branch.c:190
 #, c-format
 msgid "A branch named '%s' already exists."
-msgstr ""
+msgstr "Una rama llamada '%s' ya existe."
 
 #: branch.c:198
 msgid "Cannot force update the current branch."
-msgstr ""
+msgstr "No se puede forzar la actualizacion de la rama actual."
 
 #: branch.c:218
 #, c-format
 msgid "Cannot setup tracking information; starting point '%s' is not a branch."
-msgstr ""
+msgstr "No se puede configurar el rastreo de informacion; el punto de partida '%s' no es una rama"
 
 #: branch.c:220
 #, c-format
 msgid "the requested upstream branch '%s' does not exist"
-msgstr ""
+msgstr "la rama de upstream solicitada '%s' no existe"
 
 #: branch.c:222
 msgid ""
@@ -1081,119 +1103,128 @@ msgid ""
 "will track its remote counterpart, you may want to use\n"
 "\"git push -u\" to set the upstream config as you push."
 msgstr ""
+"\n"
+"Si estas planeando basar tu trabajo en una rama upstream\n"
+"que ya existe en el remoto, tal vez necesites correr\n"
+"\"git fetch\" para recibirlo.\n"
+"\n"
+"Si estas planeando hacer push a una nueva rama local que\n"
+"va a rastrear su contraparte remota, tal vez quieras usar\n"
+"\"git push -u\" para configurar tu upstream mientras realizas el push."
 
 #: branch.c:265
 #, c-format
 msgid "Not a valid object name: '%s'."
-msgstr ""
+msgstr "Nombre de objeto no valido: '%s'."
 
 #: branch.c:285
 #, c-format
 msgid "Ambiguous object name: '%s'."
-msgstr ""
+msgstr "Nombre de objeto ambiguo: '%s'."
 
 #: branch.c:290
 #, c-format
 msgid "Not a valid branch point: '%s'."
-msgstr ""
+msgstr "Punto de rama no valido: '%s'."
 
 #: branch.c:344
 #, c-format
 msgid "'%s' is already checked out at '%s'"
-msgstr ""
+msgstr "'%s' ya ha sido marcado en '%s'"
 
 #: branch.c:366
 #, c-format
 msgid "HEAD of working tree %s is not updated"
-msgstr ""
+msgstr "la HEAD del arbol de trabajo %s no esta actualizada"
 
 #: bundle.c:34
 #, c-format
 msgid "'%s' does not look like a v2 bundle file"
-msgstr ""
+msgstr "'%s' no se ve como un archivo bundle v2"
 
 #: bundle.c:62
 #, c-format
 msgid "unrecognized header: %s%s (%d)"
-msgstr ""
+msgstr "header no reconocido %s%s (%d)"
 
 #: bundle.c:88 sequencer.c:1344 sequencer.c:1770 builtin/commit.c:778
 #, c-format
 msgid "could not open '%s'"
-msgstr ""
+msgstr "no se pudo abrir '%s'"
 
 #: bundle.c:140
 msgid "Repository lacks these prerequisite commits:"
-msgstr ""
+msgstr "Al repositorio le falta estos commits prerequisito:"
 
 #: bundle.c:186
 #, c-format
 msgid "The bundle contains this ref:"
 msgid_plural "The bundle contains these %d refs:"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "El bundle contiene esta referencia:"
+msgstr[1] "El bundle contiene estas %d referencias:"
 
 #: bundle.c:193
 msgid "The bundle records a complete history."
-msgstr ""
+msgstr "El bundle registra una historia completa."
 
 #: bundle.c:195
 #, c-format
 msgid "The bundle requires this ref:"
 msgid_plural "The bundle requires these %d refs:"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "El bundle requiere esta referencia:"
+msgstr[1] "El bundle requiere estas %d referencias:"
 
 #: bundle.c:254
 msgid "Could not spawn pack-objects"
-msgstr ""
+msgstr "no se pudo engendrar el pack-objetcts"
 
 #: bundle.c:265
 msgid "pack-objects died"
-msgstr ""
+msgstr "pack-objects muerio"
 
 #: bundle.c:307
 msgid "rev-list died"
-msgstr ""
+msgstr "rev-list muerio"
 
 #: bundle.c:356
 #, c-format
 msgid "ref '%s' is excluded by the rev-list options"
-msgstr ""
+msgstr "referencia '%s' es excluida por las opciones de rev-list"
 
 #: bundle.c:446 builtin/log.c:173 builtin/log.c:1589 builtin/shortlog.c:282
 #, c-format
 msgid "unrecognized argument: %s"
-msgstr ""
+msgstr "argumento no reconocido: %s"
 
 #: bundle.c:454
 msgid "Refusing to create empty bundle."
-msgstr ""
+msgstr "Rechazando crear un bundle vacio."
 
 #: bundle.c:466
 #, c-format
 msgid "cannot create '%s'"
-msgstr ""
+msgstr "no se puede crear '%s'"
 
 #: bundle.c:494
 msgid "index-pack died"
-msgstr ""
+msgstr "index-pack murio"
 
 #: color.c:301
 #, c-format
 msgid "invalid color value: %.*s"
-msgstr ""
+msgstr "color invalido: %.*s"
 
 #: commit.c:41 sequencer.c:1582 builtin/am.c:420 builtin/am.c:456
 #: builtin/am.c:1469 builtin/am.c:2107
 #, c-format
 msgid "could not parse %s"
-msgstr ""
+msgstr "no se puede anazliar %s"
+
 
 #: commit.c:43
 #, c-format
 msgid "%s %s is not a commit!"
-msgstr ""
+msgstr "%s %s no es un commit!"
 
 #: commit.c:1511
 msgid ""
@@ -1201,164 +1232,167 @@ msgid ""
 "You may want to amend it after fixing the message, or set the config\n"
 "variable i18n.commitencoding to the encoding your project uses.\n"
 msgstr ""
+"Peligro: el mensaje del commit no se ajusta a UTF-8.\n"
+"Tal vez quiera enmendarlo despues de arreglar el mensaje, o arreglar la\n"
+"variable de configuracion i18n.commitencoding para el codificacion que usa su proyecto.\n"
 
 #: compat/obstack.c:406 compat/obstack.c:408
 msgid "memory exhausted"
-msgstr ""
+msgstr "memoria agotada"
 
 #: config.c:186
 msgid "relative config include conditionals must come from files"
-msgstr ""
+msgstr "la configuracion relativa incluye condicionales que deben venir de archivos"
 
 #: config.c:720
 #, c-format
 msgid "bad config line %d in blob %s"
-msgstr ""
+msgstr "mala linea de config %d en el blob %s"
 
 #: config.c:724
 #, c-format
 msgid "bad config line %d in file %s"
-msgstr ""
+msgstr "mala linea de config %d en el archivo %s"
 
 #: config.c:728
 #, c-format
 msgid "bad config line %d in standard input"
-msgstr ""
+msgstr "mala linea de config %d en la entrada standard"
 
 #: config.c:732
 #, c-format
 msgid "bad config line %d in submodule-blob %s"
-msgstr ""
+msgstr "mala linea de config %d en el submodulo-blob %s"
 
 #: config.c:736
 #, c-format
 msgid "bad config line %d in command line %s"
-msgstr ""
+msgstr "mala linea de config %d en la linea de comando %s"
 
 #: config.c:740
 #, c-format
 msgid "bad config line %d in %s"
-msgstr ""
+msgstr "mala linea de config %d en %s"
 
 #: config.c:868
 msgid "out of range"
-msgstr ""
+msgstr "fuera de rango"
 
 #: config.c:868
 msgid "invalid unit"
-msgstr ""
+msgstr "unidad invalida"
 
 #: config.c:874
 #, c-format
 msgid "bad numeric config value '%s' for '%s': %s"
-msgstr ""
+msgstr "mal valor de config numerica '%s' para '%s': %s"
 
 #: config.c:879
 #, c-format
 msgid "bad numeric config value '%s' for '%s' in blob %s: %s"
-msgstr ""
+msgstr "mal valor de config numerica '%s' para '%s' en el blob %s: %s"
 
 #: config.c:882
 #, c-format
 msgid "bad numeric config value '%s' for '%s' in file %s: %s"
-msgstr ""
+msgstr "mal valor de config numerica '%s' para '%s' en el archivo %s: %s"
 
 #: config.c:885
 #, c-format
 msgid "bad numeric config value '%s' for '%s' in standard input: %s"
-msgstr ""
+msgstr "mal valor de config numerica '%s' para '%s' en la entrada standard: %s"
 
 #: config.c:888
 #, c-format
 msgid "bad numeric config value '%s' for '%s' in submodule-blob %s: %s"
-msgstr ""
+msgstr "mal valor de config numerica '%s' para '%s' en el submodulo-blob %s: %s"
 
 #: config.c:891
 #, c-format
 msgid "bad numeric config value '%s' for '%s' in command line %s: %s"
-msgstr ""
+msgstr "mal valor de config numerica '%s' para '%s' en la linea de comando %s: %s"
 
 #: config.c:894
 #, c-format
 msgid "bad numeric config value '%s' for '%s' in %s: %s"
-msgstr ""
+msgstr "mal valor de config numerica '%s' para '%s' en %s: %s"
 
 #: config.c:989
 #, c-format
 msgid "failed to expand user dir in: '%s'"
-msgstr ""
+msgstr "fallo al expandir el directorio de usuario en: '%s'"
 
 #: config.c:1084 config.c:1095
 #, c-format
 msgid "bad zlib compression level %d"
-msgstr ""
+msgstr "mala compresion zlib en nivel %d"
 
 #: config.c:1212
 #, c-format
 msgid "invalid mode for object creation: %s"
-msgstr ""
+msgstr "modo invalido de creacion de objetos: %s"
 
 #: config.c:1368
 #, c-format
 msgid "bad pack compression level %d"
-msgstr ""
+msgstr "mala compresion pack en el nivel %d"
 
 #: config.c:1564
 msgid "unable to parse command-line config"
-msgstr ""
+msgstr "no es posible analizar la configuracion de la linea de comando"
 
 #: config.c:1894
 msgid "unknown error occurred while reading the configuration files"
-msgstr ""
+msgstr "error desconocido ocurrio mientras se leian los archivos de configuracion"
 
 #: config.c:2064
 #, c-format
 msgid "Invalid %s: '%s'"
-msgstr ""
+msgstr "Invalido %s: '%s'"
 
 #: config.c:2085
 #, c-format
 msgid "unknown core.untrackedCache value '%s'; using 'keep' default value"
-msgstr ""
+msgstr "valor core.untrackedCache '%s' desconocido; usando valor por defecto 'keep'"
 
 #: config.c:2111
 #, c-format
 msgid "splitIndex.maxPercentChange value '%d' should be between 0 and 100"
-msgstr ""
+msgstr "valor splitIndex.maxPercentChange '%d' debe estar entre 0 y 100"
 
 #: config.c:2122
 #, c-format
 msgid "unable to parse '%s' from command-line config"
-msgstr ""
+msgstr "no es posible analizar '%s' de la configuracion de la linea de comando"
 
 #: config.c:2124
 #, c-format
 msgid "bad config variable '%s' in file '%s' at line %d"
-msgstr ""
+msgstr "mala variable de config '%s' en el archivo '%s' en la linea %d"
 
 #: config.c:2183
 #, c-format
 msgid "%s has multiple values"
-msgstr ""
+msgstr "%s tiene multiples valores"
 
 #: config.c:2517 config.c:2745
 #, c-format
 msgid "fstat on %s failed"
-msgstr ""
+msgstr "fstat en %s fallo"
 
 #: config.c:2635
 #, c-format
 msgid "could not set '%s' to '%s'"
-msgstr ""
+msgstr "no se pudo configurar '%s' a '%s'"
 
 #: config.c:2637 builtin/remote.c:775
 #, c-format
 msgid "could not unset '%s'"
-msgstr ""
+msgstr "no se pudo desactivar '%s'"
 
 #: connect.c:50
 msgid "The remote end hung up upon initial contact"
-msgstr ""
+msgstr "El remoto se colgo en el contacto inicial"
 
 #: connect.c:52
 msgid ""
@@ -1367,22 +1401,26 @@ msgid ""
 "Please make sure you have the correct access rights\n"
 "and the repository exists."
 msgstr ""
+"No se pudo leer del repositorio remoto.\n"
+"\n"
+"Por favor asegurese que tiene los permisos de acceso correctos\n"
+"y que el repositorio existe."
 
 #: connected.c:63 builtin/fsck.c:191 builtin/prune.c:141
 msgid "Checking connectivity"
-msgstr ""
+msgstr "Verificando conectividad"
 
 #: connected.c:75
 msgid "Could not run 'git rev-list'"
-msgstr ""
+msgstr "No se pudo correr 'git rev-list'"
 
 #: connected.c:95
 msgid "failed write to rev-list"
-msgstr ""
+msgstr "fallo escribir a rev-list"
 
 #: connected.c:102
 msgid "failed to close rev-list's stdin"
-msgstr ""
+msgstr "fallo al cerrar la entrada standard de rev-list"
 
 #: convert.c:205
 #, c-format
@@ -1390,11 +1428,13 @@ msgid ""
 "CRLF will be replaced by LF in %s.\n"
 "The file will have its original line endings in your working directory."
 msgstr ""
+"CRLF sera remplazado por LF en %s.\n"
+"El archivo tendra sus finals de linea originales en tu directorio de trabajo."
 
 #: convert.c:209
 #, c-format
 msgid "CRLF would be replaced by LF in %s."
-msgstr ""
+msgstr "CRLF sera remplazado por LF en %s."
 
 #: convert.c:215
 #, c-format
@@ -1402,108 +1442,110 @@ msgid ""
 "LF will be replaced by CRLF in %s.\n"
 "The file will have its original line endings in your working directory."
 msgstr ""
+"LF sera reemplazado por CRLF en %s.\n"
+"El archivo tendra sus finales de linea originales en tu directorio de trabajo."
 
 #: convert.c:219
 #, c-format
 msgid "LF would be replaced by CRLF in %s"
-msgstr ""
+msgstr "LF sera reemplazado por CRLF en %s"
 
 #: date.c:116
 msgid "in the future"
-msgstr ""
+msgstr "en el futuro"
 
 #: date.c:122
 #, c-format
 msgid "%<PRIuMAX> second ago"
 msgid_plural "%<PRIuMAX> seconds ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "hace %<PRIuMAX> segundo"
+msgstr[1] "hace %<PRIuMAX> segundos"
 
 #: date.c:129
 #, c-format
 msgid "%<PRIuMAX> minute ago"
 msgid_plural "%<PRIuMAX> minutes ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "hace %<PRIuMAX> minuto"
+msgstr[1] "hace %<PRIuMAX> minutos"
 
 #: date.c:136
 #, c-format
 msgid "%<PRIuMAX> hour ago"
 msgid_plural "%<PRIuMAX> hours ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "hace %<PRIuMAX> hora"
+msgstr[1] "hace %<PRIuMAX> horas"
 
 #: date.c:143
 #, c-format
 msgid "%<PRIuMAX> day ago"
 msgid_plural "%<PRIuMAX> days ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "hace %<PRIuMAX> dia"
+msgstr[1] "hace %<PRIuMAX> dias"
 
 #: date.c:149
 #, c-format
 msgid "%<PRIuMAX> week ago"
 msgid_plural "%<PRIuMAX> weeks ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "hace %<PRIuMAX> semana"
+msgstr[1] "hace %<PRIuMAX> semanas"
 
 #: date.c:156
 #, c-format
 msgid "%<PRIuMAX> month ago"
 msgid_plural "%<PRIuMAX> months ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "hace %<PRIuMAX> mes"
+msgstr[1] "hace %<PRIuMAX> meses"
 
 #: date.c:167
 #, c-format
 msgid "%<PRIuMAX> year"
 msgid_plural "%<PRIuMAX> years"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%<PRIuMAX> year"
+msgstr[1] "%<PRIuMAX> years"
 
 #. TRANSLATORS: "%s" is "<n> years"
 #: date.c:170
 #, c-format
 msgid "%s, %<PRIuMAX> month ago"
 msgid_plural "%s, %<PRIuMAX> months ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%s, y %<PRIuMAX> mes atras"
+msgstr[1] "%s, y %<PRIuMAX> meses atras"
 
 #: date.c:175 date.c:180
 #, c-format
 msgid "%<PRIuMAX> year ago"
 msgid_plural "%<PRIuMAX> years ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "hace %<PRIuMAX> year"
+msgstr[1] "hace %<PRIuMAX> years"
 
 #: diffcore-order.c:24
 #, c-format
 msgid "failed to read orderfile '%s'"
-msgstr ""
+msgstr "fallo al leer orden de archivos '%s'"
 
 #: diffcore-rename.c:536
 msgid "Performing inexact rename detection"
-msgstr ""
+msgstr "Realizando una deteccion de cambios de nombre inexacta"
 
 #: diff.c:63
 #, c-format
 msgid "option '%s' requires a value"
-msgstr ""
+msgstr "opcion '%s' requiere un valor"
 
 #: diff.c:125
 #, c-format
 msgid "  Failed to parse dirstat cut-off percentage '%s'\n"
-msgstr ""
+msgstr "  Fallo al analizar dirstat porcentaje de corte '%s'\n"
 
 #: diff.c:130
 #, c-format
 msgid "  Unknown dirstat parameter '%s'\n"
-msgstr ""
+msgstr "  parametro '%s' de dirstat desconocido\n"
 
 #: diff.c:282
 #, c-format
 msgid "Unknown value for 'diff.submodule' config variable: '%s'"
-msgstr ""
+msgstr "valor para la variable de config 'diff.submodule' desconocido: '%s'"
 
 #: diff.c:342
 #, c-format
@@ -1511,19 +1553,21 @@ msgid ""
 "Found errors in 'diff.dirstat' config variable:\n"
 "%s"
 msgstr ""
+"Errores en la variable de config 'diff.dirstat' encontrados:\n"
+"%s"
 
 #: diff.c:3101
 #, c-format
 msgid "external diff died, stopping at %s"
-msgstr ""
+msgstr "digg externo murio, deteniendo en %s"
 
 #: diff.c:3427
 msgid "--name-only, --name-status, --check and -s are mutually exclusive"
-msgstr ""
+msgstr "--name-only, --name-status, --check y -s son mutuamente exclusivas"
 
 #: diff.c:3517
 msgid "--follow requires exactly one pathspec"
-msgstr ""
+msgstr "--follow requiere exactamente un pathspec"
 
 #: diff.c:3680
 #, c-format
@@ -1531,75 +1575,78 @@ msgid ""
 "Failed to parse --dirstat/-X option parameter:\n"
 "%s"
 msgstr ""
+"Fallo al analizar parametro de opcion --dirstat/-X:\n" 
+"%s"
 
 #: diff.c:3694
 #, c-format
 msgid "Failed to parse --submodule option parameter: '%s'"
-msgstr ""
+msgstr "Fallo al analizar parametro de opcion --submodule: '%s'"
 
 #: diff.c:4716
 msgid "inexact rename detection was skipped due to too many files."
-msgstr ""
+msgstr "deteccion de cambio de nombre inexacta fue saltada por haber muchos archivos"
 
 #: diff.c:4719
 msgid "only found copies from modified paths due to too many files."
-msgstr ""
+msgstr "solo se encontraron copias de rutas modificadas por haber muchos archivos"
 
 #: diff.c:4722
 #, c-format
 msgid ""
 "you may want to set your %s variable to at least %d and retry the command."
 msgstr ""
+"tal vez quiera configurar la variable %s para por lo menos %d y volver a intentar el comando."
 
 #: dir.c:1948
 msgid "failed to get kernel name and information"
-msgstr ""
+msgstr "fallo al conseguir la informacion y nombre del kernel"
 
 #: dir.c:2067
 msgid "Untracked cache is disabled on this system or location."
-msgstr ""
+msgstr "Untracked cache esta desactivado en este sistema o ubicacion"
 
 #: dir.c:2846 dir.c:2851
 #, c-format
 msgid "could not create directories for %s"
-msgstr ""
+msgstr "no se pudo crear directorios para %s"
 
 #: dir.c:2876
 #, c-format
 msgid "could not migrate git directory from '%s' to '%s'"
-msgstr ""
+msgstr "no se pudo migrar el directorio git de '%s' a '%s'"
 
 #: entry.c:281
 #, c-format
 msgid "could not stat file '%s'"
-msgstr ""
+msgstr "no se pudo establecer el archivo '%s'"
 
 #: fetch-pack.c:251
 msgid "git fetch-pack: expected shallow list"
-msgstr ""
+msgstr "git fetch-pack: lista poco profunda esperada"
 
 #: fetch-pack.c:263
 msgid "git fetch-pack: expected ACK/NAK, got EOF"
-msgstr ""
+msgstr "git getch-pack: se esperaba ACK/NAK, se obtuvo EOF"
 
 #: fetch-pack.c:282 builtin/archive.c:63
 #, c-format
 msgid "remote error: %s"
-msgstr ""
+msgstr "error remoto: %s"
 
 #: fetch-pack.c:283
 #, c-format
 msgid "git fetch-pack: expected ACK/NAK, got '%s'"
-msgstr ""
+msgstr "git fetch-pack: se esperaba ACK/NAK, se obtuvo '%s'"
 
 #: fetch-pack.c:335
 msgid "--stateless-rpc requires multi_ack_detailed"
-msgstr ""
+msgstr "--stateless-rpc requiere multi_ack_detailed"
 
 #: fetch-pack.c:421
 #, c-format
 msgid "invalid shallow line: %s"
-msgstr ""
+msgstr "linea poco profunda invalida: %s"
 
 #: fetch-pack.c:427
 #, c-format
@@ -1609,12 +1656,12 @@ msgstr ""
 #: fetch-pack.c:429
 #, c-format
 msgid "object not found: %s"
-msgstr ""
+msgstr "objeto no encontrado: %s"
 
 #: fetch-pack.c:432
 #, c-format
 msgid "error in object: %s"
-msgstr ""
+msgstr "error en objeto: %s"
 
 #: fetch-pack.c:434
 #, c-format
@@ -1629,35 +1676,35 @@ msgstr ""
 #: fetch-pack.c:476
 #, c-format
 msgid "got %s %d %s"
-msgstr ""
+msgstr "se obtuvo %s %d %s"
 
 #: fetch-pack.c:490
 #, c-format
 msgid "invalid commit %s"
-msgstr ""
+msgstr "commit invalido %s"
 
 #: fetch-pack.c:523
 msgid "giving up"
-msgstr ""
+msgstr "rindiendose"
 
 #: fetch-pack.c:533 progress.c:237
 msgid "done"
-msgstr ""
+msgstr "listo"
 
 #: fetch-pack.c:545
 #, c-format
 msgid "got %s (%d) %s"
-msgstr ""
+msgstr "se obtuvo %s (%d) %s"
 
 #: fetch-pack.c:591
 #, c-format
 msgid "Marking %s as complete"
-msgstr ""
+msgstr "Marcando %s como completa"
 
 #: fetch-pack.c:775
 #, c-format
 msgid "already have %s (%s)"
-msgstr ""
+msgstr "ya se tiene %s (%s)"
 
 #: fetch-pack.c:813
 msgid "fetch-pack: unable to fork off sideband demultiplexer"
@@ -1665,7 +1712,7 @@ msgstr ""
 
 #: fetch-pack.c:821
 msgid "protocol error: bad pack header"
-msgstr ""
+msgstr "error de protocolo: mal paquete de header"
 
 #: fetch-pack.c:877
 #, c-format
@@ -1675,7 +1722,7 @@ msgstr ""
 #: fetch-pack.c:893
 #, c-format
 msgid "%s failed"
-msgstr ""
+msgstr "%s fallo"
 
 #: fetch-pack.c:895
 msgid "error in sideband demultiplexer"
@@ -1695,99 +1742,99 @@ msgstr ""
 
 #: fetch-pack.c:935
 msgid "Server supports multi_ack"
-msgstr ""
+msgstr "Servidor soporta multi_ack"
 
 #: fetch-pack.c:939
 msgid "Server supports side-band-64k"
-msgstr ""
+msgstr "Servidor soporta side-band-64k"
 
 #: fetch-pack.c:943
 msgid "Server supports side-band"
-msgstr ""
+msgstr "Servidor soporta side-band"
 
 #: fetch-pack.c:947
 msgid "Server supports allow-tip-sha1-in-want"
-msgstr ""
+msgstr "Servidor soporta allow-tip-sha1-in-want"
 
 #: fetch-pack.c:951
 msgid "Server supports allow-reachable-sha1-in-want"
-msgstr ""
+msgstr "Servidor soporta allow-reachable-sha1-in-want"
 
 #: fetch-pack.c:961
 msgid "Server supports ofs-delta"
-msgstr ""
+msgstr "Servidor soporta ofs-delta"
 
 #: fetch-pack.c:968
 #, c-format
 msgid "Server version is %.*s"
-msgstr ""
+msgstr "Version de servidor es %.*s"
 
 #: fetch-pack.c:974
 msgid "Server does not support --shallow-since"
-msgstr ""
+msgstr "Servidor no soporta --shalow-since"
 
 #: fetch-pack.c:978
 msgid "Server does not support --shallow-exclude"
-msgstr ""
+msgstr "Servidor no soporta --shalow-exclude"
 
 #: fetch-pack.c:980
 msgid "Server does not support --deepen"
-msgstr ""
+msgstr "Servidor no soporta --deepen"
 
 #: fetch-pack.c:991
 msgid "no common commits"
-msgstr ""
+msgstr "no hay commits comunes"
 
 #: fetch-pack.c:1003
 msgid "git fetch-pack: fetch failed."
-msgstr ""
+msgstr "git fetch-pack: fetch fallo"
 
 #: fetch-pack.c:1165
 msgid "no matching remote head"
-msgstr ""
+msgstr "no concuerda el head remoto"
 
 #: fetch-pack.c:1187
 #, c-format
 msgid "no such remote ref %s"
-msgstr ""
+msgstr "no existe ref remota %s"
 
 #: fetch-pack.c:1190
 #, c-format
 msgid "Server does not allow request for unadvertised object %s"
-msgstr ""
+msgstr "Servidor no permite solicitudes de objetos inadvertidos %s"
 
 #: gpg-interface.c:181
 msgid "gpg failed to sign the data"
-msgstr ""
+msgstr "gpg fallo al firmar la data"
 
 #: gpg-interface.c:211
 msgid "could not create temporary file"
-msgstr ""
+msgstr "no se pudo crear archivo temporal"
 
 #: gpg-interface.c:213
 #, c-format
 msgid "failed writing detached signature to '%s'"
-msgstr ""
+msgstr "fallo al escribir la firma separada para '%s'"
 
 #: graph.c:97
 #, c-format
 msgid "ignore invalid color '%.*s' in log.graphColors"
-msgstr ""
+msgstr "ignora color invalido '%.*s' en log.graphColors"
 
 #: grep.c:1981
 #, c-format
 msgid "'%s': unable to read %s"
-msgstr ""
+msgstr "'%s': no es posible leer %s"
 
 #: grep.c:1998 builtin/clone.c:403 builtin/diff.c:81 builtin/rm.c:134
 #, c-format
 msgid "failed to stat '%s'"
-msgstr ""
+msgstr "fallo al marcar '%s'"
 
 #: grep.c:2009
 #, c-format
 msgid "'%s': short read"
-msgstr ""
+msgstr "'%s': lectura corta"
 
 #: help.c:179
 #, c-format
@@ -1886,39 +1933,50 @@ msgid ""
 "Omit --global to set the identity only in this repository.\n"
 "\n"
 msgstr ""
+"\n"
+"*** Por favor cuentame quien eres.\n"
+"\n"
+"Corre\n"
+"\n"
+"  git config --global user.email \"you@example.com\"\n"
+"  git config --global user.name \"Tu Nombre\"\n"
+"\n"
+"para configurar la identidad por defecto de tu cuenta.\n"
+"Omite --global para configurar tu identidad solo en este repositorio.\n"
+"\n"
 
 #: ident.c:366
 msgid "no email was given and auto-detection is disabled"
-msgstr ""
+msgstr "no se entrego ningun email y la deteccion automatica esta desactivada"
 
 #: ident.c:371
 #, c-format
 msgid "unable to auto-detect email address (got '%s')"
-msgstr ""
+msgstr "no es posible auto-detectar la direccion de correo (se obtuvo '%s')"
 
 #: ident.c:381
 msgid "no name was given and auto-detection is disabled"
-msgstr ""
+msgstr "no se entreogo ningun nombre y la deteccion automatica esta desactivada"
 
 #: ident.c:387
 #, c-format
 msgid "unable to auto-detect name (got '%s')"
-msgstr ""
+msgstr "no es posible auto-detectar el nombre (se obtuvo '%s')"
 
 #: ident.c:395
 #, c-format
 msgid "empty ident name (for <%s>) not allowed"
-msgstr ""
+msgstr "no se puede tener un nombre vacio (para <%s>)"
 
 #: ident.c:401
 #, c-format
 msgid "name consists only of disallowed characters: %s"
-msgstr ""
+msgstr "el nombre consiste solo de caracteres no permitidos: %s"
 
 #: ident.c:416 builtin/commit.c:612
 #, c-format
 msgid "invalid date format: %s"
-msgstr ""
+msgstr "formato de fecha invalido: %s"
 
 #: lockfile.c:152
 #, c-format
@@ -1931,86 +1989,93 @@ msgid ""
 "may have crashed in this repository earlier:\n"
 "remove the file manually to continue."
 msgstr ""
+"No se puede crear '%s.lock': %s.\n"
+"\n"
+"Otro proceso git parece estar corriendo en el repositorio, es decir\n"
+"un editor abierto con 'git commit'. Por favor asegurese de que todos los procesos\n"
+"estan terminados y vuelve a intentar. Si el fallo permanece, un proceso git\n"
+"puede haber roto el repositorio antes:\n"
+"borra el archivo manualmente para continuar."
 
 #: lockfile.c:160
 #, c-format
 msgid "Unable to create '%s.lock': %s"
-msgstr ""
+msgstr "No se pudo crear '%s.lock': %s"
 
 #: merge.c:41
 msgid "failed to read the cache"
-msgstr ""
+msgstr "fallo al leer la cache"
 
 #: merge.c:96 builtin/am.c:1980 builtin/am.c:2015 builtin/checkout.c:377
 #: builtin/checkout.c:591 builtin/clone.c:753
 msgid "unable to write new index file"
-msgstr ""
+msgstr "no es posible escribir el archivo indice"
 
 #: merge-recursive.c:210
 msgid "(bad commit)\n"
-msgstr ""
+msgstr "(mal commit)\n"
 
 #: merge-recursive.c:232 merge-recursive.c:240
 #, c-format
 msgid "addinfo_cache failed for path '%s'"
-msgstr ""
+msgstr "addinfo_cache fallo para la ruta '%s'"
 
 #: merge-recursive.c:304
 msgid "error building trees"
-msgstr ""
+msgstr "error construyendo arboles"
 
 #: merge-recursive.c:728
 #, c-format
 msgid "failed to create path '%s'%s"
-msgstr ""
+msgstr "fallo al crear la ruta '%s'%s"
 
 #: merge-recursive.c:739
 #, c-format
 msgid "Removing %s to make room for subdirectory\n"
-msgstr ""
+msgstr "Removiendo %s para hacer espacio para un subdirectorio\n"
 
 #: merge-recursive.c:753 merge-recursive.c:772
 msgid ": perhaps a D/F conflict?"
-msgstr ""
+msgstr ": tal vez un conflicto D/F?"
 
 #: merge-recursive.c:762
 #, c-format
 msgid "refusing to lose untracked file at '%s'"
-msgstr ""
+msgstr "rehusando perder el archivo rastreado en '%s'"
 
 #: merge-recursive.c:804 builtin/cat-file.c:36
 #, c-format
 msgid "cannot read object %s '%s'"
-msgstr ""
+msgstr "no se puede leer el objeto %s '%s'"
 
 #: merge-recursive.c:806
 #, c-format
 msgid "blob expected for %s '%s'"
-msgstr ""
+msgstr "se esperaba blob para %s '%s'"
 
 #: merge-recursive.c:830
 #, c-format
 msgid "failed to open '%s': %s"
-msgstr ""
+msgstr "fallo al abrir '%s': %s"
 
 #: merge-recursive.c:841
 #, c-format
 msgid "failed to symlink '%s': %s"
-msgstr ""
+msgstr "fallo al crear symlink '%s': %s"
 
 #: merge-recursive.c:846
 #, c-format
 msgid "do not know what to do with %06o %s '%s'"
-msgstr ""
+msgstr "no se que hacer con %06o %s '%s'"
 
 #: merge-recursive.c:986
 msgid "Failed to execute internal merge"
-msgstr ""
+msgstr "Fallo al ejectura fusion interna"
 
 #: merge-recursive.c:990
 #, c-format
 msgid "Unable to add %s to database"
-msgstr ""
+msgstr "No es posible agregar %s a la base de datos"
 
 #: merge-recursive.c:1093
 #, c-format
@@ -2018,6 +2083,8 @@ msgid ""
 "CONFLICT (%s/delete): %s deleted in %s and %s in %s. Version %s of %s left "
 "in tree."
 msgstr ""
+"CONFLICTO (%s/borrar): %s borrado en %s y %s en %s. Falta version %s de %s "
+"en el arbol"
 
 #: merge-recursive.c:1098
 #, c-format
