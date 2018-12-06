@@ -112,6 +112,80 @@ notes_for_l10n_team_leader () {
 	END_OF_NOTES
 }
 
+generate_essential_pot() {
+	potfile=$1
+
+	XGETTEXT_FLAGS="
+		--force-po
+		--add-comments=TRANSLATORS:
+		--from-code=UTF-8"
+
+	XGETTEXT_FLAGS_C="${XGETTEXT_FLAGS} --language=C
+		--keyword=_ --keyword=N_ --keyword='Q_:1,2'"
+
+	LOCALIZED_C="remote.c
+		wt-status.c
+		builtin/clone.c
+		builtin/checkout.c
+		builtin/index-pack.c
+		builtin/push.c
+		builtin/reset.c"
+
+	if ! git diff --quiet HEAD && git diff --quiet --cached; then
+		echo >&2 "ERROR: workspace not clean"
+		exit 1
+	fi
+
+	for s in ${LOCALIZED_C};
+	do
+		sed -e 's|PRItime|PRIuMAX|g' <"$s" >"$s+" && \
+		cat "$s+" >"$s" && rm "$s+"
+	done
+
+	xgettext -o${potfile}+ ${XGETTEXT_FLAGS_C} ${LOCALIZED_C}
+
+	# Reverting the munged source, leaving only the updated target
+	git reset --hard >/dev/null 2>&1
+	mv ${potfile}+ ${potfile}
+}
+
+# Create essential pot file and check against XXX.po
+check_essential () {
+	ESSENTIAL_POT=po/essential.pot
+
+	generate_essential_pot $ESSENTIAL_POT
+
+	if test $# -eq 0
+	then
+		echo >&2 "Generate pot file: $ESSENTIAL_POT"
+		msgfmt --stat $ESSENTIAL_POT
+		return 0
+	fi
+
+	for locale
+	do
+		locale=${locale##*/}
+		locale=${locale%.po}
+		po=$PODIR/$locale.po
+		essential_po=$PODIR/essential-$locale.po
+		essential_mo=$PODIR/essential-$locale.mo
+		if test ! -f "$essential_po"
+		then
+			if test ! -f "$po"
+			then
+				echo >&2 "ERROR: file '$po' does not exist."
+				return 1
+			else
+				cp "$po" "$essential_po"
+			fi
+		fi
+		msgmerge --add-location --backup=off -U "$essential_po" "$ESSENTIAL_POT"
+		mkdir -p "${essential_mo%/*}"
+		msgfmt -o "$essential_mo" --check --statistics "$essential_po"
+		rm -f "$essential_mo"
+	done
+}
+
 # Check po files and commits. Run all checks if no argument is given.
 check () {
 	if test $# -eq 0
@@ -746,6 +820,11 @@ do
 	check)
 		shift
 		check "$@"
+		break
+		;;
+	essential | check-essential)
+		shift
+		check_essential "$@"
 		break
 		;;
 	diff)
