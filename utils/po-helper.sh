@@ -179,8 +179,10 @@ check_essential () {
 				cp "$po" "$essential_po"
 			fi
 		fi
+		printf "[essential %s] " "$locale"
 		msgmerge --add-location --backup=off -U "$essential_po" "$ESSENTIAL_POT"
 		mkdir -p "${essential_mo%/*}"
+		printf "[essential %s] " "$locale"
 		msgfmt -o "$essential_mo" --check --statistics "$essential_po"
 		rm -f "$essential_mo"
 	done
@@ -194,7 +196,7 @@ check () {
 		ls $PODIR/*.po |
 		while read f
 		do
-			printf "%-10s: %s\n" "${f##*/}" "$(check "$f" 2>&1)"
+			printf "%-10s: %s\n" "${f##*/}" "$(check_po "$f" 2>&1)"
 		done
 
 		echo "------------------------------------------------------------"
@@ -217,6 +219,7 @@ check () {
 		case "$1" in
 		*.po)
 			check_po "$1"
+			check_essential "$1"
 			;;
 		commit | commits)
 			shift
