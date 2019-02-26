@@ -5,6 +5,12 @@
 PODIR=$(git rev-parse --show-cdup)po
 POTFILE=$PODIR/git.pot
 TEAMSFILE=$PODIR/TEAMS
+GETTEXT14_PATH=/opt/gettext/0.14.4/bin
+
+if test -f ~/.config/po-helper
+then
+	. ~/.config/po-helper
+fi
 
 usage () {
 	cat <<-\END_OF_USAGE
@@ -268,6 +274,18 @@ check_po () {
 			then
 				mkdir -p "${mo%/*}"
 				msgfmt -o "$mo" --check --statistics "$po"
+				if test -x "${GETTEXT14_PATH}/msgfmt"
+				then
+					${GETTEXT14_PATH}/msgfmt -o "$mo" --check "$po"
+					if test $? -eq 0
+					then
+						printf "\t[gettext 0.14] ok\n"
+					else
+						printf "\tERROR: [gettext 0.14] failed for '%s'\n" "$po"
+					fi
+				else
+					printf >&2 "\tWARNING: gettext 0.14 not found.\n"
+				fi
 			else
 				hiecho >&2 "Error: File $po does not exist."
 			fi
