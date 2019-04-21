@@ -2,21 +2,23 @@
 # Copyright (C) 2019 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Yuri Koval'ov <yuri@yurikoval.com>, 2019.
-#
+# 
+# Translators:
+# Yuri Kovalov <yuri@yurikoval.com>, 2019
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
 "POT-Creation-Date: 2019-02-15 10:09+0800\n"
-"PO-Revision-Date: 2019-03-31 21:25+0800\n"
-"Last-Translator: Yuri Kovalov <yuri@yurikoval.com>\n"
-"Language-Team: Ukrainian\n"
-"Language: uk\n"
+"PO-Revision-Date: 2019-03-31 13:47+0000\n"
+"Last-Translator: Yuri Kovalov <yuri@yurikoval.com>, 2019\n"
+"Language-Team: Ukrainian (https://www.transifex.com/kraiany/teams/96782/uk/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: advice.c:101
 #, c-format
@@ -92,7 +94,7 @@ msgstr ""
 
 #: alias.c:51
 msgid "unclosed quote"
-msgstr ""
+msgstr "незакриті лапки"
 
 #: apply.c:59
 #, c-format
@@ -182,14 +184,15 @@ msgstr ""
 #: apply.c:1567
 #, c-format
 msgid ""
-"git diff header lacks filename information when removing %d leading pathname "
-"component (line %d)"
+"git diff header lacks filename information when removing %d leading pathname"
+" component (line %d)"
 msgid_plural ""
-"git diff header lacks filename information when removing %d leading pathname "
-"components (line %d)"
+"git diff header lacks filename information when removing %d leading pathname"
+" components (line %d)"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: apply.c:1580
 #, c-format
@@ -261,6 +264,7 @@ msgid_plural "Hunk #%d succeeded at %d (offset %d lines)."
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: apply.c:3074
 #, c-format
@@ -520,6 +524,7 @@ msgid_plural "Applying patch %%s with %d rejects..."
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: apply.c:4556
 #, c-format
@@ -566,6 +571,7 @@ msgid_plural "squelched %d whitespace errors"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: apply.c:4908 apply.c:4923
 #, c-format
@@ -574,6 +580,7 @@ msgid_plural "%d lines add whitespace errors."
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: apply.c:4916
 #, c-format
@@ -582,6 +589,7 @@ msgid_plural "%d lines applied after fixing whitespace errors."
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: apply.c:4932 builtin/add.c:539 builtin/mv.c:301 builtin/rm.c:390
 msgid "Unable to write new index file"
@@ -731,7 +739,8 @@ msgstr ""
 
 #: archive.c:16
 msgid ""
-"git archive --remote <repo> [--exec <cmd>] [<options>] <tree-ish> [<path>...]"
+"git archive --remote <repo> [--exec <cmd>] [<options>] <tree-ish> "
+"[<path>...]"
 msgstr ""
 
 #: archive.c:17
@@ -1014,10 +1023,10 @@ msgid_plural "(roughly %d steps)"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: the last %s will be replaced with "(roughly %d
 #. steps)" translation.
-#.
 #: bisect.c:1019
 #, c-format
 msgid "Bisecting: %d revision left to test after this %s\n"
@@ -1025,6 +1034,7 @@ msgid_plural "Bisecting: %d revisions left to test after this %s\n"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: blame.c:1792
 msgid "--contents and --reverse do not blend well."
@@ -1040,8 +1050,8 @@ msgstr ""
 
 #: blame.c:1836 bundle.c:164 ref-filter.c:2071 remote.c:1948 sequencer.c:1993
 #: sequencer.c:4064 builtin/commit.c:1004 builtin/log.c:378 builtin/log.c:936
-#: builtin/log.c:1420 builtin/log.c:1796 builtin/log.c:2086 builtin/merge.c:407
-#: builtin/pack-objects.c:3137 builtin/pack-objects.c:3152
+#: builtin/log.c:1420 builtin/log.c:1796 builtin/log.c:2086
+#: builtin/merge.c:407 builtin/pack-objects.c:3137 builtin/pack-objects.c:3152
 #: builtin/shortlog.c:192
 msgid "revision walk setup failed"
 msgstr ""
@@ -1140,7 +1150,8 @@ msgstr ""
 
 #: branch.c:232
 #, c-format
-msgid "Cannot setup tracking information; starting point '%s' is not a branch."
+msgid ""
+"Cannot setup tracking information; starting point '%s' is not a branch."
 msgstr ""
 
 #: branch.c:234
@@ -1212,6 +1223,7 @@ msgid_plural "The bundle contains these %d refs:"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: bundle.c:201
 msgid "The bundle records a complete history."
@@ -1224,6 +1236,7 @@ msgid_plural "The bundle requires these %d refs:"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: bundle.c:269
 msgid "unable to dup bundle descriptor"
@@ -1387,6 +1400,7 @@ msgid_plural "Finding commits for commit graph in %d packs"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: commit-graph.c:882
 #, c-format
@@ -1405,6 +1419,7 @@ msgid_plural "Finding commits for commit graph from %d refs"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: commit-graph.c:930
 msgid "Finding commits for commit graph among packed objects"
@@ -1439,6 +1454,7 @@ msgid_plural "Writing out commit graph in %d passes"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: commit-graph.c:1109
 msgid "the commit-graph file has incorrect checksum and is likely corrupt"
@@ -1958,8 +1974,8 @@ msgstr ""
 #: convert.c:286
 #, c-format
 msgid ""
-"The file '%s' contains a byte order mark (BOM). Please use UTF-%s as working-"
-"tree-encoding."
+"The file '%s' contains a byte order mark (BOM). Please use UTF-%s as "
+"working-tree-encoding."
 msgstr ""
 
 #: convert.c:304
@@ -1970,8 +1986,8 @@ msgstr ""
 #: convert.c:306
 #, c-format
 msgid ""
-"The file '%s' is missing a byte order mark (BOM). Please use UTF-%sBE or UTF-"
-"%sLE (depending on the byte order) as working-tree-encoding."
+"The file '%s' is missing a byte order mark (BOM). Please use UTF-%sBE or "
+"UTF-%sLE (depending on the byte order) as working-tree-encoding."
 msgstr ""
 
 #: convert.c:424 convert.c:495
@@ -2049,6 +2065,7 @@ msgid_plural "%<PRIuMAX> seconds ago"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: date.c:150
 #, c-format
@@ -2057,6 +2074,7 @@ msgid_plural "%<PRIuMAX> minutes ago"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: date.c:157
 #, c-format
@@ -2065,6 +2083,7 @@ msgid_plural "%<PRIuMAX> hours ago"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: date.c:164
 #, c-format
@@ -2073,6 +2092,7 @@ msgid_plural "%<PRIuMAX> days ago"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: date.c:170
 #, c-format
@@ -2081,6 +2101,7 @@ msgid_plural "%<PRIuMAX> weeks ago"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: date.c:177
 #, c-format
@@ -2089,6 +2110,7 @@ msgid_plural "%<PRIuMAX> months ago"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: date.c:188
 #, c-format
@@ -2097,6 +2119,7 @@ msgid_plural "%<PRIuMAX> years"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: "%s" is "<n> years"
 #: date.c:191
@@ -2106,6 +2129,7 @@ msgid_plural "%s, %<PRIuMAX> months ago"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: date.c:196 date.c:201
 #, c-format
@@ -2114,6 +2138,7 @@ msgid_plural "%<PRIuMAX> years ago"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: delta-islands.c:272
 msgid "Propagating island marks"
@@ -2172,8 +2197,8 @@ msgstr ""
 #: diff.c:319
 #, c-format
 msgid ""
-"unknown color-moved-ws mode '%s', possible values are 'ignore-space-change', "
-"'ignore-space-at-eol', 'ignore-all-space', 'allow-indentation-change'"
+"unknown color-moved-ws mode '%s', possible values are 'ignore-space-change',"
+" 'ignore-space-at-eol', 'ignore-all-space', 'allow-indentation-change'"
 msgstr ""
 
 #: diff.c:327
@@ -2710,6 +2735,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: help.c:721
 msgid "git version [<options>]"
@@ -2730,6 +2756,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: ident.c:345
 msgid ""
@@ -3017,8 +3044,8 @@ msgstr ""
 #: merge-recursive.c:1759
 #, c-format
 msgid ""
-"CONFLICT (rename/rename): Rename \"%s\"->\"%s\" in branch \"%s\" rename \"%s"
-"\"->\"%s\" in \"%s\"%s"
+"CONFLICT (rename/rename): Rename \"%s\"->\"%s\" in branch \"%s\" rename "
+"\"%s\"->\"%s\" in \"%s\"%s"
 msgstr ""
 
 #: merge-recursive.c:1764
@@ -3055,8 +3082,8 @@ msgstr ""
 #: merge-recursive.c:2198
 #, c-format
 msgid ""
-"CONFLICT (rename/rename): Rename directory %s->%s in %s. Rename directory %s-"
-">%s in %s"
+"CONFLICT (rename/rename): Rename directory %s->%s in %s. Rename directory "
+"%s->%s in %s"
 msgstr ""
 
 #: merge-recursive.c:2443
@@ -3126,7 +3153,8 @@ msgstr ""
 
 #: merge-recursive.c:3358
 #, c-format
-msgid "CONFLICT (%s): There is a directory with name %s in %s. Adding %s as %s"
+msgid ""
+"CONFLICT (%s): There is a directory with name %s in %s. Adding %s as %s"
 msgstr ""
 
 #: merge-recursive.c:3367
@@ -3166,6 +3194,7 @@ msgid_plural "found %u common ancestors:"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: merge-recursive.c:3588
 msgid "merge returned no commit"
@@ -3311,8 +3340,7 @@ msgstr ""
 #, c-format
 msgid ""
 "You have not concluded your previous notes merge (%s exists).\n"
-"Please, use 'git notes merge --commit' or 'git notes merge --abort' to "
-"commit/abort the previous merge before you start a new notes merge."
+"Please, use 'git notes merge --commit' or 'git notes merge --abort' to commit/abort the previous merge before you start a new notes merge."
 msgstr ""
 
 #: notes-merge.c:284
@@ -3337,7 +3365,6 @@ msgstr ""
 #. TRANSLATORS: The first %s is the name of
 #. the environment variable, the second %s is
 #. its value.
-#.
 #: notes-utils.c:145
 #, c-format
 msgid "Bad %s value: '%s'"
@@ -3453,7 +3480,6 @@ msgstr ""
 
 #. TRANSLATORS: the colon here should align with the
 #. one in "usage: %s" translation.
-#.
 #: parse-options.c:700
 #, c-format
 msgid "   or: %s"
@@ -4211,7 +4237,6 @@ msgstr ""
 
 #. TRANSLATORS: make sure this matches "HEAD
 #. detached at " in wt-status.c
-#.
 #: ref-filter.c:1461
 #, c-format
 msgid "(HEAD detached at %s)"
@@ -4219,7 +4244,6 @@ msgstr ""
 
 #. TRANSLATORS: make sure this matches "HEAD
 #. detached from " in wt-status.c
-#.
 #: ref-filter.c:1468
 #, c-format
 msgid "(HEAD detached from %s)"
@@ -4325,7 +4349,6 @@ msgstr ""
 #. TRANSLATORS: "matches '%s'%" is the <dst> part of "git push
 #. <remote> <src>:<dst>" push, and "being pushed ('%s')" is
 #. the <src>.
-#.
 #: remote.c:1020
 #, c-format
 msgid ""
@@ -4475,6 +4498,7 @@ msgid_plural "Your branch is ahead of '%s' by %d commits.\n"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: remote.c:2014
 msgid "  (use \"git push\" to publish your local commits)\n"
@@ -4488,6 +4512,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: remote.c:2025
 msgid "  (use \"git pull\" to update your local branch)\n"
@@ -4504,6 +4529,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: remote.c:2038
 msgid "  (use \"git pull\" to merge the remote branch into yours)\n"
@@ -4681,8 +4707,8 @@ msgstr ""
 
 #: send-pack.c:422
 msgid ""
-"not sending a push certificate since the receiving end does not support --"
-"signed push"
+"not sending a push certificate since the receiving end does not support "
+"--signed push"
 msgstr ""
 
 #: send-pack.c:434
@@ -4772,7 +4798,6 @@ msgstr ""
 
 #. TRANSLATORS: %s will be "revert", "cherry-pick" or
 #. "rebase -i".
-#.
 #: sequencer.c:582
 #, c-format
 msgid "%s: Unable to write new index file"
@@ -4936,8 +4961,8 @@ msgstr ""
 msgid "unable to read commit message from '%s'"
 msgstr ""
 
-#: sequencer.c:1399 builtin/am.c:1591 builtin/commit.c:1649 builtin/merge.c:859
-#: builtin/merge.c:884
+#: sequencer.c:1399 builtin/am.c:1591 builtin/commit.c:1649
+#: builtin/merge.c:859 builtin/merge.c:884
 msgid "failed to write commit object"
 msgstr ""
 
@@ -5204,8 +5229,8 @@ msgstr ""
 msgid "could not copy '%s' to '%s'"
 msgstr ""
 
-#: sequencer.c:2870 sequencer.c:3293 builtin/rebase.c:424 builtin/rebase.c:1230
-#: builtin/rebase.c:1591 builtin/rebase.c:1646
+#: sequencer.c:2870 sequencer.c:3293 builtin/rebase.c:424
+#: builtin/rebase.c:1230 builtin/rebase.c:1591 builtin/rebase.c:1646
 msgid "could not read index"
 msgstr ""
 
@@ -5454,8 +5479,7 @@ msgstr ""
 msgid ""
 "To avoid this message, use \"drop\" to explicitly remove a commit.\n"
 "\n"
-"Use 'git config rebase.missingCommitsCheck' to change the level of "
-"warnings.\n"
+"Use 'git config rebase.missingCommitsCheck' to change the level of warnings.\n"
 "The possible behaviours are: ignore, warn, error.\n"
 "\n"
 msgstr ""
@@ -5463,8 +5487,7 @@ msgstr ""
 #: sequencer.c:4774
 #, c-format
 msgid ""
-"You can fix this with 'git rebase --edit-todo' and then run 'git rebase --"
-"continue'.\n"
+"You can fix this with 'git rebase --edit-todo' and then run 'git rebase --continue'.\n"
 "Or you can abort the rebase with 'git rebase --abort'.\n"
 msgstr ""
 
@@ -5479,6 +5502,7 @@ msgid_plural "Rebase %s onto %s (%d commands)"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: sequencer.c:4928
 #, c-format
@@ -6445,16 +6469,14 @@ msgstr ""
 #: unpack-trees.c:150
 #, c-format
 msgid ""
-"The following untracked working tree files would be overwritten by "
-"checkout:\n"
+"The following untracked working tree files would be overwritten by checkout:\n"
 "%%sPlease move or remove them before you switch branches."
 msgstr ""
 
 #: unpack-trees.c:152
 #, c-format
 msgid ""
-"The following untracked working tree files would be overwritten by "
-"checkout:\n"
+"The following untracked working tree files would be overwritten by checkout:\n"
 "%%s"
 msgstr ""
 
@@ -6501,16 +6523,14 @@ msgstr ""
 #: unpack-trees.c:175
 #, c-format
 msgid ""
-"The following working tree files would be overwritten by sparse checkout "
-"update:\n"
+"The following working tree files would be overwritten by sparse checkout update:\n"
 "%s"
 msgstr ""
 
 #: unpack-trees.c:177
 #, c-format
 msgid ""
-"The following working tree files would be removed by sparse checkout "
-"update:\n"
+"The following working tree files would be removed by sparse checkout update:\n"
 "%s"
 msgstr ""
 
@@ -6653,7 +6673,8 @@ msgstr ""
 
 #: wt-status.c:228
 msgid ""
-"  (use \"git checkout -- <file>...\" to discard changes in working directory)"
+"  (use \"git checkout -- <file>...\" to discard changes in working "
+"directory)"
 msgstr ""
 
 #: wt-status.c:230
@@ -6744,6 +6765,7 @@ msgid_plural "Your stash currently has %d entries"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: wt-status.c:916
 msgid "Submodules changed but not updated:"
@@ -6814,6 +6836,7 @@ msgid_plural "Last commands done (%d commands done):"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: wt-status.c:1280
 #, c-format
@@ -6831,6 +6854,7 @@ msgid_plural "Next commands to do (%d remaining commands):"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: wt-status.c:1296
 msgid "  (use \"git rebase --edit-todo\" to view and edit)"
@@ -6889,8 +6913,7 @@ msgid "  (use \"git commit --amend\" to amend the current commit)"
 msgstr ""
 
 #: wt-status.c:1363
-msgid ""
-"  (use \"git rebase --continue\" once you are satisfied with your changes)"
+msgid "  (use \"git rebase --continue\" once you are satisfied with your changes)"
 msgstr ""
 
 #: wt-status.c:1372
@@ -7329,7 +7352,8 @@ msgid "To restore the original branch and stop patching, run \"%s --abort\"."
 msgstr ""
 
 #: builtin/am.c:1181
-msgid "Patch sent with format=flowed; space at the end of lines might be lost."
+msgid ""
+"Patch sent with format=flowed; space at the end of lines might be lost."
 msgstr ""
 
 #: builtin/am.c:1209
@@ -7388,7 +7412,6 @@ msgstr ""
 #. TRANSLATORS: Make sure to include [y], [n], [e], [v] and [a]
 #. in your translation. The program will only accept English
 #. input at this point.
-#.
 #: builtin/am.c:1659
 msgid "Apply? [y]es/[n]o/[e]dit/[v]iew patch/[a]ccept all: "
 msgstr ""
@@ -7426,8 +7449,7 @@ msgstr ""
 #: builtin/am.c:1827
 msgid ""
 "You still have unmerged paths in your index.\n"
-"You should 'git add' each file with resolved conflicts to mark them as "
-"such.\n"
+"You should 'git add' each file with resolved conflicts to mark them as such.\n"
 "You might run `git rm` on a file to accept \"deleted by them\" for it."
 msgstr ""
 
@@ -7677,14 +7699,15 @@ msgstr ""
 
 #: builtin/bisect--helper.c:29
 msgid ""
-"git bisect--helper --bisect-terms [--term-good | --term-old | --term-bad | --"
-"term-new]"
+"git bisect--helper --bisect-terms [--term-good | --term-old | --term-bad | "
+"--term-new]"
 msgstr ""
 
 #: builtin/bisect--helper.c:30
 msgid ""
-"git bisect--helper --bisect-start [--term-{old,good}=<term> --term-{new,bad}"
-"=<term>][--no-checkout] [<bad> [<good>...]] [--] [<paths>...]"
+"git bisect--helper --bisect-start [--term-{old,good}=<term> "
+"--term-{new,bad}=<term>][--no-checkout] [<bad> [<good>...]] [--] "
+"[<paths>...]"
 msgstr ""
 
 #: builtin/bisect--helper.c:86
@@ -7769,7 +7792,6 @@ msgstr ""
 #. TRANSLATORS: Make sure to include [Y] and [n] in your
 #. translation. The program will only accept English input
 #. at this point.
-#.
 #: builtin/bisect--helper.c:329
 msgid "Are you sure [Y/n]? "
 msgstr ""
@@ -8040,7 +8062,6 @@ msgstr ""
 #. among various forms of relative timestamps, but
 #. your language may need more or fewer display
 #. columns.
-#.
 #: builtin/blame.c:926
 msgid "4 years, 11 months ago"
 msgstr ""
@@ -8052,6 +8073,7 @@ msgid_plural "file %s has only %lu lines"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: builtin/blame.c:1064
 msgid "Blaming lines"
@@ -8457,14 +8479,14 @@ msgstr ""
 
 #: builtin/cat-file.c:593
 msgid ""
-"git cat-file (-t [--allow-unknown-type] | -s [--allow-unknown-type] | -e | -"
-"p | <type> | --textconv | --filters) [--path=<path>] <object>"
+"git cat-file (-t [--allow-unknown-type] | -s [--allow-unknown-type] | -e | "
+"-p | <type> | --textconv | --filters) [--path=<path>] <object>"
 msgstr ""
 
 #: builtin/cat-file.c:594
 msgid ""
-"git cat-file (--batch | --batch-check) [--follow-symlinks] [--textconv | --"
-"filters]"
+"git cat-file (--batch | --batch-check) [--follow-symlinks] [--textconv | "
+"--filters]"
 msgstr ""
 
 #: builtin/cat-file.c:615
@@ -8730,6 +8752,7 @@ msgid_plural "Recreated %d merge conflicts"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: builtin/checkout.c:402
 #, c-format
@@ -8738,6 +8761,7 @@ msgid_plural "Updated %d paths from %s"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: builtin/checkout.c:409
 #, c-format
@@ -8746,6 +8770,7 @@ msgid_plural "Updated %d paths from the index"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: builtin/checkout.c:645
 msgid "you need to resolve your current index first"
@@ -8809,6 +8834,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: builtin/checkout.c:919
 #, c-format
@@ -8827,6 +8853,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: builtin/checkout.c:951
 msgid "internal error in revision walk"
@@ -9119,6 +9146,7 @@ msgid_plural "Would remove the following items:"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: builtin/clean.c:845
 msgid "No more files to clean, exiting."
@@ -9165,8 +9193,8 @@ msgstr ""
 
 #: builtin/clean.c:939
 msgid ""
-"clean.requireForce set to true and neither -i, -n, nor -f given; refusing to "
-"clean"
+"clean.requireForce set to true and neither -i, -n, nor -f given; refusing to"
+" clean"
 msgstr ""
 
 #: builtin/clean.c:942
@@ -9457,8 +9485,8 @@ msgstr ""
 
 #: builtin/clone.c:1043
 msgid ""
-"clone --recursive is not compatible with both --reference and --reference-if-"
-"able"
+"clone --recursive is not compatible with both --reference and --reference-"
+"if-able"
 msgstr ""
 
 #: builtin/clone.c:1104
@@ -10050,8 +10078,8 @@ msgstr ""
 
 #: builtin/commit-graph.c:13 builtin/commit-graph.c:28
 msgid ""
-"git commit-graph write [--object-dir <objdir>] [--append] [--reachable|--"
-"stdin-packs|--stdin-commits]"
+"git commit-graph write [--object-dir <objdir>] [--append] [--reachable"
+"|--stdin-packs|--stdin-commits]"
 msgstr ""
 
 #: builtin/commit-graph.c:48 builtin/commit-graph.c:78
@@ -10334,8 +10362,8 @@ msgstr ""
 
 #: builtin/config.c:712
 msgid ""
-"--show-origin is only applicable to --get, --get-all, --get-regexp, and --"
-"list"
+"--show-origin is only applicable to --get, --get-all, --get-regexp, and "
+"--list"
 msgstr ""
 
 #: builtin/config.c:718
@@ -10654,8 +10682,8 @@ msgstr ""
 
 #: builtin/difftool.c:713
 msgid ""
-"make 'git-difftool' exit when an invoked diff tool returns a non - zero exit "
-"code"
+"make 'git-difftool' exit when an invoked diff tool returns a non - zero exit"
+" code"
 msgstr ""
 
 #: builtin/difftool.c:716
@@ -10976,8 +11004,8 @@ msgstr ""
 
 #: builtin/fetch.c:1482
 msgid ""
-"--filter can only be used with the remote configured in extensions."
-"partialClone"
+"--filter can only be used with the remote configured in "
+"extensions.partialClone"
 msgstr ""
 
 #: builtin/fetch.c:1506
@@ -11025,8 +11053,8 @@ msgstr ""
 
 #: builtin/fetch.c:1651
 msgid ""
-"--filter can only be used with the remote configured in extensions."
-"partialclone"
+"--filter can only be used with the remote configured in "
+"extensions.partialclone"
 msgstr ""
 
 #: builtin/fmt-merge-msg.c:18
@@ -11437,7 +11465,8 @@ msgstr ""
 
 #: builtin/gc.c:672
 msgid ""
-"There are too many unreachable loose objects; run 'git prune' to remove them."
+"There are too many unreachable loose objects; run 'git prune' to remove "
+"them."
 msgstr ""
 
 #: builtin/grep.c:29
@@ -11457,7 +11486,6 @@ msgstr ""
 #. TRANSLATORS: %s is the configuration
 #. variable for tweaking threads, currently
 #. grep.threads
-#.
 #: builtin/grep.c:287 builtin/index-pack.c:1506 builtin/index-pack.c:1697
 #: builtin/pack-objects.c:2717
 #, c-format
@@ -11879,6 +11907,7 @@ msgid_plural "cannot fill %d bytes"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: builtin/index-pack.c:259
 msgid "early EOF"
@@ -11953,6 +11982,7 @@ msgid_plural "premature end of pack file, %<PRIuMAX> bytes missing"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: builtin/index-pack.c:581
 msgid "serious inflate inconsistency"
@@ -12042,6 +12072,7 @@ msgid_plural "completed with %d local objects"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: builtin/index-pack.c:1255
 #, c-format
@@ -12055,6 +12086,7 @@ msgid_plural "pack has %d unresolved deltas"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: builtin/index-pack.c:1283
 #, c-format
@@ -12115,6 +12147,7 @@ msgid_plural "non delta: %d objects"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: builtin/index-pack.c:1622
 #, c-format
@@ -12123,6 +12156,7 @@ msgid_plural "chain length = %d: %lu objects"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: builtin/index-pack.c:1659
 msgid "Cannot come back to cwd"
@@ -12227,8 +12261,8 @@ msgstr ""
 
 #: builtin/init-db.c:460
 msgid ""
-"git init [-q | --quiet] [--bare] [--template=<template-directory>] [--"
-"shared[=<permissions>]] [<directory>]"
+"git init [-q | --quiet] [--bare] [--template=<template-directory>] "
+"[--shared[=<permissions>]] [<directory>]"
 msgstr ""
 
 #: builtin/init-db.c:483
@@ -12715,7 +12749,8 @@ msgstr ""
 #: builtin/log.c:2057
 #, c-format
 msgid ""
-"Could not find a tracked remote branch, please specify <upstream> manually.\n"
+"Could not find a tracked remote branch, please specify <upstream> "
+"manually.\n"
 msgstr ""
 
 #: builtin/ls-files.c:470
@@ -12983,7 +13018,8 @@ msgid "verify that the named commit has a valid GPG signature"
 msgstr ""
 
 #: builtin/merge.c:256 builtin/notes.c:787 builtin/pull.c:178
-#: builtin/rebase.c:1124 builtin/rebase--interactive.c:188 builtin/revert.c:111
+#: builtin/rebase.c:1124 builtin/rebase--interactive.c:188
+#: builtin/revert.c:111
 msgid "strategy"
 msgstr ""
 
@@ -13352,6 +13388,7 @@ msgid_plural "cannot handle more than %d bases. Ignoring %s."
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: builtin/merge-recursive.c:64
 msgid "not handling anything other than two heads merge."
@@ -13542,8 +13579,8 @@ msgstr ""
 
 #: builtin/notes.c:29
 msgid ""
-"git notes [--ref <notes-ref>] add [-f] [--allow-empty] [-m <msg> | -F <file> "
-"| (-c | -C) <object>] [<object>]"
+"git notes [--ref <notes-ref>] add [-f] [--allow-empty] [-m <msg> | -F <file>"
+" | (-c | -C) <object>] [<object>]"
 msgstr ""
 
 #: builtin/notes.c:30
@@ -13552,8 +13589,8 @@ msgstr ""
 
 #: builtin/notes.c:31
 msgid ""
-"git notes [--ref <notes-ref>] append [--allow-empty] [-m <msg> | -F <file> | "
-"(-c | -C) <object>] [<object>]"
+"git notes [--ref <notes-ref>] append [--allow-empty] [-m <msg> | -F <file> |"
+" (-c | -C) <object>] [<object>]"
 msgstr ""
 
 #: builtin/notes.c:32
@@ -13706,7 +13743,6 @@ msgstr ""
 
 #. TRANSLATORS: the first %s will be replaced by a git
 #. notes command: 'add', 'merge', 'remove', etc.
-#.
 #: builtin/notes.c:356
 #, c-format
 msgid "refusing to %s notes in %s (outside of refs/notes/)"
@@ -13779,8 +13815,8 @@ msgstr ""
 #: builtin/notes.c:538
 #, c-format
 msgid ""
-"Cannot copy notes. Found existing notes for object %s. Use '-f' to overwrite "
-"existing notes"
+"Cannot copy notes. Found existing notes for object %s. Use '-f' to overwrite"
+" existing notes"
 msgstr ""
 
 #: builtin/notes.c:550
@@ -13842,8 +13878,8 @@ msgstr ""
 
 #: builtin/notes.c:788
 msgid ""
-"resolve notes conflicts using the given strategy (manual/ours/theirs/union/"
-"cat_sort_uniq)"
+"resolve notes conflicts using the given strategy "
+"(manual/ours/theirs/union/cat_sort_uniq)"
 msgstr ""
 
 #: builtin/notes.c:790
@@ -13888,9 +13924,9 @@ msgstr ""
 #: builtin/notes.c:878
 #, c-format
 msgid ""
-"Automatic notes merge failed. Fix conflicts in %s and commit the result with "
-"'git notes merge --commit', or abort the merge with 'git notes merge --"
-"abort'.\n"
+"Automatic notes merge failed. Fix conflicts in %s and commit the result with"
+" 'git notes merge --commit', or abort the merge with 'git notes merge "
+"--abort'.\n"
 msgstr ""
 
 #: builtin/notes.c:900
@@ -14567,7 +14603,8 @@ msgstr ""
 
 #: builtin/push.c:207
 #, c-format
-msgid "The current branch %s has multiple upstream branches, refusing to push."
+msgid ""
+"The current branch %s has multiple upstream branches, refusing to push."
 msgstr ""
 
 #: builtin/push.c:210
@@ -14579,8 +14616,7 @@ msgid ""
 msgstr ""
 
 #: builtin/push.c:269
-msgid ""
-"You didn't specify any refspecs to push, and push.default is \"nothing\"."
+msgid "You didn't specify any refspecs to push, and push.default is \"nothing\"."
 msgstr ""
 
 #: builtin/push.c:276
@@ -14637,8 +14673,7 @@ msgstr ""
 #: builtin/push.c:399
 msgid ""
 "No configured push destination.\n"
-"Either specify the URL from the command-line or configure a remote "
-"repository using\n"
+"Either specify the URL from the command-line or configure a remote repository using\n"
 "\n"
 "    git remote add <name> <url>\n"
 "\n"
@@ -14783,9 +14818,9 @@ msgstr ""
 
 #: builtin/read-tree.c:41
 msgid ""
-"git read-tree [(-m [--trivial] [--aggressive] | --reset | --prefix=<prefix>) "
-"[-u [--exclude-per-directory=<gitignore>] | -i]] [--no-sparse-checkout] [--"
-"index-output=<file>] (--empty | <tree-ish1> [<tree-ish2> [<tree-ish3>]])"
+"git read-tree [(-m [--trivial] [--aggressive] | --reset | --prefix=<prefix>)"
+" [-u [--exclude-per-directory=<gitignore>] | -i]] [--no-sparse-checkout] "
+"[--index-output=<file>] (--empty | <tree-ish1> [<tree-ish2> [<tree-ish3>]])"
 msgstr ""
 
 #: builtin/read-tree.c:124
@@ -14860,7 +14895,8 @@ msgstr ""
 
 #: builtin/rebase.c:32
 msgid ""
-"git rebase [-i] [options] [--exec <cmd>] [--onto <newbase>] --root [<branch>]"
+"git rebase [-i] [options] [--exec <cmd>] [--onto <newbase>] --root "
+"[<branch>]"
 msgstr ""
 
 #: builtin/rebase.c:34
@@ -14906,8 +14942,7 @@ msgid ""
 "Resolve all conflicts manually, mark them as resolved with\n"
 "\"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\n"
 "You can instead skip this commit: run \"git rebase --skip\".\n"
-"To abort and get back to the state before \"git rebase\", run \"git rebase --"
-"abort\"."
+"To abort and get back to the state before \"git rebase\", run \"git rebase --abort\"."
 msgstr ""
 
 #: builtin/rebase.c:603
@@ -15491,9 +15526,9 @@ msgstr ""
 
 #: builtin/reflog.c:17
 msgid ""
-"git reflog expire [--expire=<time>] [--expire-unreachable=<time>] [--"
-"rewrite] [--updateref] [--stale-fix] [--dry-run | -n] [--verbose] [--all] "
-"<refs>..."
+"git reflog expire [--expire=<time>] [--expire-unreachable=<time>] "
+"[--rewrite] [--updateref] [--stale-fix] [--dry-run | -n] [--verbose] [--all]"
+" <refs>..."
 msgstr ""
 
 #: builtin/reflog.c:22
@@ -15550,8 +15585,8 @@ msgstr ""
 
 #: builtin/remote.c:17
 msgid ""
-"git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--"
-"mirror=<fetch|push>] <name> <url>"
+"git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] "
+"[--mirror=<fetch|push>] <name> <url>"
 msgstr ""
 
 #: builtin/remote.c:18 builtin/remote.c:38
@@ -15737,6 +15772,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: builtin/remote.c:816
 #, c-format
@@ -15856,7 +15892,6 @@ msgstr ""
 #. TRANSLATORS: the colon ':' should align
 #. with the one in " Fetch URL: %s"
 #. translation.
-#.
 #: builtin/remote.c:1173 builtin/remote.c:1175
 #, c-format
 msgid "  Push  URL: %s"
@@ -15877,8 +15912,7 @@ msgstr ""
 
 #: builtin/remote.c:1183
 #, c-format
-msgid ""
-"  HEAD branch (remote HEAD is ambiguous, may be one of the following):\n"
+msgid "  HEAD branch (remote HEAD is ambiguous, may be one of the following):\n"
 msgstr ""
 
 #: builtin/remote.c:1195
@@ -15888,6 +15922,7 @@ msgid_plural "  Remote branches:%s"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: builtin/remote.c:1198 builtin/remote.c:1224
 msgid " (status not queried)"
@@ -15899,6 +15934,7 @@ msgid_plural "  Local branches configured for 'git pull':"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: builtin/remote.c:1215
 msgid "  Local refs will be mirrored by 'git push'"
@@ -15911,6 +15947,7 @@ msgid_plural "  Local refs configured for 'git push'%s:"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: builtin/remote.c:1242
 msgid "set refs/remotes/<name>/HEAD according to remote"
@@ -16700,6 +16737,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: builtin/rm.c:212
 msgid ""
@@ -16713,6 +16751,7 @@ msgid_plural "the following files have changes staged in the index:"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: builtin/rm.c:220 builtin/rm.c:229
 msgid ""
@@ -16726,6 +16765,7 @@ msgid_plural "the following files have local modifications:"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: builtin/rm.c:242
 msgid "do not list removed files"
@@ -16763,9 +16803,7 @@ msgstr ""
 
 #: builtin/send-pack.c:20
 msgid ""
-"git send-pack [--all | --mirror] [--dry-run] [--force] [--receive-pack=<git-"
-"receive-pack>] [--verbose] [--thin] [--atomic] [<host>:]<directory> "
-"[<ref>...]\n"
+"git send-pack [--all | --mirror] [--dry-run] [--force] [--receive-pack=<git-receive-pack>] [--verbose] [--thin] [--atomic] [<host>:]<directory> [<ref>...]\n"
 "  --all and explicit <ref> specification are mutually exclusive."
 msgstr ""
 
@@ -16852,6 +16890,7 @@ msgid_plural "ignoring %s; cannot handle more than %d refs"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: builtin/show-branch.c:549
 #, c-format
@@ -16924,7 +16963,8 @@ msgstr ""
 
 #: builtin/show-branch.c:712
 msgid ""
-"--reflog is incompatible with --all, --remotes, --independent or --merge-base"
+"--reflog is incompatible with --all, --remotes, --independent or --merge-"
+"base"
 msgstr ""
 
 #: builtin/show-branch.c:736
@@ -16942,6 +16982,7 @@ msgid_plural "only %d entries can be shown at one time."
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: builtin/show-branch.c:746
 #, c-format
@@ -16955,6 +16996,7 @@ msgid_plural "cannot handle more than %d revs."
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: builtin/show-branch.c:834
 #, c-format
@@ -16968,8 +17010,8 @@ msgstr ""
 
 #: builtin/show-ref.c:11
 msgid ""
-"git show-ref [-q | --quiet] [--verify] [--head] [-d | --dereference] [-s | --"
-"hash[=<n>]] [--abbrev[=<n>]] [--tags] [--heads] [--] [<pattern>...]"
+"git show-ref [-q | --quiet] [--verify] [--head] [-d | --dereference] [-s | "
+"--hash[=<n>]] [--abbrev[=<n>]] [--tags] [--heads] [--] [<pattern>...]"
 msgstr ""
 
 #: builtin/show-ref.c:12
@@ -17067,8 +17109,7 @@ msgstr ""
 #: builtin/submodule--helper.c:546
 #, c-format
 msgid ""
-"run_command returned non-zero status while recursing in the nested "
-"submodules of %s\n"
+"run_command returned non-zero status while recursing in the nested submodules of %s\n"
 "."
 msgstr ""
 
@@ -17448,8 +17489,7 @@ msgstr ""
 
 #: builtin/tag.c:27
 msgid ""
-"git tag -l [-n[<num>]] [--contains <commit>] [--no-contains <commit>] [--"
-"points-at <object>]\n"
+"git tag -l [-n[<num>]] [--contains <commit>] [--no-contains <commit>] [--points-at <object>]\n"
 "\t\t[--format=<format>] [--[no-]merged [<commit>]] [<pattern>...]"
 msgstr ""
 
@@ -17482,8 +17522,7 @@ msgid ""
 "\n"
 "Write a message for tag:\n"
 "  %s\n"
-"Lines starting with '%c' will be kept; you may remove them yourself if you "
-"want to.\n"
+"Lines starting with '%c' will be kept; you may remove them yourself if you want to.\n"
 msgstr ""
 
 #: builtin/tag.c:191
@@ -17847,8 +17886,8 @@ msgstr ""
 
 #: builtin/update-index.c:1188
 msgid ""
-"core.untrackedCache is set to false; remove or change it, if you really want "
-"to enable the untracked cache"
+"core.untrackedCache is set to false; remove or change it, if you really want"
+" to enable the untracked cache"
 msgstr ""
 
 #: builtin/update-index.c:1192
@@ -18269,8 +18308,7 @@ msgstr ""
 msgid ""
 "git [--version] [--help] [-C <path>] [-c <name>=<value>]\n"
 "           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n"
-"           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--"
-"bare]\n"
+"           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n"
 "           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n"
 "           <command> [<args>]"
 msgstr ""
@@ -19503,10 +19541,8 @@ msgstr ""
 msgid ""
 "If you want to reuse this local git directory instead of cloning again from\n"
 "  $realrepo\n"
-"use the '--force' option. If the local git directory is not the correct "
-"repo\n"
-"or you are unsure what this means choose another name with the '--name' "
-"option."
+"use the '--force' option. If the local git directory is not the correct repo\n"
+"or you are unsure what this means choose another name with the '--name' option."
 msgstr ""
 
 #: git-submodule.sh:277
@@ -19731,6 +19767,7 @@ msgid_plural "This is a combination of $count commits."
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: git-rebase--preserve-merges.sh:437
 #, sh-format
@@ -19752,8 +19789,7 @@ msgstr ""
 msgid ""
 "Could not amend commit after successfully picking $sha1... $rest\n"
 "This is most likely due to an empty commit message, or the pre-commit hook\n"
-"failed. If the pre-commit hook failed, you may need to resolve the issue "
-"before\n"
+"failed. If the pre-commit hook failed, you may need to resolve the issue before\n"
 "you are able to reword the commit."
 msgstr ""
 
@@ -19878,6 +19914,7 @@ msgid_plural "Rebase $shortrevisions onto $shortonto ($todocount commands)"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: git-rebase--preserve-merges.sh:942 git-rebase--preserve-merges.sh:947
 msgid "Could not init rewritten commits"
@@ -19973,6 +20010,7 @@ msgid_plural "added %d paths\n"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: git-add--interactive.perl:612
 #, perl-format
@@ -19981,6 +20019,7 @@ msgid_plural "updated %d paths\n"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: git-add--interactive.perl:615
 #, perl-format
@@ -19989,6 +20028,7 @@ msgid_plural "reverted %d paths\n"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: git-add--interactive.perl:618
 #, perl-format
@@ -19997,6 +20037,7 @@ msgid_plural "touched %d paths\n"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: git-add--interactive.perl:627
 msgid "Update"
@@ -20088,7 +20129,8 @@ msgstr ""
 #. of the word "no" does not start with n.
 #: git-add--interactive.perl:1213
 msgid ""
-"Your edited hunk does not apply. Edit again (saying \"no\" discards!) [y/n]? "
+"Your edited hunk does not apply. Edit again (saying \"no\" discards!) [y/n]?"
+" "
 msgstr ""
 
 #: git-add--interactive.perl:1222
@@ -20325,6 +20367,7 @@ msgid_plural "Sorry, only %d hunks available.\n"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: git-add--interactive.perl:1571
 msgid "No other hunks to search\n"
@@ -20362,6 +20405,7 @@ msgid_plural "Split into %d hunks.\n"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: git-add--interactive.perl:1660
 msgid "Sorry, cannot edit this hunk\n"
@@ -20380,8 +20424,7 @@ msgid ""
 "revert        - revert staged set of changes back to the HEAD version\n"
 "patch         - pick hunks and update selectively\n"
 "diff          - view diff between HEAD and index\n"
-"add untracked - add contents of untracked files to the staged set of "
-"changes\n"
+"add untracked - add contents of untracked files to the staged set of changes\n"
 msgstr ""
 
 #: git-add--interactive.perl:1742 git-add--interactive.perl:1747
@@ -20414,8 +20457,7 @@ msgstr ""
 
 #: git-send-email.perl:302
 #, perl-format
-msgid ""
-"'%s' contains an intermediate version of the email you were composing.\n"
+msgid "'%s' contains an intermediate version of the email you were composing.\n"
 msgstr ""
 
 #: git-send-email.perl:307
@@ -20550,8 +20592,7 @@ msgstr ""
 msgid ""
 "Refusing to send because the patch\n"
 "\t%s\n"
-"has the template subject '*** SUBJECT HERE ***'. Pass --force if you really "
-"want to send.\n"
+"has the template subject '*** SUBJECT HERE ***'. Pass --force if you really want to send.\n"
 msgstr ""
 
 #: git-send-email.perl:912
